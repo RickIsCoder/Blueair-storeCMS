@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>首页</title>
+		<meta charset='utf-8'>
+	</head>
+	<body>
+		<h1>产品:<?php echo $name[0]['productName']; ?>的参数</h1>
+
+		<div>
+			<?php foreach ($parameter[0] as $key => $value): ?>
+				<?php echo $key.':'.$value.'<br>'; ?>
+			<?php endforeach ?>
+
+		</div>
+	</body>
+</html>

@@ -1,0 +1,479 @@
+/* Common back_end css */
+.bgBlueColor {
+    background-color: #007dc5;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.mainContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.clearFix {
+    clear: both;
+}
+
+.leftContainer {
+    width: 200px;
+    height: 100%;
+    position: relative;
+    background-color: #2a3136;
+    float: left;
+    display: inline-block;
+}
+
+.logoWrapper {
+    width: 100%;
+    height: 110px;
+    position: relative;
+    background: url(/assets/images/logoWhite.png) center center no-repeat;
+    background-size: 160px 30px;
+}
+
+.rightContainer {
+    width: calc(100% - 200px);
+    height: 100%;
+    position: relative;
+    float: right;
+    display: inline-block;
+}
+
+.navContainer {
+    width: 100%;
+    position: relative;
+}
+
+.backToSaleBtn {
+    width: 150px;
+    height: 36px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    line-height: 36px;
+    position: absolute;
+    bottom: 60px;
+    left: 25px;
+}
+
+.navItemWrapper {
+    width: 200px;
+    height: 70px;
+    font-size: 18px;
+    color: white;
+    line-height: 70px;
+    cursor: pointer;
+}
+
+.navItemWrapper.navItemActived {
+    background-color: #007dc5;
+}
+
+.navItemIcon {
+    width: 26px;
+    height: 22px;
+    vertical-align: middle;
+    margin-left: 30px;
+    margin-right: 18px;
+}
+
+.rightTopContainer {
+    width: 700px;
+    height: 74px;
+    margin: 0 auto;
+}
+
+.topContainerLine {
+    height: 0px;
+    width: 100%;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.userType {
+    font-size: 14px;
+    color: #a0a0a0;
+    line-height: 28px;
+    display: inline-block;
+    margin-top: 40px;
+}
+
+.button {
+    height: 28px;
+    cursor: pointer;
+    color: white;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 28px;
+}
+
+#logoutBtn {
+    width: 60px;
+    height: 28px;
+    display: inline-block;
+    border-radius: 2px;
+    font-size: 12px;
+    line-height: 28px;
+    text-align: center;
+    float: right;
+    margin-top: 40px;
+}
+
+.rightMainContainerWrapper {
+    width: 100%;
+    height: calc(100% - 75px);
+}
+
+
+
+.contentSeriesWapper {
+    width: 100%;
+    height: 70px;
+}
+
+.contentSeriesContainer {
+    width: 700px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.seriesContainer {
+    width: 65%;
+    height: 100%;
+    float: left;
+}
+
+.seriesBtnContainer {
+    width: 35%;
+    height: 100%;
+    float: right;
+}
+
+.seriesWrapper {
+    width: 100px;
+    float: left;
+    height: 46px;
+    font-size: 18px;
+    line-height: 50px;
+    color: #9b9b9b;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.seriesWrapper.currentSeries {
+    border-bottom: 4px solid #18a2ce;
+    color: #18a2ce;
+    cursor: default;
+}
+
+.fourTextBtn {
+    width: 90px;
+    height: 28px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 28px;
+    float: right;
+    margin-top: 32px;
+}
+
+.fourTextBtnIcon {
+    width: 12px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+#addProductsBtn {
+    margin-left: 18px;
+}
+
+.contentProductsWrapper {
+    width: 100%;
+    height: calc(100% - 110px);
+    background-color: #f1f1f1;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contentProductsContainer {
+    width: 720px;
+    height: 100%;
+    overflow-y: scroll;
+    margin: 0 auto;
+}
+
+.contentScrollWrapper {
+    width: 100%;
+    height: auto;
+}
+
+.productsContainer {
+    
+}
+
+.productContainer {
+    width: 160px;
+    height: 240px;
+    border-radius: 2px;
+    background-color: white;
+    float: left;
+    margin: 0 10px;
+}
+
+#productEdit {
+    margin-right: 10px;
+}
+
+.alertContainerWrapper {
+    width: calc(100% - 200px);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    background-color: rgba(26,26,26,0.8);
+    display: block;
+}
+
+.alertConatiner {
+    width: 604px;
+    height: 648px;
+    border-radius: 2px;
+    background-color: #f0f0f0;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin: 0 auto;
+}
+
+.addProductsAlertWrapper {
+    width: 444px;
+    height: 553px;
+    position: relative;
+    margin: 0 auto;
+    top: 65px;
+    overflow: hidden;
+}
+
+.addProductsHeaderContainer {
+    width: 100%;
+    height: 52px;
+    position: relative;
+}
+
+.addProductsHeaderItemWrapper {
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.positionLeftZero {
+    left: 0;
+}
+
+.positionRightZero {
+    right: 0;
+}
+
+.addProductsTitle {
+    font-size: 14px;
+    line-height: 14px;
+    color: #909090;
+    margin-bottom: 8px;
+}
+
+.addProductName {
+    width: 180px;
+    height: 28px;
+}
+
+.addProductInputType {
+    border: 1px solid #979797;
+    border-radius: 2px;
+    background-color: white;
+}
+
+.addProductSelectSeries {
+    width: 200px;
+    height: 28px;
+    border-radius: 2px;
+    border: 1px solid #979797;
+}
+
+.addProductsContentContainer {
+    width: 100%;
+    height: 501px;
+}
+
+.addProductsContentNavWrapper {
+    width: 100%;
+    height: 48px;
+    position: relative;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.addProductsNavItem {
+    width: 80px;
+    height: 22px;
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    margin-bottom: 0;
+}
+
+.addProductsNavItem.addProductActivedNavItem {
+    border-bottom: 2px solid #007dc5;
+    color: #007dc5;
+}
+
+#addProductNavFeature {
+    left: 0;
+}
+
+#addProductNavParameter {
+    left: 182px;
+}
+
+#addProductNavImg {
+    right: 0;
+}
+
+#addProductSaveBtn {
+    position: absolute;
+    width: 102px;
+    left: 0;
+    bottom: 0;
+}
+
+#addProductCancelBtn {
+    position: absolute;
+    width: 60px;
+    right: 0;
+    bottom: 0;
+}
+
+.addProductScrollWrapper {
+    width: 420px;
+    padding-top: 20px;
+    padding-bottom: 35px;
+}
+
+.addProductsContentWrapper {
+    width: 444px;
+    height: 410px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+#addProductBrief {
+    height: 28px;
+    width: 396px;
+    margin-bottom: 20px;
+}
+
+#addProductTags {
+    width: 316px;
+    height: 28px;
+}
+
+#addProductSaveTagBtn {
+    display: inline-block;
+    width: 60px;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+
+.addProductTagsWrapper {
+    width: 100%;
+    margin-top: 14px;
+    margin-bottom: 20px;
+}
+
+#addProductDescription {
+    width: 396px;
+    height: 60px;
+    resize: none;
+    margin-bottom: 20px;
+}
+
+.addProductCharacterWrapper {
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+#addProductCharacterTitle {
+    width: 184px;
+    height: 28px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-indent: 10px;
+}
+
+#addProductCharacter {
+    width: 396px;
+    height: 78px;
+    font-size: 14px;
+    resize: none;
+    line-height: 16px;
+    padding-top: 8px;
+    text-indent: 10px;
+    margin-bottom: 16px;
+}
+
+#addProductCharterSave {
+    display: inline-block;
+    width: 80px;
+    float: right;
+    margin-right: 20px;
+}
+
+#addProductCharaterCancel {
+    display: inline-block;
+    width: 60px;
+    float: right;
+}
+
+
+
+
+
+.addProductContentWrapper {
+    display: none;
+}
+
+.addProductContentWrapper.addProductActivedContent {
+    display: block;        
+}
+
+.addProductParameterInputType {
+    height: 24px;
+    text-indent: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: inline-block;
+    float: left;
+}
+
+.addProductParameterInputShort {
+    width: 188px;
+    margin-right: 20px;
+}
+
+#addProductParameterQuality {
+    width: 398px;
+}

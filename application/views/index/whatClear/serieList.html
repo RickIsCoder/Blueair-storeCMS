@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>首页</title>
+		<meta charset='utf-8'>
+	</head>
+	<body>
+		<h1>系列列表</h1>
+		<ul>
+			<?php foreach ($serieList as $v): ?>
+				<li>
+					<a href="<?php echo site_url('serieDetail/'.$v['serieID']); ?>"><?php echo  $v['serieName']; ?></a>
+				</li>
+			<?php endforeach ?>
+		</ul>
+	</body>
+</html>

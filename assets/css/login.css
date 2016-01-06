@@ -1,0 +1,44 @@
+.container {
+    width: 600px;
+    margin: 0 auto;
+    position: relative;
+    top: 200px;
+}
+
+.logo {
+    width: 210px;
+    height: 39px;
+    background: url(/assets/images/logoBlue.png) no-repeat center center;
+    background-size: 100%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+.inputWrapper {
+    width: 542px;
+    height: 48px;
+    display: block;
+    border: 1px solid #a0a0a0;
+    margin: 0 auto;
+    text-indent: 16px;
+    font-size: 18px;
+    color: #4a4a4a;
+}
+
+#password {
+    margin-top: 14px;
+    margin-bottom: 40px;
+}
+
+.loginBtn {
+    width: 544px;
+    height: 50px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    margin: 0 auto;
+    display: block;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}

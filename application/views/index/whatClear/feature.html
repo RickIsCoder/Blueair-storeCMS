@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>首页</title>
+		<meta charset='utf-8'>
+	</head>
+	<body>
+		<h1>产品:<?php echo $name[0]['productName']; ?>的特性</h1>
+	<div>
+		<?php foreach ($feature as $v): ?>
+			<?php echo $v['featureTitle'].':'.$v['featureContent']; ?>
+		<?php endforeach ?>
+	</div>
+	</body>
+</html>

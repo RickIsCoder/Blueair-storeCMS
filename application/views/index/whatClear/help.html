@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>首页</title>
+		<meta charset='utf-8'>
+		<script src='<?php echo base_url('public/js/jquery.js'); ?>'></script>
+		<script src='<?php echo base_url('public/js/index_help.js'); ?>'></script>
+	</head>
+	<body>
+		<h1>帮您选</h1>
+		<?php foreach ($scene as $sceneOption): ?>
+			<button class='sceneOption' sceneID = '<?php echo $sceneOption['sceneID']; ?>'> <?php echo $sceneOption['sceneName']; ?> </button>
+		<?php endforeach ?>
+
+		<div id ='scale'>
+
+		</div>
+
+		<div id='advice'>
+		</div>
+	</body>
+</html>

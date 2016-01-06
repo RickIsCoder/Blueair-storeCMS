@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <script src="<?php echo base_url('/public/js/jquery.js'); ?>"></script>
+	    <script src="<?php echo base_url('/public/js/admin_feature.js'); ?>"></script>
+	</head>
+	<body>
+		<div id='feature' productionID='<?php echo $productionID; ?>'>
+			<h2>特性</h2>
+			<div class='des-content'>
+				<textarea id="des"><?php echo $des[0]['description']; ?></textarea>
+				<button id='des-edit-btn'>修改产品描述</button>
+			</div>
+			<div id='feature-content'>
+				<?php foreach ($featureItems as $v): ?>
+					<div class="feature-item" featureID='<?php echo $v['featureID']; ?>'>
+						特性名称:<input class="featureTitle" type="text" value='<?php  echo $v['featureTitle'];  ?>'>
+						特性描述:<input class="featureContent"type="text" value='<?php  echo $v['featureContent'];  ?>'>
+						<button class='feature-del-btn'>删除特性</button>
+						<button class='feature-edit-btn'>修改特性</button>
+					</div>
+				<?php endforeach ?>
+			</div>
+			<hr>
+			特性名称:<input type="text" id='new-featureTitle'><br>
+			特性描述:<input type="text" id='new-featureContent'><br>
+			<button id='feature-add-btn'>添加特性</button>
+			<hr>
+
+			<div class='label-content'>
+				<input type='text' id="label" value='<?php echo $label[0]['label']; ?>'>
+				<button id='label-edit-btn'>修改label</button>
+			</div>
+
+			<div id='tips-content'>
+				<?php foreach ($TipsItems as $v): ?>
+					<div class="tips-item" tipsID='<?php echo $v['tipsID']; ?>'>
+						tips:<input class="tips" type="text" value='<?php  echo $v['tips'];  ?>'>
+						<button class='tips-del-btn'>删除tips</button>
+						<button class='tips-edit-btn'>修改tips</button>
+					</div>
+				<?php endforeach ?>
+			</div>
+			<hr>
+			特性名称:<input type="text" id='new-tips'><br>
+			<button id='tips-add-btn'>添加TIPS</button>
+			<hr>
+		</div>
+	</body>
+</html>

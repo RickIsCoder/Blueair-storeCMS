@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>管理员登陆</title>
+	    <script src="<?php echo base_url('/public/js/jquery.js'); ?>"></script>
+	    <script src="<?php echo base_url('/public/js/admin_list.js'); ?>"></script>
+	    <link rel="stylesheet" href="<?php echo base_url('/public/css/admin_list.css'); ?>">
+	</head>
+	<body>
+		<h1>admin</h1>
+			<?php foreach ($production as $serie): ?>
+			<div class='serie' serieID='<?php echo $serie['serieID']; ?>'>
+				<table>
+					<th><?php echo $serie['serieName']; ?><button class='serie-del-btn'>删除系列</button></th>
+					<tr>
+						<td>产品名</td>
+						<td>删除</td>
+						<td>编辑</td>
+					</tr>	
+
+					<?php foreach ($serie['production'] as $production): ?>
+					<tr class='production' productionID='<?php echo $production['productID']; ?>' >
+						<td><?php echo $production['productName']; ?></td>
+						<td><button class='production-del-btn'>删除产品</button></td>
+						<td>
+							<a href="<?php echo site_url('pd/'.$production['productID']); ?>"><button>编辑</button></a> 
+							<a href="<?php echo site_url('feature/'.$production['productID']); ?>"><button>编辑特性</button></a>
+						</td>
+					</tr>
+					<?php endforeach ?>
+				</table>
+				<hr>
+			</div>
+			<?php endforeach ?>
+			<div id='addSerie'>
+				系列名:<input type="text" id='serieName'>
+				<button class='serie-add-btn'>添加系列</button>
+			</div>
+			<hr>
+			<a id='addProduction' href="<?php echo site_url('pd'); ?>"><button>添加产品</button></a>
+			<span id='tips'></span>
+	</body>
+</html>

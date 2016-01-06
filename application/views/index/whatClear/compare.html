@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>首页</title>
+		<meta charset='utf-8'>
+		<script src='<?php echo base_url('public/js/jquery.js'); ?>'></script>
+		<script src='<?php echo base_url('public/js/index_compare.js'); ?>'></script>
+	</head>
+	<body>
+		<?php //var_dump($production); ?>
+		<h1>产品对比</h1>
+		<div class='compare'>
+			<?php foreach ($compareDetail as $key => $value): ?>
+				<div class='compare-item' productionID='<?php echo $value[0]['productID']; ?>'>
+					<?php foreach ($value[0] as $key => $value): ?>
+						<?php echo $key.':'.$value.'<br>'; ?>
+					<?php endforeach ?>
+					<button class='delCompare'>删除对比</button>
+					<hr>
+				</div>
+			<?php endforeach ?>
+		</div>
+		<div>
+			<?php foreach ($production as $serie): ?>
+			<div class='serie' serieID='<?php echo $serie['serieID']; ?>'>
+				<table>
+					<?php echo $serie['serieName']; ?>
+
+					<?php foreach ($serie['production'] as $production): ?>
+					<tr class='production' productionID='<?php echo $production['productID']; ?>' >
+						<td><?php echo $production['productName']; ?></td>
+						<td><button class='addCompare'>加入对比</button></td>
+					</tr>
+					<?php endforeach ?>
+				</table>
+				<hr>
+			</div>
+			<?php endforeach ?>
+		</div>
+	</body>
+</html>

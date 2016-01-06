@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title></title>
+	<meta charset='utf-8'>
+	    <script src="<?php echo base_url('/public/js/jquery.js'); ?>"></script>
+	    <script src="<?php echo base_url('/public/js/admin_scene.js'); ?>"></script>
+</head>
+<body>
+	<?php //var_dump($sceneList); ?>
+	<!-- 场景list begin -->
+	<h2>场景管理</h2>
+	<?php foreach ($sceneList as $scene): ?>
+		<div class='scenelist' sceneID='<?php echo $scene['sceneID']; ?>'>
+
+			场景名称: <input class='sceneName' type='text' value='<?php echo $scene['sceneName']; ?>'>
+			<button class='sceneEdit'>编辑场景</button>
+			<button class='sceneDel'>删除场景</button>
+
+			<?php foreach ($scene['scale'] as $scale): ?>
+				<div class='scale' scaleID='<?php echo $scale['scaleID']; ?>'>
+					规模名称： <input class='scaleName' type='text' value='<?php echo $scale['scaleName']; ?>'> 
+					<button class='scaleEdit'>编辑规模</button>
+					<button class='scaleDel'>删除规模</button>
+					<button class='productionAdd'>添加产品</button>
+					<br>
+					<?php if(sizeof($scale['production'])!=0) echo "规模产品:"; foreach ($scale['production'] as $production): ?>
+						<div class='production' productionID='<?php echo $production['senceProductID']; ?>'>
+							产品名: <?php echo $production['productName']; ?>
+							<button class='productionDel'>删除产品</button>
+						</div>	
+					<?php endforeach ?>
+				</div>
+			<?php endforeach ?>
+
+			<input class='newScaleName' type ='text'>
+			<button class='scaleAdd'>添加规模</button> 
+			<hr>
+		</div>
+	<?php endforeach ?>
+	<!-- 场景list end -->
+
+
+
+
+	<!-- 添加场景 begin -->
+		<div>
+			<input type='text' id='newSceneName'>
+			<button id='sceneAdd'>添加场景</button>
+		</div>
+	<!-- 添加场景 end -->
+
+	<div id='choicelist'>
+
+	</div>
+
+
+
+</body>
+</html>

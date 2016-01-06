@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>编辑产品详细参数</title>
+    <script src="<?php echo base_url('/public/js/jquery.js'); ?>"></script>
+    <script src="<?php echo base_url('/public/js/admin_ajaxupload.js'); ?>"></script>
+    <script src="<?php echo base_url('/public/js/admin_edit.js'); ?>"></script>
+    <link rel="stylesheet" href="<?php echo base_url('/public/css/admin_edit.css'); ?>">
+</head>
+<body>
+	<span id='productID' productID='<?php echo $productionDetail[0]['productID'];?>' hidden></span>
+	<div id='paramater' >
+		<h2>参数</h2>
+		系列:
+		<select id="serieID" >
+			<?php foreach ($series as $v): ?>
+				<option 
+					<?php 
+						echo 'value='.$v['serieID'].'';
+						if ($v['serieID']==$productionDetail[0]['serieID']) {
+							echo "selected";
+						} 
+					?> 
+				>
+				<?php echo $v['serieName'];?>
+				</option>
+			<?php endforeach ?>
+		</select><br>
+
+		产品名:<input type="text" id='productName' value='<?php echo $productionDetail[0]['productName']; ?>'><br>				
+		产地:<input type="text" id='producting_area' value='<?php echo $productionDetail[0]['producting_area']; ?>'><br>	
+		质保:<input type="text" id='warranty' value='<?php echo $productionDetail[0]['warranty']; ?>'><br>				
+		注册质保:<input type="text" id='reg_warranty' value='<?php echo $productionDetail[0]['reg_warranty']; ?>'><br>			
+		材料:<input type="text" id='material' value='<?php echo $productionDetail[0]['material']; ?>'><br>				
+		高:<input type="text" id='height' value='<?php echo $productionDetail[0]['height']; ?>'>(mm)<br>				
+		宽:<input type="text" id='width' value='<?php echo $productionDetail[0]['width']; ?>'>(mm)<br>				
+		厚:<input type="text" id='thickness' value='<?php echo $productionDetail[0]['thickness']; ?>'>(mm)<br>				
+		重量:<input type="text" id='weight' value='<?php echo $productionDetail[0]['weight']; ?>'>(kg)<br>				
+		颜色:<input type="text" id='color' value='<?php echo $productionDetail[0]['color']; ?>'><br>				
+		电源线长度:<input type="text" id='power_line_length' value='<?php echo $productionDetail[0]['power_line_length']; ?>'>(m)<br>
+		滚轮:<input type="text" id='wheel' value='<?php echo $productionDetail[0]['wheel']; ?>'><br>				
+		滤网寿命:<input type="text" id='filter_life' value='<?php echo $productionDetail[0]['filter_life']; ?>'>个月<br>
+		烟雾:<input type="text" id='smoke' value='<?php echo $productionDetail[0]['smoke']; ?>'><br>				
+		灰尘:<input type="text" id='dirt' value='<?php echo $productionDetail[0]['dirt']; ?>'><br>				
+		花粉:<input type="text" id='pollen' value='<?php echo $productionDetail[0]['pollen']; ?>'><br>
+		标定面积:<input type="text" id='area' value='<?php echo $productionDetail[0]['area']; ?>'>(m²)<br>				
+		风档(0:自动):<input type="text" id='wind_gears' value='<?php echo $productionDetail[0]['wind_gears']; ?>'><br>	
+		循环风量:<input type="text" id='wind_quantity' value='<?php echo $productionDetail[0]['wind_quantity']; ?>'><br>	
+		换气次数:<input type="text" id='gas_exchange' value='<?php echo $productionDetail[0]['gas_exchange']; ?>'>(次/h)<br	>
+		耗电:<input type="text" id='power_consume' value='<?php echo $productionDetail[0]['power_consume']; ?>'>(w)<br>	
+		噪音水平:<input type="text" id='noise' value='<?php echo $productionDetail[0]['noise']; ?>'>(dBA)<br>				
+		遥控器:
+		<input type="radio" name='remote_control' value='1' <?php if($productionDetail[0]['remote_control']==1) echo "checked"; ?> >有
+		<input type="radio" name='remote_control' value='0' <?php if($productionDetail[0]['remote_control']==0) echo "checked"; ?> >无	<br>	
+		电子颗粒传感器:
+		<input type="radio" name='particle_sensor' value='1' <?php if($productionDetail[0]['particle_sensor']==1) echo "checked"; ?> >有
+		<input type="radio" name='particle_sensor' value='0' <?php if($productionDetail[0]['particle_sensor']==0) echo "checked"; ?> >无	<br>	
+		电子气体传感器:
+		<input type="radio" name='gas_sensor' value='1' <?php if($productionDetail[0]['gas_sensor']==1) echo "checked"; ?> >有
+		<input type="radio" name='gas_sensor' value='0' <?php if($productionDetail[0]['gas_sensor']==0) echo "checked"; ?> >无	<br>
+		自动风扇速度控制器:
+		<input type="radio" name='fan_speed_control' value='1' <?php if($productionDetail[0]['fan_speed_control']==1) echo "checked"; ?> >有
+		<input type="radio" name='fan_speed_control' value='0' <?php if($productionDetail[0]['fan_speed_control']==0) echo "checked"; ?> >无	<br>	
+		滤网更换提示:
+		<input type="radio" name='filter' value='1' <?php if($productionDetail[0]['filter']==1) echo "checked"; ?> >有
+		<input type="radio" name='filter' value='0' <?php if($productionDetail[0]['filter']==0) echo "checked"; ?> >无	<br>
+		定时器:
+		<input type="radio" name='timer' value='1' <?php if($productionDetail[0]['timer']==1) echo "checked"; ?> >有
+		<input type="radio" name='timer' value='0' <?php if($productionDetail[0]['timer']==0) echo "checked"; ?> >无	<br>
+		动作感应控制:
+		<input type="radio" name='motion_seneor' value='1' <?php if($productionDetail[0]['motion_seneor']==1) echo "checked"; ?> >有
+		<input type="radio" name='motion_seneor' value='0' <?php if($productionDetail[0]['motion_seneor']==0) echo "checked"; ?> >无	<br>
+		钢化玻璃显示板:
+		<input type="radio" name='armorplate_glass_displayer' value='1' <?php if($productionDetail[0]['armorplate_glass_displayer']==1) echo "checked"; ?> >有
+		<input type="radio" name='armorplate_glass_displayer' value='0' <?php if($productionDetail[0]['armorplate_glass_displayer']==0) echo "checked"; ?> >无	<br>				
+		HEPASilentPlus™技术:
+		<input type="radio" name='HEPASilentPlus' value='1' <?php if($productionDetail[0]['HEPASilentPlus']==1) echo "checked"; ?> >有
+		<input type="radio" name='HEPASilentPlus' value='0' <?php if($productionDetail[0]['HEPASilentPlus']==0) echo "checked"; ?> >无	<br>
+		内置滤网:<input type="text" id='inner_filter' value='<?php echo $productionDetail[0]['inner_filter']; ?>'><br>	
+		附赠:<input type="text" id='append' value='<?php echo $productionDetail[0]['append']; ?>'><br>	
+		可选配件:<input type="text" id='accessories' value='<?php echo $productionDetail[0]['accessories']; ?>'>
+		<hr>
+	</div>	
+	<div id='pic'>	
+		<h2>图片</h2>
+		<?php foreach ($productionDetail['pic'] as $pic): ?>	
+			<div class='pic-wall'  picID="<?php echo $pic['pictureID']; ?>"  style="background-image:url(<?php echo base_url('upload/'.$pic['pic_path']); ?>)">
+
+				<button class="btn_del">del_pic</button>
+			</div>
+		<?php endforeach ?>
+		<button id='pic_selector'>添加图片</button>
+		<hr>
+	</div>
+	<button id='submit'>submit</button>
+</body>
+</html>

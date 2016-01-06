@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>首页</title>
+		<meta charset='utf-8'>
+		<script src='<?php echo base_url('public/js/jquery.js'); ?>'></script>
+		<script src='<?php echo base_url('public/js/index_product.js'); ?>'></script>
+	</head>
+	<body>
+		<h1 id = 'title' productionID = '<?php echo $ID; ?>'>产品:<?php echo $name[0]['productName']; ?></h1>
+		<ul>
+			<li><a href="<?php echo site_url('ifeature/'.$ID); ?>">查看特性</a></li>
+			<li><a href="<?php echo site_url('parameter/'.$ID); ?>">查看参数</a></li>
+			<li><button id='addCompare'>加入对比</button></li>
+		</ul>
+		<div>
+			描述:<?php echo $des[0]['description']; ?>
+		</div>
+		<div>
+			label:<?php echo $label[0]['label']; ?>
+		</div>
+
+		<div>
+			<?php foreach ($tips as $v): ?>
+				<button><?php echo $v['tips']; ?></button>
+			<?php endforeach ?>
+		</div>
+		<div>
+			<?php foreach ($pic as $v): ?>
+				<img src="<?php echo base_url('upload/'.$v['pic_path']); ?>" >
+			<?php endforeach ?>
+		</div>
+	</body>
+</html>

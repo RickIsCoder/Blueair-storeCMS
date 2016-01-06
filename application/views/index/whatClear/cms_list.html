@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>管理员登陆</title>
+    <script src="<?php echo base_url('/public/js/jquery.js'); ?>"></script>
+    <script src="<?php echo base_url('/public/js/index_list.js'); ?>"></script>
+    <link rel="stylesheet" href="<?php echo base_url('/public/css/list.css'); ?>">
+</head>
+<body>
+	<?php foreach ($production as $v): ?>
+		<h1><?php echo $v['serieName']; ?></h1>
+		<table>
+
+			<tr>
+				<td>产品名</td>
+				<td>添加</td>
+				<td>删除</td>
+			</tr>
+		
+			<?php foreach ($v['production_not_exist'] as $production): ?>
+				<tr productID='<?php echo $production['productID']; ?>'>
+					<td><?php echo $production['productName']; ?></td>
+					<td><button class='add'>添加</button></td>
+					<td><button class='del' disabled>删除</button></td>
+				</tr>
+			<?php endforeach ?>
+
+			<?php foreach ($v['production_exist'] as $production): ?>
+				<tr productID='<?php echo $production['productID']; ?>'>
+					<td><?php echo $production['productName']; ?></td>
+					<td><button class='add' disabled>添加</button></td>
+					<td><button class='del'>删除</button></td>
+				</tr>
+			<?php endforeach ?>
+
+		</table>
+	<?php endforeach ?>
+
+
+</body>
+</html>
