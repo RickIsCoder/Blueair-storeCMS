@@ -477,3 +477,10 @@ html, body {
 #addProductParameterQuality {
     width: 398px;
 }
+
+.addProductRadioWrapper {
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #939598;
+}

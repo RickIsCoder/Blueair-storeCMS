@@ -193,6 +193,51 @@
                                     <input type="text" class="addProductParameterInputType addProductInputType addProductParameterInputShort" placeholder="可选配件:">
                                     <div class="clearFix"></div>
                                     
+                                    <div class="addProductRadioWrapper">
+                                        <span class="addProductRadioTitle">遥控器：</span>
+                                        <input type="radio" name="remoteControl">有
+                                        <input type="radio" name="remoteControl" checked>无
+                                    </div>
+                                    <div class="addProductRadioWrapper">
+                                        <span class="addProductRadioTitle">电子颗粒传感器：</span>
+                                        <input type="radio" name="particleSensor">有
+                                        <input type="radio" name="particleSensor" checked>无
+                                    </div>
+                                    <div class="addProductRadioWrapper">
+                                        <span class="addProductRadioTitle">电子气体传感器：</span>
+                                        <input type="radio" name="gasSensor">有
+                                        <input type="radio" name="gasSensor" checked>无
+                                    </div>
+                                    <div class="addProductRadioWrapper">
+                                        <span class="addProductRadioTitle">自动风扇速度控制器：</span>
+                                        <input type="radio" name="speedControl">有
+                                        <input type="radio" name="speedControl" checked>无
+                                    </div>
+                                    <div class="addProductRadioWrapper">
+                                        <span class="addProductRadioTitle">滤网更换提示：</span>
+                                        <input type="radio" name="filterChange">有
+                                        <input type="radio" name="filterChange" checked>无
+                                    </div>
+                                    <div class="addProductRadioWrapper">
+                                        <span class="addProductRadioTitle">定时器：</span>
+                                        <input type="radio" name="timer">有
+                                        <input type="radio" name="timer" checked>无
+                                    </div>
+                                    <div class="addProductRadioWrapper">
+                                        <span class="addProductRadioTitle">动作感应控制：</span>
+                                        <input type="radio" name="actionControl">有
+                                        <input type="radio" name="actionControl" checked>无
+                                    </div>
+                                    <div class="addProductRadioWrapper">
+                                        <span class="addProductRadioTitle">钢化玻璃显示板：</span>
+                                        <input type="radio" name="glassBoard">有
+                                        <input type="radio" name="glassBoard" checked>无
+                                    </div>
+                                    <div class="addProductRadioWrapper">
+                                        <span class="addProductRadioTitle">HEPASilentPlus™ 技术：</span>
+                                        <input type="radio" name="silentPlus">有
+                                        <input type="radio" name="silentPlus" checked>无
+                                    </div>
                                 </div>
                             </div>
                         </div>
