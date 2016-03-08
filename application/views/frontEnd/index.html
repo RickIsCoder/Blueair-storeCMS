@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--TODO: keywords-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0" />
+
+    <title>BlueAir</title>
+    <link rel="stylesheet" href="css/resetStyle.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="mainContainer">
+        <!--  nav  -->
+        <div class="navBtn" id="navBtn"><img src="./images/headNav.png" alt="nav"></div>
+        <div class="nav" id="nav">
+            <img src="./images/logo.png" alt="logo" class="navLogo">
+            <ul class="navUl">
+                <li class="navLi"><img class="navImg" src="./images/homeIcon.png" alt="home"><a class="navLink" href="./index.html">首页</a></li>
+                <li class="navLi"><img class="navImg" src="./images/cleanerIcon.png" alt="img"><a class="navLink" href="">为什么需要空气净化器</a></li>
+                <li class="navLi"><img class="navImg" src="./images/whyBlueairIcon.png" alt="img"><a class="navLink" href="./whyBlueAir.html">为什么选择Blueair</a></li>
+                <li class="navLi"><img class="navImg" src="./images/whichoneIcon.png" alt="img"><a class="navLink" href="">怎样的空气净化器适合您</a></li>
+            </ul>
+            
+            <div class="button gotoBackEndBtn colorBlue">进入后台管理</div>
+        </div>
+        <div class="navMask" id="navMask"></div>
+        <!--  end nav  -->
+        
+        <!--  homePage  -->
+        <div class="homePage">
+            <div class="header">
+                <img src="images/logo.png" alt="logo" class="logo">
+            </div>
+            <div class="homePageBanner"></div>
+            <div class="homePageBottom">
+                <a class="button homePageBottomItem btnWhyCleaner"></a>
+                <a class="button homePageBottomItem btnWhyBlueAir" href="./whyBlueAir.html"></a>
+                <a class="button homePageBottomItem btnWhichOne"></a>
+            </div>
+        </div>
+        <!--  end homePage  -->
+        
+        <!--  whyBlueAir  -->
+        <div class="whyBlueAirContainer animated inShow" id="whyBlueAirContainer">
+            <div id="whyBlueAirSlide">
+                <div class="slickContainer ourBrand">
+                    <img src="./images/logo.png" alt="logo" class="ourBrandlogo">
+                    <div class="ourBrandText">
+                        <p class="titleMid colorBlue">我们的品牌</p>
+                        <p class="ourBrandContent contentSml colorDarkGray">Blueair品牌1996年创立于瑞典首都斯德哥尔摩，HEPASilent® 高效静音专利技术使之成为全球最强劲的空气净化系统，并在技术创新、高品质、高效能等方面迅速赢得业内认可，确立了在国际市场上高端品牌的形象及地位。</p>
+                    </div>
+                    <div class="ourBrandDig bgBlue">
+                        <div class="ourBrandContentWrapper ourBrandContentleft">
+                            <p class="ourBrandContentTitle fontFamilyEn">20<span class="contentMid">年</span></p>
+                            <p class="contentMid">空气净化系统生产、研发历史。</p>
+                        </div>
+                        <div class="ourBrandContentWrapper purBrandContentMid">
+                            <p class="ourBrandContentTitle fontFamilyEn">63<span class="contentMid">个</span></p>
+                            <p class="contentMid">国家热销，深受欧美、日韩顾客喜爱。</p>
+                        </div>
+                        <div class="ourBrandContentWrapper purBrandContentRight">
+                            <p class="ourBrandContentTitle fontFamilyEn">84<span class="contentMid">%</span></p>
+                            <p class="contentMid">顾客表示Blueair比之前用的其他品牌净化器性能更优。</p>
+                        </div>
+                    </div>
+                    <span class="footnote">注：数据来自权威机构对美国791名用户的调查访问</span>
+                </div>
+                <div class="slickContainer hepaSilent">
+                    <img src="./images/logo.png" alt="logo" class="HEPAlogo">
+                    <div class="HEPAtext">
+                        <p class="titleMid colorBlue">专利技术 <span class="fontFamilyEn">HEPASilent</span></p>
+                        <p class="HEPAContent contentSml colorDarkGray">结合电子吸附和滤网过滤的多层渐进式过滤技术，可清除0.1微米级对肺脏有害的可吸入颗粒物，及过敏原、香烟烟雾、细菌及激光打印机、传真机所释放的微粒等空气中99.7%的污染源。</p>  
+                    </div>
+                    <img src="./images/whyBlueAir/hepaimg.png" alt="HEPASilent" class="HEPAImg">
+                    <div class="HEPANavWrapper">
+                        <div class="HEPANavItemWrapper HEPANavItemWrapper1">
+                            <img class="HEPANavImg button" id="jumpEfficient" src="./images/whyBlueAir/hepaNav1.png" alt="icon">
+                            <p class="HEPANavText contentSml">有效清除包括PM2.5在内的大部分微尘颗粒和细菌，一小时内室内5次循环换气。</p>
+                        </div>
+                        <div class="HEPANavItemWrapper">
+                            <img class="HEPANavImg button" id="jumpMute" src="./images/whyBlueAir/hepaNav2.png" alt="icon">
+                            <p class="HEPANavText contentSml">低速运转时静过轻声絮语，绝不干扰您的睡眠。</p>
+                        </div>
+                        <div class="HEPANavItemWrapper">
+                            <img class="HEPANavImg button" id="jumpEnergy" src="./images/whyBlueAir/hepaNav3.png" alt="icon">
+                            <p class="HEPANavText contentSml">猜猜Blueair的能耗和哪种设备相当？</p>
+                        </div>
+                        <div class="HEPANavItemWrapper">
+                            <img class="HEPANavImg button" id="jumpByproduct" src="./images/whyBlueAir/hepaNav4.png" alt="icon">
+                            <p class="HEPANavText contentSml">绝对不会释放任何臭氧，妈妈再也不用担心家中臭氧超标。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slickContainer">
+                    <div class="serveBanner">
+                        <img src="./images/logo.png" alt="logo" class="serveLogo">
+                        <div class="serveTitle bgBlue">
+                            <p class="fontSize32 serveTitleTop">优质的服务</p>
+                            <p class="fontSize14 serveTitleBottom">从售前、售中到售后，Blueair始终为您提供优质周到的服务！</p>
+                        </div>
+                        <img src="./images/whyBlueAir/serverMan.png" alt="img" class="serveMan">
+                    </div>
+                    <div class="serveContentContainer">
+                        <div class="serveItemContainer">
+                            <div class="serveIconWrapper serveIconWrapper1"><img class="serveIcon1" src="./images/whyBlueAir/serveIcon1.png" alt="Icon"></div>
+                            <p class="contentMid colorDarkGray">入户测试 上门服务</p>
+                            <p class="contentSml colorLightGray serveContent">专业团队到您家，为您提供空气检测服务。</p>
+                        </div>
+                        <div class="serveItemContainer">
+                            <div class="serveIconWrapper"><img class="serveIcon2" src="./images/whyBlueAir/serveIcon2.png" alt="Icon"></div>
+                            <p class="contentMid colorDarkGray">注册会员 实惠更多</p>
+                            <p class="contentSml colorLightGray serveContent">到blueair.cn注册后您可以享受更快捷高效的售后服务支持。</p>
+                        </div>
+                        <div class="serveItemContainer">
+                            <div class="serveIconWrapper"><img class="serveIcon3" src="./images/whyBlueAir/serveIcon3.png" alt="Icon"></div>
+                            <p class="contentMid colorDarkGray">全型滤网 长期供应</p>
+                            <p class="contentSml colorLightGray serveContent">Blueair本着对客户负责的态度，为客户的后续使用提供不间断的保障。</p>
+                        </div>
+                        <div class="serveItemContainer">
+                            <div class="serveIconWrapper"><img class="serveIcon4" src="./images/whyBlueAir/serveIcon4.png" alt="Icon"></div>
+                            <p class="contentMid colorDarkGray">服务网点 遍布全国</p>
+                            <p class="contentSml colorLightGray serveContent">售后服务网络 覆盖全中国95个城市32个省及直辖市。</p>
+                        </div>
+                        <div class="serveItemContainer">
+                            <div class="serveIconWrapper"><img class="serveIcon5" src="./images/whyBlueAir/serveIcon5.png" alt="Icon"></div>
+                            <p class="contentMid colorDarkGray">企业客户 全程服务</p>
+                            <p class="contentSml colorLightGray serveContent">对集团采购的客户提供前期方案咨询、上门送货、售后的全程服务。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slickContainer">
+                    <img src="./images/logo.png" alt="logo" class="honorLogo">
+                    <p class="titleBig colorBlue honorTitle">荣誉和故事</p>
+                    <div class="honorNavContainer">
+                        <span class="honorNav contentMid actived" id="honorIdenty">奖项和认证</span>
+                        <span class="honorNav contentMid" id="honorReport">荣誉和报道</span>
+                    </div>
+                    <div class="honorContentContainer actived" id="honorIdentyContent">
+                        <img src="./images/whyBlueAir/honorImg1.png" alt="img" class="honorImgSml">
+                        <img src="./images/whyBlueAir/honorImg2.png" alt="img" class="honorImgSml">
+                        <img src="./images/whyBlueAir/honorImg3.png" alt="img" class="honorImgSml">
+                        <img src="./images/whyBlueAir/honorImg4.png" alt="img" class="honorImgSml">
+                        <img src="./images/whyBlueAir/honorImg5.png" alt="img" class="honorImgSml">
+                        <img src="./images/whyBlueAir/honorImg6.png" alt="img" class="honorImgSml">
+                        <img src="./images/whyBlueAir/honorImg7.png" alt="img" class="honorImgSml">
+                        <img src="./images/whyBlueAir/honorImg8.png" alt="img" class="honorImgSml">
+                        <img src="./images/whyBlueAir/honorImg9.png" alt="img" class="honorImgSml">
+                        <img src="./images/whyBlueAir/honorImg10.png" alt="img" class="honorImgSml">
+                        <img src="./images/whyBlueAir/honorImg11.png" alt="img" class="honorImgSml">
+                        <img src="./images/whyBlueAir/honorImg12.png" alt="img" class="honorImgSml">
+                    </div>
+                    <div class="honorContentContainer" id="honorReportContent">
+                        <img src="./images/whyBlueAir/honorRightImgBig.png" alt="img" class="honorImg honorImgBig">
+                        <img src="./images/whyBlueAir/honorRightImg1.png" alt="img" class="honorImg">
+                        <img src="./images/whyBlueAir/honorRightImg2.png" alt="img" class="honorImg">
+                        <img src="./images/whyBlueAir/honorRightImg3.png" alt="img" class="honorImg">
+                        <img src="./images/whyBlueAir/honorRightImg4.png" alt="img" class="honorImg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  end whyBlueAir  -->
+        
+    </div>
+    
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/action.js"></script>
+</body>
+</html>

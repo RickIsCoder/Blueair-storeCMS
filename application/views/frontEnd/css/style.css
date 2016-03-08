@@ -1,0 +1,287 @@
+/* common style */
+html,body {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    font-family: 'Hiragino Sans GB';
+}
+
+.fontFamilyEn {
+    font-family: 'Helvetica Neue';
+}
+
+.inShow {
+    z-index: 999 !important;
+    visibility: visible !important;
+}
+
+.aniDelay {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;    
+}
+
+.centerText {
+    text-align: center;
+}
+
+.mainContainer {
+    width: 100%;
+    height: 100%;
+    max-width: 1024px;
+    max-height: 768px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.button {
+    cursor: pointer;
+}
+
+.navBtn {
+    cursor: pointer;
+    position: fixed;
+    z-index: 999;
+}
+
+.fontSize32 {
+    font-size: 32px;
+    line-height: 56px;
+}
+.fontSize14 {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.titleMid {
+    font-size: 24px;
+    line-height: 38px;
+}
+
+.contentSml {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.colorDarkGray {
+    color: #353535;
+}
+
+.colorLightGray {
+    color: #909090;
+}
+
+.colorBlue {
+    color: #007dc5;
+}
+
+.bgDarkGray {
+    background-color: #353535;
+}
+
+.bgBlue {
+    background-color: #007dc5;
+}
+
+.bgLightBlue {
+    background-color: #80bfe3;
+}
+
+.titleBig {
+    font-size: 32px;
+}
+
+.contentMid {
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.footnote {
+    font-size: 10px;
+    line-height: 18px;
+    position: absolute;
+}
+
+
+/* slickJs button css */
+.slick-dots {
+    bottom: 6%;
+}
+.slick-dots li, .slick-dots li button, .slick-dots li button:before {
+    border-radius: 100%;
+    color: transparent;
+    width: 10px;
+    height: 10px;
+}
+.slick-dots li {
+    margin: 0 12px;
+}
+.slick-dots li button:before  {
+/*    background-color: #007dc5;*/
+    background-color: #2f2f2f;
+    border: 1px solid #2f2f2f;
+    opacity: 1;
+}
+.slick-dots li.slick-active button:before {
+    background-color: transparent;
+    color: transparent;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 430px;
+    height: 100%;
+    z-index: 999;
+    background-color: white;
+    display: none;
+}
+
+.nav.actived {
+    display: block;
+}
+
+.navMask {
+    position: fixed;
+    top: 0;
+    left: 430px;
+    width: 594px;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    z-index: 999;
+    display: none;
+}
+
+.navMask.actived {
+    display: block;
+}
+
+.navLogo {
+    width: 213px;
+    height: 41px;
+    position: absolute;
+    top: 54px;
+    left: 48px;
+}
+
+.navUl {
+    width: 320px;
+    margin: 140px auto 0;
+}
+
+.navLi {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+.navLink {
+    color: #007dc5;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.navLink:hover,
+.navLink:active: {
+    color: #007dc5;
+}
+
+.navImg {
+    vertical-align: middle;
+    width: 35px;
+    margin-right: 20px;
+    margin-top: -5px;
+}
+
+.gotoBackEndBtn {
+    width: 275px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    border: 1px solid #007dc5;
+    border-radius: 4px;
+    text-align: center;
+    position: absolute;
+    bottom: 5%;
+    left: 50px;
+}
+/* end common style*/
+
+
+/* homePage style*/
+.homePage {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.header {
+    height: 12%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.logo {
+    height: 43px;
+    width: 227px;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.homePageBanner {
+    width: 100%;
+    height: 390px;
+    position: relative;
+    background: url(../images/homePageBanner.png) no-repeat center center;
+    background-size: contain;
+}
+
+.homePageBottomItem {
+    position: absolute;
+    display: block;
+    height: 100%;
+    top: 0;
+}
+
+.btnWhyCleaner {
+    width: 125px;
+    left: 136px;
+    background: url(../images/whyCleaner.png) no-repeat center center;
+    background-size: contain;
+}
+
+.homePageBottom {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    left: 0;
+    bottom: 50px;
+}
+
+.btnWhyBlueAir {
+    width: 106px;
+    left: 459px;
+    background: url(../images/whyBlueAir.png) no-repeat center;
+    background-size: contain;
+}
+
+.btnWhichOne {
+    width: 141px;
+    left: 748px;
+    background: url(../images/whichOne.png) no-repeat center;
+    background-size: contain;
+}
+/* end homePage style*/

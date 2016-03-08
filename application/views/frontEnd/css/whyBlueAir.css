@@ -1,0 +1,779 @@
+
+.whyBlueAirContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.slickContainer {
+    width: 1024px;
+    height: 768px;
+    max-width: 1024px;
+    max-height: 768px;
+    position: relative;
+    background-color: white;
+    top: 0;
+    left: 0;
+}
+
+.ourBrand {
+    background: url(../images/whyBlueAir/ourBrand.png) no-repeat center center;
+    background-size: 100%;
+}
+
+.ourBrandlogo {
+    width: 223px;
+    height: 42px;
+    position: absolute;
+    top: 70px;
+    right: 63px;
+}
+
+.ourBrandText {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 91px;
+    left: 153px;
+}
+
+
+
+.ourBrandContent {
+    margin-top: 12px;
+    line-height: 22px;
+}
+
+.ourBrandDig {
+    width: 100%;
+    height: 190px;
+    color: white;
+    position: absolute;
+    top: 60%;
+    left: 0;
+    background-color: rgba(0, 125, 165, 0.8);        
+}
+
+.ourBrandContentWrapper {
+    height: 97px;
+    position: absolute;
+    top: 43px;
+}
+
+.ourBrandContentleft {
+    width: 256px;
+    left: 57px;
+}
+
+.ourBrandContentTitle {
+    font-weight: 100;
+    font-size: 60px; 
+    line-height: 60px;
+    margin-bottom: 10px;
+}
+
+.purBrandContentRight .ourBrandContentTitle{
+    text-indent: 80px;
+}
+
+.purBrandContentMid .ourBrandContentTitle {
+    text-indent: 110px;
+}
+
+.ourBrandContentleft .ourBrandContentTitle {
+    text-indent: 80px;
+}
+
+.purBrandContentMid {
+    width: 311px;
+    left: 355px;
+}
+
+.purBrandContentRight {
+    width: 265px;
+    left: 710px;
+}
+
+.ourBrand .footnote {
+    color: white;
+    right: 36px;
+    bottom: 6%;
+}
+
+.HEPAlogo {
+    width: 223px;
+    height: 42px;
+    position: absolute;
+    top: 10%;
+    left: 71px;
+}
+
+.HEPAtext {
+    width: 357px;
+    height: 300px;
+    position: absolute;
+    top: 20%;
+    left: 77px;
+}
+
+.HEPAContent {
+    margin-top: 12px;
+    line-height: 22px;
+}
+
+.HEPAImg {
+    width: 506px;
+    height: 214px;
+    position: absolute;
+    top: 14%;
+    right: 35px;
+}
+
+.HEPANavWrapper {
+    width: 100%;
+    height: 51%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url(../images/whyBlueAir/hepaBottomBg.png) no-repeat top center;
+    background-size: 100%;
+}
+
+
+
+
+
+.HEPANavImg {
+    width: 160px;
+    height: 160px;
+    display: block;
+    margin: 0 auto;
+}
+
+.HEPANavItemWrapper {
+    width: 183px;
+    height: 240px;
+    float: left;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.HEPANavText {
+    width: 183px;
+    height: 70px;
+    color: white;
+    margin-top: 10px;
+}
+
+
+.HEPANavItemWrapper1 {
+    margin-left: 111px;
+}
+
+
+
+
+
+
+
+.serveBanner {
+    width: 100%;
+    height: 54.82%;
+    background-color: #f6f6f6;
+    left: 0;
+    top: 0;
+    position: absolute;
+    overflow: hidden;
+}
+
+.serveLogo {
+    width: 223px;
+    height: 42px;
+    top: 4.7%;
+    left: 191px;
+    position: absolute;
+}
+
+.serveTitle {
+    width: 35.9vh;
+    height: 35.9vh;
+    border-radius: 100%;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 24.82%;
+    left: 197px;
+}
+
+.serveTitleTop {
+    margin-top: 25%;
+}
+
+.serveTitleBottom {
+    width: 150px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.serveMan {
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 166px;
+}
+
+.serveContentContainer {
+    width: 100%;
+    height: 38.67%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.serveItemContainer {
+    width: 155px;
+    margin: 10px 20px 0;
+    float: left;
+}
+
+.serveItemContainer:first-child {
+    margin-left: 44px;
+}
+
+.serveIconWrapper {
+    height: 70px;
+    width: 100%;
+}
+
+.serveIcon {
+    
+}
+
+.serveIcon1 {
+    width: 56px;
+    height: 64px;
+    margin: 0 auto;
+    margin-top: -5px;
+}
+
+.serveContent {
+    margin: 0 auto;
+    margin-top: 3px;
+}
+
+.serveIcon2 {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto;
+}
+
+.serveIcon3 {
+    width: 60px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.serveIcon4 {
+    width: 60px;
+    height: 52.5px;
+    margin: 0 auto;
+}
+
+.serveIcon5 {
+    width: 58.7px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.serveIconWrapper1 {
+    height: 75px;
+}
+
+.honorLogo {
+    width: 223px;
+    height: 42px;
+    position: absolute;
+    top: 70px;
+    left: 59px;
+}
+
+.honorTitle {
+    position: absolute;
+    top: 147px;
+    left: 64px;
+}
+
+.honorNavContainer {
+    position: absolute;
+    left: 64px;
+    top: 221px;
+}
+
+.honorNav {
+    margin-right: 38px;
+    cursor: pointer;
+    color: #909090;
+}
+
+.honorNav.actived {
+    color: #353535;
+}
+
+.honorContentContainer {
+    width: 900px;
+    height: 377px;
+    position: absolute;
+    left: 64px;
+    bottom: 55px;
+    display: none;
+}
+.honorContentContainer.actived {
+    display: block;
+}
+
+.honorImg {
+    float: left;
+    width: 266px;
+    height: 183px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.honorImgBig {
+    width: 350px;
+    height: 377px;
+}
+
+.honorImgSml {
+    width: 120px;
+    height: 120px;
+    float: left;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+#honorReportContent {
+    width: 1000px;
+}
+
+.efficientContainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/whyBlueAir/efficientBg.jpg) no-repeat center center;
+    background-size: 100%;
+    visibility: hidden;
+}
+
+.bacterialWrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/whyBlueAir/bacterials.png) no-repeat center center;
+    background-size: 100%;
+}
+
+.bacterialText {
+    color: white;
+    font-size: 24px;
+    line-height: 43px;
+    text-align: center;
+    position: absolute;
+    top: 21%;
+    left: 0;
+    width: 100%;
+}
+
+.darkAirWrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../images/whyBlueAir/efficientDarkBg.jpg) no-repeat center center;
+    background-size: 100%;
+}
+
+.openBlueairBtn {
+    width: 99px;
+    height: 99px;
+    position: absolute;
+    top: 65%;
+    left: 463px;
+    background: url(../images/whyBlueAir/openBlueair.png) no-repeat center center;
+    background-size: contain;
+}
+
+.efficientBottomText {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+
+
+.efficientWrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    animation-duration: 3s;
+}
+
+.efficientWrapper.actived {
+    visibility: visible;
+}
+
+.efficientLightText {
+    width: 100%;
+    height: 81px;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    text-align: center;
+}
+
+.efficientLightImg {
+    width: 482px;
+    height: 164px;
+    position: absolute;
+    top: 30%;
+    left: 271px;
+}
+
+.efficientLightTextBottom {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 55%;
+    text-align: center;
+}
+
+.btnWhyEfficient {
+    width: 142px;
+    height: 36px;
+    position: absolute;
+    top: 65%;
+    left: 441px;
+    border-radius: 40px;
+    background-color: #A1D792;
+    text-align: center;
+    font-size: 14px;
+    line-height: 36px;
+    color: white;
+}
+
+.efficientMachine {
+    width: 600px;
+    height: 180px;
+    position: absolute;
+    bottom: 0;
+    left: 212px;
+}
+
+.whyEfficient {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+}
+
+.whyEfficientTitle {
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    text-align: center;
+    top: 15%;
+}
+
+.whyEfficientImgLeft {
+    width: 375px;
+    left: 95px;
+}
+
+.whyEfficientImgRight {
+    left: 497px;
+    width: 354px;
+}
+
+.whyEfficientText {
+    position: absolute;
+    width: 291px;
+    height: 50px;
+    top: 78%;
+    font-size: 12px;
+    line-height: 21px;
+}
+
+.whyEfficientTextLeft {
+    left: 171px;
+}
+
+.whyEfficientTextRight {
+    left: 581px;
+}
+
+.whyEfficientImg {
+    position: absolute;
+    top: 35%;
+    height: 291px;
+}
+
+.mute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+
+.muteItem {
+    width: 253px;
+    height: 100%;
+    float: left;
+    margin-right: 4px;
+    background: no-repeat center center;
+    background-size: 100%;
+    text-align: center;
+}
+
+.muteItem:last-child {
+    margin-right: 0;
+}
+
+.muteItem1 {
+    background-image: url(../images/whyBlueAir/muteItem1.png);
+}
+
+.muteItem2 {
+    background-image: url(../images/whyBlueAir/muteItem2.png);
+}
+
+.muteItem3 {
+    background-image: url(../images/whyBlueAir/muteItem3.png);
+}
+
+.muteItem4 {
+    background-image: url(../images/whyBlueAir/muteItem4.png);
+}
+
+.muteItemImg {
+    margin-top: 90%;
+}
+
+.muteText {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    line-height: 42px;
+}
+
+
+.energy {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    background-color: white;
+}
+
+.energyTitle {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.energyCicle {
+    width: 280px;
+    height: 280px;
+    margin-bottom: 30px;
+    border-radius: 100%;
+    line-height: 280px;
+    text-align: center;
+    opacity: 0.8;
+    z-index: -1;
+    background-color: #007dc5;
+    cursor: pointer;
+}
+
+.energyImg {
+    vertical-align: middle;
+}
+
+.energyItem {
+    width: 280px;
+    height: 600px;
+    float: left;
+    margin-left: -61px;
+    margin-top: 8%;
+}
+
+.firstEnergyItem {
+    margin-left: 40px;
+}
+
+.energyQusTitle {
+    font-size: 36px;
+    line-height: 58px;
+    color: #007dc5;
+    font-weight: 800;
+    text-align: center;
+}
+
+.energyAns {
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    opacity: 0;
+}
+
+.energyContent {
+    width: 190px;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 18px;
+    opacity: 0;
+}
+
+.energyHonorImg {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.energyHonor {
+    width: 190px;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0;
+}
+
+.byproduct {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+}
+
+.byproductItem {
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+
+
+.byproductLeftText {
+    width: 367px;
+    height: 125px;
+    position: absolute;
+    left: 82px;
+    top: 12.63%;
+    color: white;
+}
+
+.byproductLeftImg {
+    position: absolute;
+    right: 0;
+    top: 33.6%;
+}
+
+.byproductBtn {
+    position: absolute;
+    height: 36px;
+    font-size: 14px;
+    line-height: 36px;
+    border: 1px solid #007dc5;
+    color: #007dc5;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 40px;
+}
+
+#byproductLearnMore {
+    top: 86%;
+    left: 75px;
+}
+
+.byproductRightText {
+    width: 344px;
+    height: 155px;
+    position: absolute;
+    top: 12.63%;
+    left: 110px;
+}
+
+.byproductRightImg {
+    position: absolute;
+    left: 0;
+    top: 25.6%;
+}
+
+.byproductImg1 {
+    width: 121px;
+    height: 121px;
+    position: absolute;
+    top: 50.1%;
+    right: 212px;
+}
+
+.byproductText1 {
+    width: 133px;
+    height: 84px;
+    position: absolute;
+    top: 52.47%;
+    right: 52px;
+}
+
+.byproductImg2 {
+    width: 131px;
+    height: 23px;
+    position: absolute;
+    top: 73.58%;
+    right: 209px;
+}
+
+.byproductText2 {
+    width: 143px;
+    height: 110px;
+    position: absolute;
+    top: 73.57%;
+    right: 50px;
+}
+
+#byproductCheckIdent {
+    top: 82%;
+    right: 216px;
+    width: 120px;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+
