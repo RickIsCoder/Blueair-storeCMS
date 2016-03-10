@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0" />
-    
+
     <title>WhyBlueAir</title>
-    
+
     <link rel="stylesheet" href="css/resetStyle.css">
-    
-    
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/whyBlueAir.css">
-    
+
 </head>
+
 <body>
     <div class="mainContainer">
-        <div class="whyBlueAirContainer animated inShow" id="whyBlueAirContainer">
-            <div class="navBtn" id="navBtn"><img src="./images/headNav.png" alt="nav"></div>
+        <div class="whyBlueAirContainer" id="whyBlueAirContainer">
+            <!--  nav  -->
+            <div class="navBtn" id="navBtn"></div>
             <div class="nav" id="nav">
                 <img src="./images/logo.png" alt="logo" class="navLogo">
-                <ul class="navUl">
+                <ul class="navUl font18">
                     <li class="navLi"><img class="navImg" src="./images/homeIcon.png" alt="home"><a class="navLink" href="./index.html">首页</a></li>
-                    <li class="navLi"><img class="navImg" src="./images/cleanerIcon.png" alt="img"><a class="navLink" href="">为什么需要空气净化器</a></li>
+                    <li class="navLi"><img class="navImg" src="./images/cleanerIcon.png" alt="img"><a class="navLink" href="./whyCleaner.html">为什么需要空气净化器</a></li>
                     <li class="navLi"><img class="navImg" src="./images/whyBlueairIcon.png" alt="img"><a class="navLink" href="./whyBlueAir.html">为什么选择Blueair</a></li>
-                    <li class="navLi"><img class="navImg" src="./images/whichoneIcon.png" alt="img"><a class="navLink" href="">怎样的空气净化器适合您</a></li>
+                    <li class="navLi"><img class="navImg" src="./images/whichoneIcon.png" alt="img"><a class="navLink" href="./whichOne.html">怎样的空气净化器适合您</a></li>
                 </ul>
 
-                <div class="button gotoBackEndBtn colorBlue">进入后台管理</div>
+                <div class="button gotoBackEndBtn colorBlue font14">进入后台管理</div>
+
+                <div class="navCloseBtn button" id="navCloseBtn"></div>
             </div>
-            <div class="navMask" id="navMask"></div>
+            <!--  end nav  -->
+            
             <div id="whyBlueAirSlide">
                 <div class="slickContainer ourBrand">
                     <img src="./images/logo.png" alt="logo" class="ourBrandlogo">
@@ -37,7 +43,7 @@
                         <p class="ourBrandContent contentSml colorDarkGray">Blueair品牌1996年创立于瑞典首都斯德哥尔摩，HEPASilent® 高效静音专利技术使之成为全球最强劲的空气净化系统，并在技术创新、高品质、高效能等方面迅速赢得业内认可，确立了在国际市场上高端品牌的形象及地位。</p>
                     </div>
                     <div class="ourBrandDig bgBlue">
-                        <div class="ourBrandContentWrapper ourBrandContentleft">
+                        <div class="ourBrandContentWrapper font18 ourBrandContentleft">
                             <p class="ourBrandContentTitle fontFamilyEn">20<span class="contentMid">年</span></p>
                             <p class="contentMid">空气净化系统生产、研发历史。</p>
                         </div>
@@ -56,7 +62,7 @@
                     <img src="./images/logo.png" alt="logo" class="HEPAlogo">
                     <div class="HEPAtext">
                         <p class="titleMid colorBlue">专利技术 <span class="fontFamilyEn">HEPASilent</span></p>
-                        <p class="HEPAContent contentSml colorDarkGray">结合电子吸附和滤网过滤的多层渐进式过滤技术，可清除0.1微米级对肺脏有害的可吸入颗粒物，及过敏原、香烟烟雾、细菌及激光打印机、传真机所释放的微粒等空气中99.7%的污染源。</p>  
+                        <p class="HEPAContent contentSml colorDarkGray">结合电子吸附和滤网过滤的多层渐进式过滤技术，可清除0.1微米级对肺脏有害的可吸入颗粒物，及过敏原、香烟烟雾、细菌及激光打印机、传真机所释放的微粒等空气中99.7%的污染源。</p>
                     </div>
                     <img src="./images/whyBlueAir/hepaimg.png" alt="HEPASilent" class="HEPAImg">
                     <div class="HEPANavWrapper">
@@ -82,8 +88,8 @@
                     <div class="serveBanner">
                         <img src="./images/logo.png" alt="logo" class="serveLogo">
                         <div class="serveTitle bgBlue">
-                            <p class="fontSize32 serveTitleTop">优质的服务</p>
-                            <p class="fontSize14 serveTitleBottom">从售前、售中到售后，Blueair始终为您提供优质周到的服务！</p>
+                            <p class="font32 serveTitleTop">优质的服务</p>
+                            <p class="font14 serveTitleBottom">从售前、售中到售后，Blueair始终为您提供优质周到的服务！</p>
                         </div>
                         <img src="./images/whyBlueAir/serverMan.png" alt="img" class="serveMan">
                     </div>
@@ -117,7 +123,7 @@
                 </div>
                 <div class="slickContainer">
                     <img src="./images/logo.png" alt="logo" class="honorLogo">
-                    <p class="titleBig colorBlue honorTitle">荣誉和故事</p>
+                    <p class="font32 colorBlue honorTitle">荣誉和故事</p>
                     <div class="honorNavContainer">
                         <span class="honorNav contentMid actived" id="honorIdenty">奖项和认证</span>
                         <span class="honorNav contentMid" id="honorReport">荣誉和报道</span>
@@ -145,39 +151,44 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
         <!--  end WhyBlueAir  -->
-        
+
         <!--  Efficient  -->
-        <div class="efficientContainer animated" id="efficient">
-            <div class="navBtn" id="efficientBack"><img src="./images/backIcon.png" alt="nav"></div>
+        <div class="efficientContainer" id="efficient">
+<!--            <div class="navBtn" id="efficientBack"><img src="./images/backIcon.png" alt="nav"></div>-->
             <div class="efficientWrapper animated" id="efficientDark">
                 <div class="darkAirWrapper"></div>
                 <div class="bacterialWrapper"></div>
-                <p class="bacterialText">重度污染的室内，<br> PM2.5浓度和细菌浓度分别为400µg/m3和20000cfu/m3。</p>
+                <p class="bacterialText">重度污染的室内，
+                    <br> PM2.5浓度和细菌浓度分别为400µg/m3和20000cfu/m3。</p>
                 <div class="openBlueairBtn button" id="openBlueAir"></div>
-                <p class="contentSml efficientBottomText">点击开启Blueair净化器<br>让Blueair带给您耳目一新的改变</p>
+                <p class="contentSml efficientBottomText">点击开启Blueair净化器
+                    <br>让Blueair带给您耳目一新的改变</p>
             </div>
             <div class="efficientWrapper animated" id="efficientLight">
-                <p class="efficientLightText colorDarkGray titleMid">打开Blueair净化器仅一小时 <br> PM2.5和细菌浓度下降了99%</p>
+                <p class="efficientLightText colorDarkGray titleMid">打开Blueair净化器仅一小时
+                    <br> PM2.5和细菌浓度下降了99%</p>
                 <img src="./images/whyBlueAir/efiicientLightImg.png" alt="img" class="efficientLightImg">
-                <p class="efficientLightTextBottom colorDarkGray contentSml">用一个人往返北欧的机票钱，购入一台Blueair，您就可以吧北欧的空气<br>永久地带回家中，让您和家人一起呼吸到全球最好的空气。</p>
+                <p class="efficientLightTextBottom colorDarkGray contentSml">用一个人往返北欧的机票钱，购入一台Blueair，您就可以吧北欧的空气
+                    <br>永久地带回家中，让您和家人一起呼吸到全球最好的空气。</p>
                 <div class="button btnWhyEfficient" id="btnWhyEfficient">为什么这么高效?</div>
                 <img src="./images/whyBlueAir/machine.png" alt="machine" class="efficientMachine">
             </div>
         </div>
-        
+
         <div class="whyEfficient animated" id="whyEfficient">
             <div class="navBtn" id="whyEfficientBack"><img src="./images/backIcon.png" alt="back"></div>
-            <p class="whyEfficientTitle titleMid colorDarkGray">Blueair何以达到如此高的净化效率<br>——归功于<span class="colorBlue">HEPASilent</span>的创新性净化技术</p>
+            <p class="whyEfficientTitle titleMid colorDarkGray">Blueair何以达到如此高的净化效率
+                <br>——归功于<span class="colorBlue">HEPASilent</span>的创新性净化技术</p>
             <img src="./images/whyBlueAir/efficientChartLeft.png" alt="Chart" class="whyEfficientImg whyEfficientImgLeft">
             <img src="./images/whyBlueAir/efficientChartRight.png" alt="Chart" class="whyEfficientImg whyEfficientImgRight">
             <p class="whyEfficientText whyEfficientTextLeft">采用单一过滤技术，而纯静电过滤和纯机械过滤都存在局限性。纯静电过滤遇到比较大的颗粒物效果就减弱了，而纯机械过滤在颗粒物较小时也不理想。</p>
             <p class="whyEfficientText whyEfficientTextRight">HEPASilent®专利技术将几种过滤机制进行了革命性的结合和创新，任何尺寸的颗粒都不会放过，对难以捕捉的颗粒也能将其高效过滤。</p>
         </div>
         <!--  end Efficient  -->
-        
+
         <!--  Mute  -->
         <div class="mute animated" id="mute">
             <div class="navBtn" id="muteBack"><img src="./images/backIcon.png" alt="back"></div>
@@ -199,7 +210,7 @@
             </div>
         </div>
         <!--  end Mute  -->
-        
+
         <!--  Energy Saving  -->
         <div class="energy animated" id="energy">
             <div class="navBtn" id="energyBack"><img src="./images/backIcon.png" alt="back"></div>
@@ -240,10 +251,10 @@
                 <img src="./images/whyBlueAir/right.png" alt="right" class="energyAns animated" id="energy4Img">
                 <p class="energyContent animated colorLightGray" id="energy4Content">Blueair的HEPASilent过滤技术可有效降低风压，最低功率仅10W，24小时开机能耗低于一个节能灯泡。</p>
                 <div class="energyHonor animated colorLightGray" id="energyHonor"><img src="./images/whyBlueAir/honorImg2.png" alt="Honor" class="energyHonorImg">荣获美国能源之星认证</div>
-            </div>            
+            </div>
         </div>
         <!--  end Energy Saving -->
-        
+
         <!--  By-product  -->
         <div class="byproduct animated" id="byproduct">
             <div class="navBtn" id="byproductBack"><img src="./images/backIcon.png" alt="back"></div>
@@ -265,10 +276,11 @@
         </div>
         <!--  end By-product  -->
     </div>
-    
-    
+
+
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/action.js"></script>
 </body>
+
 </html>
