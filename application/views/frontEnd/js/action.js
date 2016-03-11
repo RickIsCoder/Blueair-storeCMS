@@ -22,6 +22,26 @@ $(function () {
             $('#efficient').removeClass("inShow");
             resetNavBtn();
             break;
+        case "mute":
+            whyBAShow();
+            $('#mute').removeClass("inShow");
+            resetNavBtn();
+            break;
+        case "energy":
+            whyBAShow();
+            $('#energy').removeClass("inShow");
+            resetNavBtn();
+            break;
+        case "byproduct":
+            whyBAShow();
+            $('#byproduct').removeClass("inShow");
+            resetNavBtn();
+            break;
+        case "whyEfficient":
+            $("#efficientLight").removeClass("dismiss");
+            $("#whyEfficient").removeClass("inShow");
+            resetNavBtn("efficient");
+            break;
         default:
             $('#nav').addClass('actived');
             $("#navCloseBtn").addClass('actived');
@@ -35,28 +55,6 @@ $(function () {
     // end nav
 
     // whyBlueAir
-    function whyBADismiss() {
-        $("#whyBlueAirContainer").addClass("dismiss");
-    }
-
-    function whyBAShow() {
-        $("#whyBlueAirContainer").removeClass("dismiss");
-    }
-
-    function changeNavBtn() {
-        $("#navBtn").addClass("downArrow").data("state", "efficient");
-    }
-    
-    function resetNavBtn() {
-        $("#navBtn").removeClass("downArrow").data("state", "normal");
-    }
-
-    $('#jumpEfficient').on('click', function (event) {
-        whyBADismiss();
-        changeNavBtn();
-        $('#efficient').addClass("inShow");
-    });
-
     $('#honorIdenty').on('click', function (event) {
         $('.honorContentContainer').removeClass('actived');
         $('#honorIdentyContent').addClass('actived');
@@ -70,83 +68,94 @@ $(function () {
         $('.honorNav').removeClass('actived');
         $(event.currentTarget).addClass('actived');
     });
+    // jump
+    function whyBADismiss() {
+        $("#whyBlueAirContainer").addClass("dismiss");
+    }
 
+    function whyBAShow() {
+        $("#whyBlueAirContainer").removeClass("dismiss");
+    }
 
+    function changeNavBtn(stateStr) {
+        if (stateStr == "whyEfficient") {
+            $("#navBtn").removeClass("upArrow").addClass("leftArrow");
+        } else {
+            $("#navBtn").addClass("upArrow");
+        }
+        $("#navBtn").data("state", stateStr);
+    }
 
-    $('#efficientBack').on('click', function (event) {
-        $('#whyBlueAirContainer').addClass("inShow fadeIn").removeClass("fadeOut");
-        $('#efficient').addClass("fadeOut").removeClass("inShow");
-        $('#efficientDark').removeClass('actievd');
-        $('#efficientLight').removeClass('actived fadeOut');
+    function resetNavBtn(stateStr) {
+        if (stateStr) {
+            $("#navBtn").removeClass("leftArrow").addClass("upArrow");
+        } else {
+            stateStr = "normal"; 
+            $("#navBtn").removeClass("upArrow");
+        }
+        $("#navBtn").data("state", stateStr);
+    }
+
+    $('#jumpEfficient').on('click', function (event) {
+        whyBADismiss();
+        changeNavBtn("efficient");
+        $('#efficient').addClass("inShow");
     });
 
     $('#jumpMute').on('click', function () {
-        $('#whyBlueAirContainer').removeClass("inShow fadeIn").addClass("fadeOut");
-        $('#mute').addClass("fadeIn inShow").removeClass("fadeOut");
-    });
-
-    $('#muteBack').on('click', function () {
-        $('#whyBlueAirContainer').addClass("inShow fadeIn").removeClass("fadeOut");
-        $('#mute').addClass("fadeOut").removeClass("inShow");
+        whyBADismiss();
+        changeNavBtn("mute");
+        $('#mute').addClass("inShow");
     });
 
     $('#jumpEnergy').on('click', function () {
-        $('#whyBlueAirContainer').removeClass("inShow fadeIn").addClass("fadeOut");
-        $('#energy').addClass("fadeIn inShow").removeClass("fadeOut");
-    });
-
-    $('#energyBack').on('click', function () {
-        $('#whyBlueAirContainer').addClass("inShow fadeIn").removeClass("fadeOut");
-        $('#energy').addClass("fadeOut").removeClass("inShow");
+        whyBADismiss();
+        changeNavBtn("energy");
+        $('#energy').addClass("inShow");
     });
 
     $('#jumpByproduct').on('click', function () {
-        $('#whyBlueAirContainer').removeClass("inShow fadeIn").addClass("fadeOut");
-        $('#byproduct').addClass("fadeIn inShow").removeClass("fadeOut");
+        whyBADismiss();
+        changeNavBtn("byproduct");
+        $('#byproduct').addClass("inShow");
     });
-
-    $('#byproductBack').on('click', function () {
-        $('#whyBlueAirContainer').addClass("inShow fadeIn").removeClass("fadeOut");
-        $('#byproduct').addClass("fadeOut").removeClass("inShow");
-    });
+    // end jump
 
     $('#openBlueAir').on('click', function (event) {
-        $('#efficientDark').addClass('fadeOut');
-        $('#efficientLight').addClass('fadeIn actived');
+        $('#efficientDark').addClass('dismiss');
+        setTimeout(function () {
+            $('#efficientDark').addClass('disable');
+        }, 1000);
     });
-
 
     $('#btnWhyEfficient').on('click', function (event) {
-        $('#efficient').addClass('slideOutLeft');
-        $('#whyEfficient').addClass('slideInRight').addClass('inShow');
+        $('#efficientLight').addClass('dismiss');
+        $('#whyEfficient').addClass('inShow');
+        changeNavBtn("whyEfficient");
     });
 
-    $('#whyEfficientBack').on('click', function (event) {
-        $('#whyEfficient').addClass('slideOutRight').removeClass("slideInRight");
-        $('#efficient').addClass('slideInLeft').removeClass('slideOutLeft');
-    });
 
     $('#energyBtn1').on('click', function () {
-        $('#energy1Img').addClass("fadeIn");
-        $('#energy1Content').addClass("fadeIn aniDelay");
+        $('#energy1Img').addClass("inShow");
+        $('#energy1Content').addClass("inShow");
     });
 
     $('#energyBtn2').on('click', function () {
-        $('#energy2Img').addClass("fadeIn");
-        $('#energy2Content').addClass("fadeIn aniDelay");
+        $('#energy2Img').addClass("inShow");
+        $('#energy2Content').addClass("inShow");
     });
 
     $('#energyBtn3').on('click', function () {
-        $('#energy3Img').addClass("fadeIn");
-        $('#energy3Content').addClass("fadeIn aniDelay");
+        $('#energy3Img').addClass("inShow");
+        $('#energy3Content').addClass("inShow");
     });
 
     $('#energyBtn4').on('click', function () {
-        $('#energy4Img').addClass("fadeIn");
-        $('#energy4Content').addClass("fadeIn aniDelay");
-        $('#energyHonor').addClass("fadeIn aniDelay");
+        $('#energy4Img').addClass("inShow");
+        $('#energy4Content').addClass("inShow");
+        $('#energyHonor').addClass("inShow");
     });
-
     // end whyBlueAir
+    
 
 });
