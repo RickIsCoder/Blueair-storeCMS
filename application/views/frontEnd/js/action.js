@@ -90,7 +90,7 @@ $(function () {
         if (stateStr) {
             $("#navBtn").removeClass("leftArrow").addClass("upArrow");
         } else {
-            stateStr = "normal"; 
+            stateStr = "normal";
             $("#navBtn").removeClass("upArrow");
         }
         $("#navBtn").data("state", stateStr);
@@ -156,6 +156,14 @@ $(function () {
         $('#energyHonor').addClass("inShow");
     });
     // end whyBlueAir
-    
+
+
+
+    // why need cleaner
+    $.stellar({
+        horizontalScrolling: false,
+        responsive: true
+    });
+    // end why need cleaner
 
 });

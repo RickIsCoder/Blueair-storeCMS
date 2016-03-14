@@ -16,13 +16,27 @@ a:visited {
     color: #007dc5;
 }
 
+p {
+    line-height: 1.6;
+}
+
 .disable {
     display: none;
+}
+
+.clearBoth {
+    clear: both;
 }
 
 .fontFamilyEn {
     font-family: 'Helvetica Neue';
 }
+
+.fBold {
+   font-weight: 600; 
+}
+
+
 
 .mainContainer {
     width: 100%;
@@ -78,6 +92,10 @@ a:visited {
     font-size: 64px;
 }
 
+.font42 {
+    font-size: 42px;
+}
+
 .font32 {
     font-size: 32px;
 }
@@ -94,6 +112,10 @@ a:visited {
     font-size: 24px;
 }
 
+.font12 {
+    font-size: 12px;
+}
+
 .colorDarkGray {
     color: #353535;
 }
@@ -102,12 +124,20 @@ a:visited {
     color: #909090;
 }
 
+.color9bGray {
+    color: #9b9b9b;
+}
+
 .colorBlue {
     color: #007dc5;
 }
 
 .bgDarkGray {
     background-color: #353535;
+}
+
+.bgLightGray {
+    background-color: #f6f6f6;
 }
 
 .bgBlue {
