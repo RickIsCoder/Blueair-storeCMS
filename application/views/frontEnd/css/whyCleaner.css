@@ -1,30 +1,33 @@
-.whyCleaner {
-    overflow-y: auto;
+.paraWrap {
+    position: relative;
 }
 
-.part1Title {
+.wncParaBgImg {
+    width: 100%;
+    height: 768px;
+}
+
+.paraItem {
     width: 100%;
     height: 768px;
     position: relative;
-    background: url(../images/whyCleaner/1_1.png) no-repeat top center;
-    background-size: 100%;
-    background-attachment: fixed;
+    background: transparent;
 }
 
-.whyTitleLH {
-    line-height: 1;
+.partTitle {
+    position: absolute;
+    top: 0;
 }
 
-.part1TitleWrapper {
+.wncPartTitle {
+    width: 334px;
+    height: 334px;
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     left: calc(50% - 167px);
-    border: 20px solid white;
-    color: white;
-    padding: 0 20px 20px;
 }
 
 .partSection {
@@ -101,7 +104,7 @@
 }
 
 .whyArrowImg {
-    margin-top: 25px;
+    margin-top: 40px;
 }
 
 .whyCleanerPartTitle {
@@ -121,7 +124,86 @@
 .whyConMartop {
     margin-top: 22px
 }
+
 .whyPepTitle {
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+.shortLineWrap {
+    margin-top: 40px;
+    margin-bottom: 44px;
+}
+
+.shortLine {
+    width: 80px;
+    height: 5px;
+    background-color: #4a4a4a;
+    margin: 0 auto;
+}
+
+.part3SpTime {
+    margin-top: 40px;
+    line-height: 2.5
+}
+
+.wnc3SecTitle1 {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.wnc3SecTitle2 {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.part3TitleIcon {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 80px;
+    font-size: 42px;
+    color: white;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.part3S1ConLFWrap {
+    float: left;
+    width: 65%;
+}
+
+.part3S1ConRTWrap {
+    float: right;
+    margin-top: -40px;
+}
+
+.whatIsCleanBtnWrap {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.whatIsCleanBtn {
+    display: inline-block;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 40px;
+    font-size: 14px;
+    color: white;
+}
+
+.polutionSrcLi > li {
+    float: left;
+    text-align: center;
+    margin-right: 22px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.polutionSrcLi img {
+    width: 64px;
 }

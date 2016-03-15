@@ -160,9 +160,43 @@ $(function () {
 
 
     // why need cleaner
-    $.stellar({
-        horizontalScrolling: false,
-        responsive: true
+    // part1
+    $('#wncPart1Bg').parallax({
+        naturalWidth: 1200,
+        naturalHeight: 768
+    });
+
+    $('#wncPart1Title').parallax({
+        naturalWidth: 1200,
+        naturalHeight: 768,
+        zIndex: -99,
+        speed: 0.4
+    });
+    
+    // part2
+    $('#wncPart2Bg').parallax({
+        naturalWidth: 1200,
+        naturalHeight: 768
+    });
+    
+    $('#wncPart2Title').parallax({
+        naturalWidth: 1200,
+        naturalHeight: 768,
+        zIndex: -99,
+        speed: 0.4
+    });
+    
+    // part3
+    $('#wncPart3Bg').parallax({
+        naturalWidth: 1200,
+        naturalHeight: 768
+    });
+    
+    $('#wncPart3Title').parallax({
+        naturalWidth: 1200,
+        naturalHeight: 768,
+        zIndex: -99,
+        speed: 0.4
     });
     // end why need cleaner
 
