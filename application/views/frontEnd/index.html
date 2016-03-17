@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <!--TODO: keywords-->
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0" />
 
     <title>BlueAir</title>
@@ -15,34 +14,35 @@
 </head>
 
 <body>
-    <div class="mainContainer">
+    <div class="main-container">
+       
         <!--  nav  -->
-        <div class="navBtn" id="navBtn"></div>
-        <div class="nav" id="nav">
+        <div class="navbtn" id="navBtn"></div>
+        <nav id="nav">
             <img src="./images/logo.png" alt="logo" class="navLogo">
-            <ul class="navUl font18">
-                <li class="navLi"><img class="navImg" src="./images/homeIcon.png" alt="home"><a href="./index.html">首页</a></li>
-                <li class="navLi"><img class="navImg" src="./images/cleanerIcon.png" alt="img"><a href="./whyCleaner.html">为什么需要空气净化器</a></li>
-                <li class="navLi"><img class="navImg" src="./images/whyBlueairIcon.png" alt="img"><a href="./whyBlueAir.html">为什么选择Blueair</a></li>
-                <li class="navLi"><img class="navImg" src="./images/whichoneIcon.png" alt="img"><a href="./whichOne.html">怎样的空气净化器适合您</a></li>
+            <ul class="nav">
+                <li><img class="navimg" src="./images/homeIcon.png" alt="home"><a href="./index.html">首页</a></li>
+                <li><img class="navimg" src="./images/cleanerIcon.png" alt="img"><a href="./whyCleaner.html">为什么需要空气净化器</a></li>
+                <li><img class="navimg" src="./images/whyBlueairIcon.png" alt="img"><a href="./whyBlueAir.html">为什么选择Blueair</a></li>
+                <li><img class="navimg" src="./images/whichoneIcon.png" alt="img"><a href="./whichOne.html">怎样的空气净化器适合您</a></li>
             </ul>
 
-            <div class="button gotoBackEndBtn font14 colorBlue">进入后台管理</div>
+            <button class="jumpbackend">进入后台管理</button>
 
-            <div class="navCloseBtn button" id="navCloseBtn"></div>
-        </div>
+            <button class="close" id="navCloseBtn"></button>
+        </nav>
         <!--  end nav  -->
 
         <!--  homePage  -->
-        <div class="homePage">
-            <div class="header">
-                <img src="images/logo.png" alt="logo" class="logo">
+        <div class="container">
+            <div class="hp-header">
+                <img src="images/logo.png" alt="logo" class="hp-logo">
             </div>
-            <div class="homePageBanner"></div>
-            <div class="homePageBottom">
-                <a class="button homePageBottomItem btnWhyCleaner" href="./whyCleaner.html"></a>
-                <a class="button homePageBottomItem btnWhyBlueAir" href="./whyBlueAir.html"></a>
-                <a class="button homePageBottomItem btnWhichOne" href="./whichOne.html"></a>
+            <div class="hp-banner"></div>
+            <div class="hp-footer">
+                <a role="button" class="icon-wnc" href="./whyCleaner.html"></a>
+                <a role="button" class="icon-wba" href="./whyBlueAir.html"></a>
+                <a role="button" class="icon-which" href="./whichOne.html"></a>
             </div>
         </div>
         <!--  end homePage  -->

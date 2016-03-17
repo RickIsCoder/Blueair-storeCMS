@@ -5,6 +5,24 @@ body {
     width: 100%;
     height: 100%;
     font-family: 'Hiragino Sans GB';
+    font-size: 18px;
+    color: #353535;
+    line-height: 1.556;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0;
+}
+
+[role=button] {
+    cursor: pointer;
 }
 
 a,
@@ -14,9 +32,68 @@ a:visited {
     color: #007dc5;
 }
 
-p {
-    line-height: 1.6;
+h1 {
+    font-size: 32px;
 }
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 2.1;
+}
+
+b {
+    font-size: 42px;
+    font-weight: 600;
+}
+
+small {
+    font-size: 12px;
+}
+
+.subp {
+    font-size: 14px;
+}
+
+:before,
+:after {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+}
+
+.row {}
+
+.row:before,
+.row:after {
+    display: table;
+    content: " ";
+}
+
+.row:after {
+    clear: both;
+}
+
+.row .item {
+    display: inline-block;
+    text-align: center;
+}
+
+.col-4 {
+    width: 33.33%;
+    float: left;
+}
+
 
 .disable {
     display: none;
@@ -26,17 +103,33 @@ p {
     clear: both;
 }
 
-.fontFamilyEn {
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.en {
     font-family: 'Helvetica Neue';
 }
 
-.fBold {
-   font-weight: 600; 
+.explain {
+    font-size: 14px;
+    color: #909090;
+}
+
+.smlnote {
+    font-size: 14px;
 }
 
 
-
-.mainContainer {
+.main-container {
     width: 100%;
     height: 100%;
     max-width: 1024px;
@@ -51,40 +144,12 @@ p {
     transform: translateY(-50%);
 }
 
-.button {
-    cursor: pointer;
+.imgwrap > img {
+    width: 50%;
 }
 
-.navBtn {
-    cursor: pointer;
-    position: fixed;
-    width: 52px;
-    height: 52px;
-    z-index: 999;
-    background: url(../images/headNav.png) no-repeat center;
-    background-size: contain;
-    top: 0;
-    left: 0;
-    -webkit-transition: -webkit-transform 0.3s ease;
-    transition: -webkit-transform 0.3s ease;
-    transition: transform 0.3s ease;
-    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-}
 
-.navBtn.upArrow {
-    background-image: url(../images/backIcon.png);
-    -webkit-transform: rotateZ(90deg);
-    -ms-transform: rotateZ(90deg);
-    transform: rotateZ(90deg);
-}
 
-.navBtn.leftArrow {
-    background-image: url(../images/backIcon.png);
-}
-
-.font42 {
-    font-size: 42px;
-}
 
 .font32 {
     font-size: 32px;
@@ -92,10 +157,6 @@ p {
 
 .font14 {
     font-size: 14px;
-}
-
-.font18 {
-    font-size: 18px;
 }
 
 .font24 {
@@ -126,10 +187,6 @@ p {
     background-color: #353535;
 }
 
-.bgLightGray {
-    background-color: #f6f6f6;
-}
-
 .bgBlue {
     background-color: #007dc5;
 }
@@ -138,11 +195,7 @@ p {
     background-color: #80bfe3;
 }
 
-.footnote {
-    font-size: 10px;
-    line-height: 18px;
-    position: absolute;
-}
+
 
 
 /* slickJs button css */
@@ -176,7 +229,7 @@ p {
     color: transparent;
 }
 
-.nav {
+nav {
     position: fixed;
     top: 0;
     left: -431px;
@@ -190,11 +243,38 @@ p {
     overflow: hidden;
 }
 
-.nav.actived {
+nav.actived {
     left: 0;
 }
 
-.navCloseBtn {
+.navbtn {
+    cursor: pointer;
+    position: fixed;
+    width: 52px;
+    height: 52px;
+    z-index: 999;
+    background: url(../images/headNav.png) no-repeat center;
+    background-size: contain;
+    top: 0;
+    left: 0;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.navbtn.upArrow {
+    background-image: url(../images/backIcon.png);
+    -webkit-transform: rotateZ(90deg);
+    -ms-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+}
+
+.navbtn.leftArrow {
+    background-image: url(../images/backIcon.png);
+}
+
+nav .close {
     position: absolute;
     background: url(../images/navCloseBtn.png) no-repeat center center;
     background-size: contain;
@@ -209,7 +289,7 @@ p {
     transition: right 0.5s ease 0.5s, transform 0.5s ease 0.5s, -webkit-transform 0.5s ease 0.5s;
 }
 
-.navCloseBtn.actived {
+nav .close.actived {
     right: 20px;
     -webkit-transform: rotateZ(-360deg);
     -ms-transform: rotateZ(-360deg);
@@ -224,25 +304,25 @@ p {
     left: 48px;
 }
 
-.navUl {
+.nav {
     width: 320px;
     margin: 140px auto 0;
 }
 
-.navLi {
+.nav li {
     margin-top: 20px;
     margin-bottom: 20px;
     list-style: none;
 }
 
-.navImg {
+.navimg {
     vertical-align: middle;
     width: 35px;
     margin-right: 20px;
     margin-top: -5px;
 }
 
-.gotoBackEndBtn {
+.jumpbackend {
     width: 275px;
     height: 40px;
     line-height: 40px;
@@ -252,6 +332,8 @@ p {
     position: absolute;
     bottom: 5%;
     left: 50px;
+    font-size: 14px;
+    color: #007dc5;
 }
 
 

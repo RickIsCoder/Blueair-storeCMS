@@ -1,15 +1,6 @@
 
 /* homePage style*/
-.homePage {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: white;
-    top: 0;
-    left: 0;
-}
-
-.header {
+.hp-header {
     height: 12%;
     width: 100%;
     position: relative;
@@ -18,7 +9,7 @@
     text-align: center;
 }
 
-.logo {
+.hp-logo {
     height: 43px;
     width: 227px;
     position: relative;
@@ -28,7 +19,7 @@
     transform: translateY(-50%);
 }
 
-.homePageBanner {
+.hp-banner {
     width: 100%;
     height: 390px;
     position: relative;
@@ -36,21 +27,21 @@
     background-size: contain;
 }
 
-.homePageBottomItem {
+.hp-footer a {
     position: absolute;
     display: block;
     height: 100%;
     top: 0;
 }
 
-.btnWhyCleaner {
+.icon-wnc {
     width: 125px;
     left: 136px;
     background: url(../images/whyCleaner.png) no-repeat center center;
     background-size: contain;
 }
 
-.homePageBottom {
+.hp-footer {
     position: absolute;
     width: 100%;
     height: 20%;
@@ -58,14 +49,14 @@
     bottom: 50px;
 }
 
-.btnWhyBlueAir {
+.icon-wba {
     width: 106px;
     left: 459px;
     background: url(../images/whyBlueAir.png) no-repeat center;
     background-size: contain;
 }
 
-.btnWhichOne {
+.icon-which {
     width: 141px;
     left: 748px;
     background: url(../images/whichOne.png) no-repeat center;

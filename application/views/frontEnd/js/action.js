@@ -1,17 +1,23 @@
 $(function () {
 
-    var winWidth = $(window).width();
-    var winHeight = $(window).height();
+    var slickWrap = $('#whyBlueAirSlide');
+    if (slickWrap[0] !== undefined) {
 
-    $('.slickContainer').height(winHeight).width(winWidth);
+        var winWidth = $(window).width();
+        var winHeight = $(window).height();
 
-    $('#whyBlueAirSlide').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        infinite: false,
-    });
+        $('.slick-container').height(winHeight).width(winWidth);
+
+        slickWrap.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            infinite: false,
+        });
+
+    }
+
 
     // nav
     $('#navBtn').on('click', function (event) {
@@ -56,16 +62,16 @@ $(function () {
 
     // whyBlueAir
     $('#honorIdenty').on('click', function (event) {
-        $('.honorContentContainer').removeClass('actived');
+        $('.honor-content').removeClass('actived');
         $('#honorIdentyContent').addClass('actived');
-        $('.honorNav').removeClass('actived');
+        $('.honor-navitem').removeClass('actived');
         $(event.currentTarget).addClass('actived');
     });
 
     $('#honorReport').on('click', function (event) {
-        $('.honorContentContainer').removeClass('actived');
+        $('.honor-content').removeClass('actived');
         $('#honorReportContent').addClass('actived');
-        $('.honorNav').removeClass('actived');
+        $('.honor-nav').removeClass('actived');
         $(event.currentTarget).addClass('actived');
     });
     // jump
@@ -160,44 +166,46 @@ $(function () {
 
 
     // why need cleaner
-    // part1
-    $('#wncPart1Bg').parallax({
-        naturalWidth: 1200,
-        naturalHeight: 768
-    });
+    if ($('#wncPart1Bg')[0] !== undefined) {
+        // part1
+        $('#wncPart1Bg').parallax({
+            naturalWidth: 1200,
+            naturalHeight: 768
+        });
 
-    $('#wncPart1Title').parallax({
-        naturalWidth: 1200,
-        naturalHeight: 768,
-        zIndex: -99,
-        speed: 0.4
-    });
-    
-    // part2
-    $('#wncPart2Bg').parallax({
-        naturalWidth: 1200,
-        naturalHeight: 768
-    });
-    
-    $('#wncPart2Title').parallax({
-        naturalWidth: 1200,
-        naturalHeight: 768,
-        zIndex: -99,
-        speed: 0.4
-    });
-    
-    // part3
-    $('#wncPart3Bg').parallax({
-        naturalWidth: 1200,
-        naturalHeight: 768
-    });
-    
-    $('#wncPart3Title').parallax({
-        naturalWidth: 1200,
-        naturalHeight: 768,
-        zIndex: -99,
-        speed: 0.4
-    });
+        $('#wncPart1Title').parallax({
+            naturalWidth: 1200,
+            naturalHeight: 768,
+            zIndex: -99,
+            speed: 0.4
+        });
+
+        // part2
+        $('#wncPart2Bg').parallax({
+            naturalWidth: 1200,
+            naturalHeight: 768
+        });
+
+        $('#wncPart2Title').parallax({
+            naturalWidth: 1200,
+            naturalHeight: 768,
+            zIndex: -99,
+            speed: 0.4
+        });
+
+        // part3
+        $('#wncPart3Bg').parallax({
+            naturalWidth: 1200,
+            naturalHeight: 768
+        });
+
+        $('#wncPart3Title').parallax({
+            naturalWidth: 1200,
+            naturalHeight: 768,
+            zIndex: -99,
+            speed: 0.4
+        });
+    }
     // end why need cleaner
 
 });
