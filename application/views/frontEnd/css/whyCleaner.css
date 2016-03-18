@@ -54,14 +54,6 @@
     text-align: center;
 }
 
-
-
-.half {
-    width: 50%;
-    float: left;
-    box-sizing: border-box;
-}
-
 .half:first-child {
     padding-right: 46px;
 }
@@ -83,11 +75,6 @@
     margin-top: 40px;
 }
 
-.whyCleanerPartTitle {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
 .wnc-subtitle {
     margin-top: 20px;
 }
@@ -100,8 +87,6 @@
 .wncmtop {
     margin-top: 22px
 }
-
-
 
 .shortlinewrap {
     margin-top: 40px;
@@ -261,16 +246,10 @@
     font-size: 14px;
 }
 
-.emspan {
-    color: #007dc5;
-}
-
 h3.wnc-subtitle {
     margin-top: 40px;
     margin-bottom: 20px;
 }
-
-
 
 .part3-item {
     width: 80%;
@@ -279,7 +258,6 @@ h3.wnc-subtitle {
 p.subtitle {
     color: #007dc5;
 }
-
 
 .lmcadr {
     margin: 0 auto;

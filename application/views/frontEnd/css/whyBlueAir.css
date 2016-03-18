@@ -227,8 +227,6 @@
     margin-left: 44px;
 }
 
-
-
 .honor-logo {
     width: 223px;
     height: 42px;
@@ -270,7 +268,7 @@
 }
 
 #honorIdentyContent img {
-     width: 120px;
+    width: 120px;
     height: 120px;
     float: left;
     margin-right: 10px;
@@ -294,10 +292,6 @@
     height: 377px;
 }
 
-
-
-
-
 #honorReportContent {
     width: 1000px;
 }
@@ -305,7 +299,7 @@
 
 /* efficient */
 
-.efficientContainer {
+.efficient {
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -318,11 +312,11 @@
     transition: top 0.5s ease;
 }
 
-.efficientContainer.inShow {
+.efficient.inShow {
     top: 0;
 }
 
-.bacterialWrapper {
+.bacterialwrap {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -332,7 +326,7 @@
     background-size: 100%;
 }
 
-.bacterialText {
+.bacterial-text {
     color: white;
     font-size: 24px;
     line-height: 43px;
@@ -343,7 +337,7 @@
     width: 100%;
 }
 
-.darkAirWrapper {
+.darkair {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -351,7 +345,7 @@
     background-size: 100%;
 }
 
-.openBlueairBtn {
+.openbabtn {
     width: 99px;
     height: 99px;
     position: absolute;
@@ -361,7 +355,7 @@
     background-size: contain;
 }
 
-.efficientBottomText {
+.efficient-dark .explain {
     position: absolute;
     top: 80%;
     left: 0;
@@ -370,7 +364,7 @@
     color: white;
 }
 
-.efficientWrapper {
+.efficient .item {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -378,26 +372,26 @@
     left: 0;
 }
 
-.efficientLight {
+.efficient-light {
     -webkit-transition: left 0.5s ease;
     transition: left 0.5s ease;
 }
 
-.efficientLight.dismiss {
+.efficient-light.dismiss {
     left: -100%;
 }
 
-.efficientDark {
+.efficient-dark {
     opacity: 1;
     -webkit-transition: opacity 1s ease;
     transition: opacity 1s ease;
 }
 
-.efficientDark.dismiss {
+.efficient-dark.dismiss {
     opacity: 0;
 }
 
-.efficientLightText {
+.efficient-light h2 {
     width: 100%;
     height: 81px;
     position: absolute;
@@ -406,7 +400,7 @@
     text-align: center;
 }
 
-.efficientLightImg {
+.el-img {
     width: 482px;
     height: 164px;
     position: absolute;
@@ -414,7 +408,7 @@
     left: 271px;
 }
 
-.efficientLightTextBottom {
+.efficient-light .explain {
     width: 100%;
     height: 50px;
     position: absolute;
@@ -423,7 +417,7 @@
     text-align: center;
 }
 
-.btnWhyEfficient {
+#btnWhyEfficient {
     width: 142px;
     height: 36px;
     position: absolute;
@@ -437,7 +431,7 @@
     color: white;
 }
 
-.efficientMachine {
+.el-machineimg {
     width: 600px;
     height: 180px;
     position: absolute;
@@ -445,7 +439,7 @@
     left: 212px;
 }
 
-.whyEfficient {
+.whyefficient {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -455,49 +449,32 @@
     transition: left 0.5s ease;
 }
 
-.whyEfficient.inShow {
+.whyefficient .row {
+    position: absolute;
+    top: 35%;
+}
+
+.whyefficient .half {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.whyefficient small {
+    display: block;
+    margin-top: 5px;
+    width: 90%;
+}
+
+.whyefficient.inShow {
     left: 0;
 }
 
-.whyEfficientTitle {
+.whyefficient h2 {
     position: absolute;
     width: 100%;
     height: 90px;
     text-align: center;
     top: 15%;
-}
-
-.whyEfficientImgLeft {
-    width: 375px;
-    left: 95px;
-}
-
-.whyEfficientImgRight {
-    left: 497px;
-    width: 354px;
-}
-
-.whyEfficientText {
-    position: absolute;
-    width: 291px;
-    height: 50px;
-    top: 78%;
-    font-size: 12px;
-    line-height: 21px;
-}
-
-.whyEfficientTextLeft {
-    left: 171px;
-}
-
-.whyEfficientTextRight {
-    left: 581px;
-}
-
-.whyEfficientImg {
-    position: absolute;
-    top: 35%;
-    height: 291px;
 }
 
 .mute {
@@ -510,48 +487,46 @@
     transition: top 0.5s ease;
 }
 
+.mute .row {
+    height: 100%;
+}
+
+.mute .row .col-3 {
+    height: 100%;
+    text-align: center;
+}
+
 .mute.inShow {
     top: 0;
 }
 
-.muteItem {
-    width: 253px;
-    height: 100%;
-    float: left;
-    margin-right: 4px;
-    background: no-repeat center center;
-    background-size: 100%;
-    text-align: center;
+.mute-item1 {
+    background: url(../images/whyBlueAir/muteItem1.png) no-repeat center center;
+    background-size: cover;
 }
 
-.muteItem:last-child {
-    margin-right: 0;
+.mute-item2 {
+    background: url(../images/whyBlueAir/muteItem2.png) no-repeat center center;
+    background-size: cover;
 }
 
-.muteItem1 {
-    background-image: url(../images/whyBlueAir/muteItem1.png);
+.mute-item3 {
+    background: url(../images/whyBlueAir/muteItem3.png) no-repeat center center;
+    background-size: cover;
 }
 
-.muteItem2 {
-    background-image: url(../images/whyBlueAir/muteItem2.png);
+.mute-item4 {
+    background: url(../images/whyBlueAir/muteItem4.png) no-repeat center center;
+    background-size: cover;
 }
 
-.muteItem3 {
-    background-image: url(../images/whyBlueAir/muteItem3.png);
-}
-
-.muteItem4 {
-    background-image: url(../images/whyBlueAir/muteItem4.png);
-}
-
-.muteItemImg {
+.mute img {
     margin-top: 90%;
 }
 
-.muteText {
+.mute p {
     text-align: center;
     color: white;
-    font-size: 18px;
     line-height: 42px;
 }
 
@@ -570,7 +545,7 @@
     top: 0;
 }
 
-.energyTitle {
+.energy h1 {
     position: absolute;
     top: 15px;
     left: 0;
@@ -578,7 +553,7 @@
     text-align: center;
 }
 
-.energyCicle {
+.energy-cicle {
     width: 280px;
     height: 280px;
     margin-bottom: 30px;
@@ -591,11 +566,11 @@
     cursor: pointer;
 }
 
-.energyImg {
+.energy-cicle img {
     vertical-align: middle;
 }
 
-.energyItem {
+.energy-item {
     width: 280px;
     height: 600px;
     float: left;
@@ -603,11 +578,11 @@
     margin-top: 8%;
 }
 
-.firstEnergyItem {
+.energy-item:first-of-type {
     margin-left: 40px;
 }
 
-.energyQusTitle {
+.energy-qustitle {
     font-size: 36px;
     line-height: 58px;
     color: #007dc5;
@@ -615,7 +590,7 @@
     text-align: center;
 }
 
-.energyAns {
+.energy-ans {
     margin: 0 auto;
     display: block;
     margin-top: 20px;
@@ -625,46 +600,48 @@
     transition: opacity 0.5s ease;
 }
 
-.energyAns.inShow {
+.energy-ans.inShow {
     opacity: 1;
 }
 
-.energyContentTitle {
+.energy h2 {
     text-align: center;
 }
 
-.energyContent {
+.energy-content {
     width: 190px;
     margin: 0 auto;
     font-size: 12px;
     line-height: 18px;
+    color: #909090;
     opacity: 0;
     -webkit-transition: opacity 0.5s ease 0.5s;
     transition: opacity 0.5s ease 0.5s;
 }
 
-.energyContent.inShow {
+.energy-content.inShow {
     opacity: 1;
 }
 
-.energyHonorImg {
+.energy-honor img {
     width: 30px;
     height: 30px;
     vertical-align: middle;
     margin-right: 10px;
 }
 
-.energyHonor {
+.energy-honor {
     width: 190px;
     margin: 0 auto;
     margin-top: 10px;
     font-size: 12px;
     opacity: 0;
+    color: #909090;
     -webkit-transition: opacity 0.5s ease 0.8s;
     transition: opacity 0.5s ease 0.8s;
 }
 
-.energyHonor.inShow {
+.energy-honor.inShow {
     opacity: 1;
 }
 
@@ -678,18 +655,28 @@
     transition: top 0.5s ease;
 }
 
+.byproduct .row {
+    height: 100%;
+}
+
+.byproduct .half {
+    height: 100%;
+    position: relative;
+}
+
+.byproduct .lefthalf {
+    background-color: #353535;
+}
+
+.byproduct .righthalf {
+    background-color: #80bfe3;
+}
+
 .byproduct.inShow {
     top: 0;
 }
 
-.byproductItem {
-    width: 50%;
-    height: 100%;
-    float: left;
-    position: relative;
-}
-
-.byproductLeftText {
+.lefthalf p {
     width: 367px;
     height: 125px;
     position: absolute;
@@ -698,13 +685,13 @@
     color: white;
 }
 
-.byproductLeftImg {
+.lefthalf img {
     position: absolute;
     right: 0;
     bottom: 15%;
 }
 
-.byproductBtn {
+.byproduct div[role="button"] {
     position: absolute;
     height: 36px;
     font-size: 14px;
@@ -721,21 +708,22 @@
     left: 75px;
 }
 
-.byproductRightText {
+.byproduct .right-con1 {
     width: 344px;
     height: 155px;
     position: absolute;
     top: 12.63%;
     left: 110px;
+    color: #007dc5;
 }
 
-.byproductRightImg {
+.byproduct .rightimg1 {
     position: absolute;
     left: 0;
     bottom: 15%;
 }
 
-.byproductImg1 {
+.byproduct .rightimg2 {
     width: 121px;
     height: 121px;
     position: absolute;
@@ -743,15 +731,17 @@
     right: 212px;
 }
 
-.byproductText1 {
+.byproduct .right-text1 {
     width: 133px;
     height: 84px;
     position: absolute;
     top: 52.47%;
     right: 52px;
+    color: #007dc5;
+    font-size: 14px;
 }
 
-.byproductImg2 {
+.byproduct .rightimg3 {
     width: 131px;
     height: 23px;
     position: absolute;
@@ -759,12 +749,14 @@
     right: 209px;
 }
 
-.byproductText2 {
+.byproduct .right-text2 {
     width: 143px;
     height: 110px;
     position: absolute;
     top: 73.57%;
     right: 50px;
+    color: #007dc5;
+    font-size: 14px;
 }
 
 #byproductCheckIdent {
