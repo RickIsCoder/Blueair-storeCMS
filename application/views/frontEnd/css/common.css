@@ -46,8 +46,11 @@ h3 {
 }
 
 b {
-    font-size: 42px;
     font-weight: 600;
+}
+
+.bigtext {
+    font-size: 42px;
 }
 
 small {

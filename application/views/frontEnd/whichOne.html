@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <title>Products</title>
+
+    <link rel="stylesheet" href="css/resetStyle.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/whichone.css">
+</head>
+
+<body>
+
+    <!--  nav  -->
+    <div class="navbtn" id="navBtn"></div>
+    <nav id="nav">
+        <img src="./images/logo.png" alt="logo" class="nav-logo">
+        <ul class="nav">
+            <li><img class="navimg" src="./images/homeIcon.png" alt="home"><a href="./index.html">首页</a></li>
+            <li><img class="navimg" src="./images/cleanerIcon.png" alt="img"><a href="./whyCleaner.html">为什么需要空气净化器</a></li>
+            <li><img class="navimg" src="./images/whyBlueairIcon.png" alt="img"><a href="./whyBlueAir.html">为什么选择Blueair</a></li>
+            <li><img class="navimg" src="./images/whichoneIcon.png" alt="img"><a href="./whichOne.html">怎样的空气净化器适合您</a></li>
+        </ul>
+
+        <button class="jumpbackend">进入后台管理</button>
+
+        <button class="close" id="navCloseBtn"></button>
+    </nav>
+    <!--  end nav  -->
+
+    <!-- index container -->
+    <div class="container">
+        <div class="series row">
+            <div class="series-item" role="button">
+                <div class="series-imgwrap"><img src="./images/whichone/iconclassic.png" alt="series-img" onload="this.width>>=1;this.onload=null;"></div>
+                <h2>Classic</h2>
+                <p>畅销、常销的经典之选</p>
+            </div>
+            <div class="series-item" role="button">
+                <div class="series-imgwrap"><img src="./images/whichone/iconpro.png" alt="series-img" onload="this.width>>=1;this.onload=null;"></div>
+                <h2>Pro</h2>
+                <p>来自瑞典的专业之选</p>
+            </div>
+            <div class="series-item" role="button">
+                <div class="series-imgwrap"><img src="./images/whichone/iconsense.png" alt="series-img" onload="this.width>>=1;this.onload=null;"></div>
+                <h2>Sense</h2>
+                <p>个性、灵动的自我表达</p>
+            </div>
+            <div class="series-item" role="button">
+                <div class="series-imgwrap"><img src="./images/whichone/iconfilter.png" alt="series-img" onload="this.width>>=1;this.onload=null;"></div>
+                <h2>滤网</h2>
+                <p>空气净化机核心的组件</p>
+            </div>
+            <div class="series-item" role="button">
+                <div class="series-imgwrap"><img src="./images/whichone/iconaware.png" alt="series-img" onload="this.width>>=1;this.onload=null;"></div>
+                <h2>Aware</h2>
+                <p>事实监测室内空气质量</p>
+            </div>
+            <div class="seriesline"></div>
+        </div>
+
+        <button role="button" class="series-btn" id="btnhelpchoice">帮您选择</button>
+        <button role="button" class="series-btn" id="seri-contrast">机型对比</button>
+    </div>
+    <!-- end index container -->
+
+    <!--  filter -->
+    <div class="container filter">
+        <h1>滤网</h1>
+        <h2><span class="bluedot"></span>滤网的种类</h2>
+        <h3>粒子型滤网</h3>
+        <p class="subp">通过其优越的性能为您的健康保驾护航，在去除细菌、病菌、宠物皮屑、尘螨及其它种类的颗粒物方面是您的最佳选择。该粒子型滤网专为去除固态颗粒物而设计（包括PM2.5）。</p>
+        <p class="subp">下列机型均有相应的粒子型滤网供您选购：203 / 270E / 301 / 303 / 403 / 410B / 450E / 503 / 510B / 550E / 603 / Sense / Mini。如有新机型，请以 Blueair 公司最终解释为准。</p>
+        <div class="row filter-row">
+            <div class="half text-center">
+                <img src="./images/whichone/air_filter.png" alt="filter-img" onload="this.width>>=1;this.onload=null;">
+            </div>
+            <div class="half text-center">
+                <div class="row filter-right">
+                    <div class="item">
+                        <img src="./images/whyCleaner/2_04.png" alt="smoke">
+                        <p>二手烟</p>
+                    </div>
+                    <div class="item">
+                        <img src="./images/whyCleaner/2_05.png" alt="smoke">
+                        <p>装修材料</p>
+                    </div>
+                    <div class="item">
+                        <img src="./images/whyCleaner/2_06.png" alt="smoke">
+                        <p>床品</p>
+                    </div>
+                </div>
+                <div class="row filter-right">
+                    <div class="item">
+                        <img src="./images/whyCleaner/2_07.png" alt="smoke">
+                        <p>烹饪油烟</p>
+                    </div>
+                    <div class="item">
+                        <img src="./images/whyCleaner/2_08.png" alt="smoke">
+                        <p>微波炉</p>
+                    </div>
+                    <div class="item">
+                        <img src="./images/whyCleaner/2_09.png" alt="smoke">
+                        <p>花粉</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3>复合型滤网</h3>
+        <p class="subp">SmokeStop™ 滤网在原有多级渐进式 HEPA 滤网的基础上特别增加了超强活性炭，特别推荐用于气态污染严重的室内环境，如香烟、雪茄、甲醛或者 TVOC （墙体涂料和清洁用品中自带的挥发性有机化合物）。相比于对颗粒污染物的去除， SmokeStop™ 滤网更是人们用于去除气态污染物的不二之选。</p>
+        <p class="subp">适用机型：103 / 203 / 270E / 301 / 303 / 403 / 410B / 450E / 503 / 510B / 550E / 603 / Sense</p>
+        <div class="row filter-row">
+            <div class="half text-center filter-leftimg">
+                <img src="./images/whichone/air_filter_smokestop.png" alt="filter-img" onload="this.width>>=1;this.onload=null;">
+            </div>
+            <div class="half text-center">
+                <div class="row filter-right">
+                    <div class="item">
+                        <img src="./images/whyCleaner/2_04.png" alt="smoke">
+                        <p>二手烟</p>
+                    </div>
+                    <div class="item">
+                        <img src="./images/whyCleaner/2_05.png" alt="smoke">
+                        <p>装修材料</p>
+                    </div>
+                    <div class="item">
+                        <img src="./images/whyCleaner/2_06.png" alt="smoke">
+                        <p>床品</p>
+                    </div>
+                </div>
+                <div class="row filter-right">
+                    <div class="item">
+                        <img src="./images/whyCleaner/2_07.png" alt="smoke">
+                        <p>烹饪油烟</p>
+                    </div>
+                    <div class="item">
+                        <img src="./images/whyCleaner/2_08.png" alt="smoke">
+                        <p>微波炉</p>
+                    </div>
+                    <div class="item">
+                        <img src="./images/whyCleaner/2_09.png" alt="smoke">
+                        <p>花粉</p>
+                    </div>
+                </div>
+                <div class="row filter-right">
+                    <div class="item">
+                        <img src="./images/whyCleaner/2_10.png" alt="smoke">
+                        <p>冰箱</p>
+                    </div>
+                    <div class="item">
+                        <img src="./images/whyCleaner/2_11.png" alt="smoke">
+                        <p>宠物</p>
+                    </div>
+                    <div class="item">
+                        <img src="./images/whyCleaner/2_12.png" alt="smoke">
+                        <p>马桶</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2><span class="bluedot"></span>更换滤网小知识</h2>
+        <p class="subp">滤网长期使用后，会有大量灰尘、杂质形成，就会有二次污染，而且增加了空气通过滤网时的阻力从而噪音加大。影响了机器的正常使用。
+            <br>所以 Blueair 建议：在中国这样一个空气污染颇为严重的大环境下，如果是24小时持续使用的话，更换滤网的间隔为6个月，如果是12小时使用更换间隔为1年。</p>
+        <br>
+        <p class="subp"><b>以下情况您可以考虑更换滤网</b></p>
+        <br>
+        <p class="subp">个人需求：有的人感觉室内空气没有之前清新了，要去更换。
+            <br> 噪音：污染物颗粒吸附的过多了之后，阻力就会加大，从而噪音就增大，这个时候就要更换滤网了。
+            <br> 计时器：智能机的智能面板会显示使用寿命，手动机器会配备一个计时器。
+        </p>
+    </div>
+    <!--  end filter -->
+
+    <!--  series classic  -->
+    <div class="container">
+        <div class="series-nav">
+            <ul>
+                <li>Sense</li>
+                <li>Sense+</li>
+            </ul>
+        </div>
+        
+        <div class="series-section blue-section">
+            <h1>Sense, 个性、灵动的时尚之选</h1>
+            <p>Blueair与瑞典著名设计公司Claesson Koivisto Rune双剑合璧，推出世界上第一个由顶级建筑设计工作室创造设计的空气净化器。专为年轻一族小户型打造。在各项国际设计大奖中屡获殊荣。</p>
+            <div class="tagwrap"><span class="tag"></span><div class="tag"></div></div>
+        </div>
+        <div class="series-section"></div>
+        <div class="series-section"></div>
+        <div class="series-section"></div>
+        <div class="series-section"></div>
+    </div>
+    <!--  end classic  -->
+
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/action.js"></script>
+</body>
+
+</html>

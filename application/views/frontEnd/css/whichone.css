@@ -1,0 +1,158 @@
+.series {
+    position: absolute;
+    width: 1600px;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.series-item {
+    float: left;
+    width: 220px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.series-item p {
+    color: #909090;
+}
+
+.series-imgwrap {
+    width: 100%;
+    height: 230px;
+    margin-bottom: 100px;
+}
+
+.seriesline {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 280px;
+    background-color: #007dc5;
+}
+
+.series-btn {
+    border-radius: 10px;
+    border: 1px solid #007dc5;
+    color: #007dc5;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 30px;
+    position: fixed;
+    bottom: 50px;
+}
+
+#btnhelpchoice {
+    left: 60px;
+}
+
+#seri-contrast {
+    right: 60px;
+}
+
+
+/* filter */
+
+.filter {
+    height: auto;
+    padding: 80px 80px 100px 80px;
+}
+
+.filter h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.filter h2 {
+    color: #007dc5;
+    margin-bottom: 20px;
+}
+
+.bluedot {
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    background-color: #007dc5;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.filter .subp {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.filter-row {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.filter-leftimg {
+    margin-top: 50px;
+}
+
+.row.filter-right .item {
+    margin: 10px 12px;
+}
+
+.filter-right img {
+    width: 64px;
+    height: 64px;
+}
+
+.filter-right p {
+    font-size: 14px;
+}
+
+
+/* end filter */
+
+
+/* series nav */
+
+.series-nav {
+    width: 150px;
+    height: 100%;
+    background-color: #007dc5;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 80px;
+}
+
+.series-nav li {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.series-section {
+    width: calc(100% - 150px);
+    height: 768px;
+    position: relative;
+    left: 150px;
+    border-bottom: 1px solid white;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.series-section h1 {
+    color: white;
+    display: inline-block;
+    margin-top: 80px;
+}
+
+.blue-section {
+    background-color: rgba(0, 125, 197, 0.5);
+}
+
+.gray-section {
+    background-color: #f0f0f0;
+}
+
+
+/* end series nav*/
