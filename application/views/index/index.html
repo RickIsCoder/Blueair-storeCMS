@@ -1,17 +1,39 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>首页</title>
-		<meta charset='utf-8'>
-	</head>
-	<body>
-		<h1>首页加载</h1>
-		<h2>框架加载视图</h2>
-		<ul>
-			<li><a href="">为什么净化器</a></li>
-			<li><a href="<?php echo site_url('whyBlueAir'); ?>">为什么blueair</a></li>
-			<li><a href="<?php echo site_url('index/whatClear/index'); ?>">什么样的净化器</a></li>
-		</ul>
-		<a href="<?php echo site_url('cms'); ?>">CMS</a>
-	</body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0" />
+
+    <title>BlueAir</title>
+    <link rel="stylesheet" href="<?php echo base_url('/common/css/resetStyle.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/common/css/slick.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/common/css/slick-theme.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/common/css/common.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/common/css/homepage.css'); ?>">
+</head>
+
+<body>
+    <div class="main-container">
+        <?php include "nav.html"; ?>
+        <!--  homePage  -->
+        <div class="container">
+            <div class="hp-header">
+                <img src="<?php echo base_url('/common/images/logo.png'); ?>" alt="logo" class="hp-logo">
+            </div>
+            <div class="hp-banner"></div>
+            <div class="hp-footer">
+                <a role="button" class="icon-wnc" href="<?php echo base_url('/whyCleaner.html'); ?>"></a>
+                <a role="button" class="icon-wba" href="<?php echo base_url('/whyBlueAir.html'); ?>"></a>
+                <a role="button" class="icon-which" href="<?php echo base_url('/whichOne.html'); ?>"></a>
+            </div>
+        </div>
+        <!--  end homePage  -->
+    </div>
+
+    <script src="<?php echo base_url('/common/js/jquery.min.js'); ?>"></script>
+    <script src="<?php echo base_url('/common/js/slick.min.js'); ?>"></script>
+    <script src="<?php echo base_url('/common/js/action.js'); ?>"></script>
+</body>
+
 </html>

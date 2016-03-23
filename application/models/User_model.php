@@ -1,10 +1,35 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php 
+
+if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class User_model extends MY_Model{
-		public function addUser($data){
-		$this->db->insert('user',$data);
-		$data = json_encode($data);
-		return $this->db->insert_id();
+    
+    public function getAllUserInfo(){
+		$data = $this->db->get('user')->result_array();
+		return $data;
+	}
+
+	public function verify($username,$password){
+		$getPassword = 'SELECT userID, username, userType FROM user WHERE username = ? and password = ?';
+		$data = $this->db->query($getPassword,array($username, $password))->result_array();
+		if (count($data) > 0) {
+			return $data[0];
+		}
+		else{
+			return FALSE;
+		}
+	}
+
+    public function addUser($data){
+        // should check if realy added.
+        // if add a user with an exist username?
+		$f = $this->db->insert('user',$data);
+        if($f){
+            return $this->db->insert_id();
+        }
+        else{
+            return FALSE;
+        }
 	}
 
 	public function editUser($userID,$data){

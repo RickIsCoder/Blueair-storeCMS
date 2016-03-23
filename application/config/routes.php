@@ -52,20 +52,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'index';
+$route['(logout|login|verify)']= 'user/$1';
+$route["admin/(.*)"] = "admin/$1";
+$route["(.*)"] = "index/$1";
+
+
+/*
 $route['404_override'] = 'errors/html/error_404';
 $route['translate_uri_dashes'] = FALSE;
-
-
 $route['loginout']= 'welcome/clearsession';
 $route['login'] = 'user/login';
 $route['verify'] = 'user/verify';
-
 $route['cms'] = 'navigator/cms';
 $route['adminCMS'] = 'backEnd/adminCMS';
 $route['salesmanCMS'] = 'backEnd/salesmanCMS';
-
-
 $route['auc'] = 'admin/admin/userCMS';
 $route['productionCMS'] = 'admin/admin/productionCMS';
 $route['asc'] = 'admin/admin/sceneCMS';
@@ -90,14 +91,12 @@ $route['editLabel'] = 'admin/feature/editLabel';
 $route['addTips'] = 'admin/feature/addTips';
 $route['delTips'] = 'admin/feature/delTips';
 $route['editTips'] = 'admin/feature/editTips';
-
 $route['serieList'] = 'index/whatClear/serieList';
 $route['compare'] = 'index/whatClear/compare';
 $route['filter'] = 'index/whatClear/filter';
 $route['help'] = 'index/whatClear/help';
 $route['getScale'] = 'index/whatClear/getScale';
 $route['advice'] = 'index/whatClear/advice';
-
 $route['serieDetail/(.*)'] = 'index/whatClear/serieDetail/$1';
 $route['productDeatail/(.*)'] = 'index/whatClear/productDeatail/$1';
 $route['feature/(.*)'] = 'admin/feature/feature/$1';
@@ -105,20 +104,15 @@ $route['ifeature/(.*)'] = 'index/whatClear/feature/$1';
 $route['parameter/(.*)'] = 'index/whatClear/parameter/$1';
 $route['addCompare'] = 'index/whatClear/addCompare';
 $route['delCompare'] = 'index/whatClear/delCompare';
-
 $route['sceneAdd'] = 'admin/Scene/addScene';
 $route['sceneDel'] = 'admin/Scene/delScene';
 $route['sceneEdit'] = 'admin/Scene/editScene';
-
 $route['scaleAdd'] = 'admin/Scene/addScale';
 $route['scaleDel'] = 'admin/Scene/delScale';
 $route['scaleEdit'] = 'admin/Scene/editScale';
-
 $route['sceneProductionDel'] = 'admin/Scene/delSceneProduction';
 $route['sceneProductionCheck'] = 'admin/Scene/checkSceneProduction';
 $route['sceneProductionAdd'] = 'admin/Scene/addSceneProduction';
-
-
-
 $route['whatClear'] = 'index/whatClear/index';
 $route['whyBlueAir'] = 'index/whyBlueAir/index';
+*/

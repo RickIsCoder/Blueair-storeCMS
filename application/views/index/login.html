@@ -1,24 +1,48 @@
-<html>
-	<head>
-		<meta charset='utf-8'>
-		
-		<link rel="stylesheet" href="<?php echo base_url('assets/css/resetStyle.css') ?>">
-		<link rel="stylesheet" href="<?php echo base_url('assets/css/common_backend.css') ?>">
-		<link rel="stylesheet" href="<?php echo base_url('assets/css/login.css') ?>">
-	</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="<?php echo base_url('common/css/bootstrap.min.css'); ?>" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('common/css/login.css'); ?>">
+	<title>Blueair login</title>
+</head>
 
-	<body>
-        <div class="mainContainer">
-            <div class="container">
-                <div class="logo"></div>
-                <input type="text" id='username' class="inputWrapper" placeholder="用户名">
-                <input type="password" id='password' class="inputWrapper" placeholder="密码">
-                <button id='login' class="loginBtn bgBlueColor">登录</button>
-            </div>
+<body>
+    <form id="login-form" class="form-horizontal container">
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-6 imgPosition">
+          <img src="<?php echo base_url('common/images/logo.png'); ?>" alt="#" class="center-block img">
         </div>
-		
-		
-		<script src="<?php echo base_url('assets/js/jquery.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/js/index_login.js'); ?>"></script>
-	</body>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-6">
+          <input type="text" class="form-control input-lg" id="username" placeholder="用户名" style="">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-6">
+          <input type="password" class="form-control input-lg" id="password" placeholder="密码">
+        </div>
+      </div>
+      <div id="error-label" class="form-group" style="display:none">
+          <div class="col-sm-offset-3 col-sm-6">
+              <div class="alert alert-danger">
+                  登录失败
+              </div>
+          </div>
+      </div>
+      
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-6">
+          <button id="login-button" type="button" class="btn btn-primary btn-lg btn-block">登陆</button>
+        </div>
+      </div>
+
+    </form>
+	<script src="<?php echo base_url('common/js/jquery.min.js'); ?>"></script>
+	<script src="<?php echo base_url('common/js/bootstrap.min.js'); ?>"></script>
+	<script src="<?php echo base_url('common/js/login.js'); ?>"></script>
+</body>
 </html>

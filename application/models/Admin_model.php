@@ -1,4 +1,6 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php 
+
+if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 require_once "Pic_model.php";
 
 class Admin_model extends MY_Model{
@@ -23,6 +25,26 @@ class Admin_model extends MY_Model{
 		$name = $this->db->query($name_sql,$productID)->result_array();
 		return $name;
 	}
+    
+    public function getAdminProductsBySerieIs($serieId){
+        $products = [];
+        $pic = new Pic_model();
+        if($_SESSION['userType'] == 2){
+            $query = "select product.productID as productID, productName, isnull(privilege.productID) as online from product left join privilege on product.productID = privilege.productID where product.serieID = ? and privilege.userID = ?";
+            $products = $this->db->query($query, array($serieId, $_SESSION["userID"]))->result_array();
+        }
+        else if($_SESSION['userType'] == 1){
+            $query = "select productID, productName from product where serieID = ?";
+            $products = $this->db->query($query, array($serieId)->result_array();
+        }
+        else{
+            return FALSE;
+        }
+        foreach ($products as &$production) {
+            $production['pic'] = $pic->getProductionPic($production['productID']);
+        }
+        return $products;
+    }
 
 	public function getAllProductionList(){
 		$pic = new Pic_model();
@@ -134,8 +156,7 @@ class Admin_model extends MY_Model{
 		$this->db->where('productID', $id);
 		$this->db->delete('tips');
 
-
-		return TRUE;
+        return TRUE;
 	}
 
 	public function editProduction($id,$data){
@@ -158,22 +179,6 @@ class Admin_model extends MY_Model{
 		$this->db->where('serieID', $serieID);
 		$f = $this->db->delete('series');
 		return $f;
-	}
-
-	public function getAllUserInfo(){
-		$data = $this->db->get('user')->result_array();
-		return $data;
-	}
-
-	public function verify($username,$password){
-		$getPassword = 'SELECT * FROM user WHERE username = ?';
-		$data = $this->db->query($getPassword,$username)->result_array();
-		if ($password == $data[0]['password']) {
-			return $data;
-		}
-		else{
-			return FALSE;
-		}
 	}
 
 	public function delStoreProduction($data){
