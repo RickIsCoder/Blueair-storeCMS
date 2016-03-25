@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <title>Products</title>
+
+    <link rel="stylesheet" href="<?php echo base_url('/common/css/resetStyle.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/common/css/common.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/common/css/whichone.css'); ?>">
+</head>
+
+<body>
+
+    <?php include "nav.html"; ?>
+        <div class="whichone-container">
+            <!-- index container -->
+            <div class="container" id="series">
+                <div class="row">
+                    <div class="series-item" role="button" id="classic-btn">
+                        <div class="series-imgwrap"><img src="<?php echo base_url('/common/images/whichone/iconclassic.png'); ?>" alt="series-img" onload="this.width>>=1;this.onload=null;"></div>
+                        <h2>Classic</h2>
+                        <p>畅销、常销的经典之选</p>
+                    </div>
+                    <div class="series-item" role="button" id="pro-btn">
+                        <div class="series-imgwrap"><img src="<?php echo base_url('/common/images/whichone/iconpro.png'); ?>" alt="series-img" onload="this.width>>=1;this.onload=null;"></div>
+                        <h2>Pro</h2>
+                        <p>来自瑞典的专业之选</p>
+                    </div>
+                    <div class="series-item" role="button" id="sense-btn">
+                        <div class="series-imgwrap"><img src="<?php echo base_url('/common/images/whichone/iconsense.png'); ?>" alt="series-img" onload="this.width>>=1;this.onload=null;"></div>
+                        <h2>Sense</h2>
+                        <p>个性、灵动的自我表达</p>
+                    </div>
+                    <div class="series-item" role="button" id="filter-btn">
+                        <div class="series-imgwrap"><img src="<?php echo base_url('/common/images/whichone/iconfilter.png'); ?>" alt="series-img" onload="this.width>>=1;this.onload=null;"></div>
+                        <h2>滤网</h2>
+                        <p>空气净化机核心的组件</p>
+                    </div>
+                    <div class="series-item" role="button" id="aware-btn">
+                        <div class="series-imgwrap"><img src="<?php echo base_url('/common/images/whichone/iconaware.png'); ?>" alt="series-img" onload="this.width>>=1;this.onload=null;"></div>
+                        <h2>Aware</h2>
+                        <p>事实监测室内空气质量</p>
+                    </div>
+                    <div class="seriesline"></div>
+                </div>
+
+                <button role="button" class="series-btn" id="btnhelpchoice">帮您选择</button>
+                <button role="button" class="series-btn" id="seri-contrast">机型对比</button>
+            </div>
+            <!-- end index container -->
+
+            <!--  filter -->
+            <div class="container" id="filter">
+                <h1>滤网</h1>
+                <h2><span class="bluedot"></span>滤网的种类</h2>
+                <h3>粒子型滤网</h3>
+                <p class="subp">通过其优越的性能为您的健康保驾护航，在去除细菌、病菌、宠物皮屑、尘螨及其它种类的颗粒物方面是您的最佳选择。该粒子型滤网专为去除固态颗粒物而设计（包括PM2.5）。</p>
+                <p class="subp">下列机型均有相应的粒子型滤网供您选购：203 / 270E / 301 / 303 / 403 / 410B / 450E / 503 / 510B / 550E / 603 / Sense / Mini。如有新机型，请以 Blueair 公司最终解释为准。</p>
+                <div class="row filter-row">
+                    <div class="half text-center">
+                        <img src="<?php echo base_url('/common/images/whichone/air_filter.png'); ?>" alt="filter-img" onload="this.width>>=1;this.onload=null;">
+                    </div>
+                    <div class="half text-center">
+                        <div class="row filter-right">
+                            <div class="item">
+                                <img src="<?php echo base_url('/common/images/whyCleaner/2_04.png'); ?>" alt="smoke">
+                                <p>二手烟</p>
+                            </div>
+                            <div class="item">
+                                <img src="<?php echo base_url('/common/images/whyCleaner/2_05.png'); ?>" alt="smoke">
+                                <p>装修材料</p>
+                            </div>
+                            <div class="item">
+                                <img src="<?php echo base_url('/common/images/whyCleaner/2_06.png'); ?>" alt="smoke">
+                                <p>床品</p>
+                            </div>
+                        </div>
+                        <div class="row filter-right">
+                            <div class="item">
+                                <img src="<?php echo base_url('/common/images/whyCleaner/2_07.png'); ?>" alt="smoke">
+                                <p>烹饪油烟</p>
+                            </div>
+                            <div class="item">
+                                <img src="<?php echo base_url('/common/images/whyCleaner/2_08.png'); ?>" alt="smoke">
+                                <p>微波炉</p>
+                            </div>
+                            <div class="item">
+                                <img src="<?php echo base_url('/common/images/whyCleaner/2_09.png'); ?>" alt="smoke">
+                                <p>花粉</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3>复合型滤网</h3>
+                <p class="subp">SmokeStop™ 滤网在原有多级渐进式 HEPA 滤网的基础上特别增加了超强活性炭，特别推荐用于气态污染严重的室内环境，如香烟、雪茄、甲醛或者 TVOC （墙体涂料和清洁用品中自带的挥发性有机化合物）。相比于对颗粒污染物的去除， SmokeStop™ 滤网更是人们用于去除气态污染物的不二之选。</p>
+                <p class="subp">适用机型：103 / 203 / 270E / 301 / 303 / 403 / 410B / 450E / 503 / 510B / 550E / 603 / Sense</p>
+                <div class="row filter-row">
+                    <div class="half text-center filter-leftimg">
+                        <img src="<?php echo base_url('/common/images/whichone/air_filter_smokestop.png'); ?>" alt="filter-img" onload="this.width>>=1;this.onload=null;">
+                    </div>
+                    <div class="half text-center">
+                        <div class="row filter-right">
+                            <div class="item">
+                                <img src="<?php echo base_url('/common/images/whyCleaner/2_04.png'); ?>" alt="smoke">
+                                <p>二手烟</p>
+                            </div>
+                            <div class="item">
+                                <img src="<?php echo base_url('/common/images/whyCleaner/2_05.png'); ?>" alt="smoke">
+                                <p>装修材料</p>
+                            </div>
+                            <div class="item">
+                                <img src="<?php echo base_url('/common/images/whyCleaner/2_06.png'); ?>" alt="smoke">
+                                <p>床品</p>
+                            </div>
+                        </div>
+                        <div class="row filter-right">
+                            <div class="item">
+                                <img src="<?php echo base_url('/common/images/whyCleaner/2_07.png'); ?>" alt="smoke">
+                                <p>烹饪油烟</p>
+                            </div>
+                            <div class="item">
+                                <img src="<?php echo base_url('/common/images/whyCleaner/2_08.png'); ?>" alt="smoke">
+                                <p>微波炉</p>
+                            </div>
+                            <div class="item">
+                                <img src="<?php echo base_url('/common/images/whyCleaner/2_09.png'); ?>" alt="smoke">
+                                <p>花粉</p>
+                            </div>
+                        </div>
+                        <div class="row filter-right">
+                            <div class="item">
+                                <img src="<?php echo base_url('/common/images/whyCleaner/2_10.png'); ?>" alt="smoke">
+                                <p>冰箱</p>
+                            </div>
+                            <div class="item">
+                                <img src="<?php echo base_url('/common/images/whyCleaner/2_11.png'); ?>" alt="smoke">
+                                <p>宠物</p>
+                            </div>
+                            <div class="item">
+                                <img src="<?php echo base_url('/common/images/whyCleaner/2_12.png'); ?>" alt="smoke">
+                                <p>马桶</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2><span class="bluedot"></span>更换滤网小知识</h2>
+                <p class="subp">滤网长期使用后，会有大量灰尘、杂质形成，就会有二次污染，而且增加了空气通过滤网时的阻力从而噪音加大。影响了机器的正常使用。
+                    <br>所以 Blueair 建议：在中国这样一个空气污染颇为严重的大环境下，如果是24小时持续使用的话，更换滤网的间隔为6个月，如果是12小时使用更换间隔为1年。</p>
+                <br>
+                <p class="subp"><b>以下情况您可以考虑更换滤网</b></p>
+                <br>
+                <p class="subp">个人需求：有的人感觉室内空气没有之前清新了，要去更换。
+                    <br> 噪音：污染物颗粒吸附的过多了之后，阻力就会加大，从而噪音就增大，这个时候就要更换滤网了。
+                    <br> 计时器：智能机的智能面板会显示使用寿命，手动机器会配备一个计时器。
+                </p>
+            </div>
+            <!--  end filter -->
+
+            <!--  series sense  -->
+            <div class="container" id="sense">
+                <div class="series-nav">
+                    <ul>
+                        <li>Sense</li>
+                        <li>Sense+</li>
+                    </ul>
+                </div>
+
+                <div class="cps-container">
+                    <div class="series-section blue-section sense-first">
+                        <h1>Sense, 个性、灵动的时尚之选</h1>
+                        <p class="subp">Blueair与瑞典著名设计公司Claesson Koivisto Rune双剑合璧，推出世界上第一个由顶级建筑设计工作室创造设计的空气净化器。专为年轻一族小户型打造。在各项国际设计大奖中屡获殊荣。</p>
+                        <div class="tagwrap"><span class="sertag">14㎡-19㎡</span><span class="sertag">2款机型</span></div>
+                    </div>
+                    <div class="series-section">
+                        <div class="row midrow">
+                            <div class="half text-center">
+                                <img src="<?php echo base_url('/common/images/whichone/1-2.png'); ?>" onload="this.width>>=1;this.onload=null;" alt="sense">
+                            </div>
+                            <div class="half">
+                                <h2>科技与美珠联璧合，在小空间大放异彩</h2>
+                                <p class="subp">Blueair联手国际顶尖设计公司设计团队，用心打磨出这一性能出色，外观时尚出彩的全新系列净化器——Blueair Sense。该系列专为年轻一族设计，对于居住在14平米左右的小空间、对净化器性能和外观都有极高要求的年轻人来说，该系列一定是最佳的选择。
+                                    <br> Sense系列涵盖多种赏心悦目的颜色，总有一款能为现代人的时尚家居空间增添一抹亮色。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="series-section blue-section sense-third">
+                        <h2>空气好不好？App来汇报！</h2>
+                        <p>Blueair Aware可以与Blueair Sense+进行绑定，只要室内空气质量下降，就可以及时监测并反馈调节，您还可以在手机上下载Blueair App，直接手机控制Blueair Sense+并且收到来自Blueair Aware甚至是全年的室内外空气数据，空气好不好，数据来说话。</p>
+                    </div>
+                    <div class="series-section gray-section sense-fourth">
+                        <h2>没有按钮，无需触控</h2>
+                        <p class="subp">无需触碰显示屏表面，只需手指在传感器表面轻轻滑动，即可调节风速与开关。</p>
+                    </div>
+                    <div class="series-section sen-award">
+                        <h2>屡获国际大奖</h2>
+                        <div class="row midrow">
+                            <div class="col-3">
+                                <img src="<?php echo base_url('/common/images/whichone/1-5.png'); ?>" alt="icon">
+                                <h3>瑞典国家设计大奖</h3>
+                                <p class="explain">2012年Blueair Sense在瑞典国家设计大奖中脱颖而出。</p>
+                            </div>
+                            <div class="col-3">
+                                <img src="<?php echo base_url('/common/images/whichone/1-6.png'); ?>" alt="icon">
+                                <h3>瑞典国家设计大奖</h3>
+                                <p class="explain">2012年Blueair Sense在瑞典国家设计大奖中脱颖而出。</p>
+                            </div>
+                            <div class="col-3">
+                                <img src="<?php echo base_url('/common/images/whichone/1-7.png'); ?>" alt="icon">
+                                <h3>瑞典国家设计大奖</h3>
+                                <p class="explain">2012年Blueair Sense在瑞典国家设计大奖中脱颖而出。</p>
+                            </div>
+                            <div class="col-3">
+                                <img src="<?php echo base_url('/common/images/whichone/1-8.png'); ?>" alt="icon">
+                                <h3>瑞典国家设计大奖</h3>
+                                <p class="explain">2012年Blueair Sense在瑞典国家设计大奖中脱颖而出。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  end sense  -->
+
+            <!--  classic  -->
+            <div class="container" id="classic">
+                <div class="series-nav">
+                    <ul>
+                        <li>203</li>
+                        <li>270E</li>
+                    </ul>
+                </div>
+
+                <div class="cps-container">
+                    <div class="series-section blue-section cla-first">
+                        <h1>Classic，畅销、常销的经典之选</h1>
+                        <p class="subp">经过18年市场检验，成为畅销、常销于世界各国的经典之选。丰富的产品型号，各种不同的价格段，满足各类人群的需求。无论是时尚单身一族，新婚夫妇，孕育新生命的年轻家庭，亦或是老少同住三代同堂等，都可以找到相适应的机型满足净化需求。</p>
+                        <div class="tagwrap"><span class="sertag">22㎡-65㎡</span><span class="sertag">8款机型</span></div>
+                    </div>
+                    <div class="series-section">
+                        <h2>18年来不断革新，历经各国市场检验</h2>
+                        <img src="<?php echo base_url('/common/images/whichone/2_timeline.png'); ?>" alt="timeline" class="timelineimg">
+                        <p class="subp buss-subp">18年来Blueair产品热销于欧洲、北美、韩国、日本等50多个国家和地区,现已成为室内空气净化系统全球 领导品牌。以下企业均是Blueair Classic系列的客户。</p>
+                        <img src="<?php echo base_url('/common/images/whichone/2_busicon.png'); ?>" alt="bussiness_icons" class="busiconimg">
+                    </div>
+                    <div class="series-section gray-section">
+                        <div class="row midrow">
+                            <div class="half text-center">
+                                <img src="<?php echo base_url('/common/images/whichone/2-2.png'); ?>" onload="this.width>>=1;this.onload=null;" alt="sense">
+                            </div>
+                            <div class="half">
+                                <h2>Blueair Classic与大使馆</h2>
+                                <p class="subp">2013年参考消息转载美国纽约时报的报道，令大家对Blueair留下了深刻的印象。报道写道：空气污染迫使一些在中国工作的外国人决定离开中国，一些海外员工也不愿意接受派遣到中国的职位。雇用外国员工的中国企业和机构开始寻找应对策略，其中美国驻华使领馆经过对多品牌进行对比检测，最终锁定Blueair。美使馆分批多次购买了超4000台Blueair空气净化器，以帮助在华工作的员工消除呼吸不到清新空气的烦恼。
+                                    <br> 至今已有21个驻华使馆和外交机构选择了Blueair。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="series-section blue-section cla-mediasec">
+                        <h2>各国重要媒体强烈推荐Classic机型</h2>
+                        <h3 class="cla-mediasec-firsth3">中国CCTV</h3>
+                        <p class="subp">北京的章小姐家中既有老人又有幼儿，为了保护家人的健康，她决定购买Blueair净化器来守护家人的健康。Classic系列涵盖了适合于不同大小的房间的机型，从22-65平方米。章小姐为家中的三个房间都找到了合适的Classic的机型。
+                            <br> 为了验证空气净化器的效果，央视记者手持美国专业的空气颗粒物实时检测仪Dylos 1700在章小姐家中和楼道内分别测试了空气中的PM2.5颗粒物指数。根据新闻画面显示，章小姐家中的颗粒物读数为9100左右，记者表示，这相当于AQI指数的80多，而当记者一走进楼道，颗粒物读数就瞬间飙升，甚至达到了两万多。
+                        </p>
+                        <!--  498*510  -->
+                        <iframe height=348.6 width=357 src="http://player.youku.com/embed/XMzk0NTEwMjQ0" class="classic-video" frameborder=0 allowfullscreen></iframe>
+                    </div>
+                    <div class="series-section blue-section cla-mediasec">
+                        <h3>日本《Monoqlo》</h3>
+                        <p class="subp">日本著名的家居用品评测杂志monoqlo对日本市面上在售的众多空气净化器进行评测。Blueair 650E因其功能简约，净化效率超高，受到该杂志的强力推荐。</p>
+                        <div class="row">
+                            <div class="col-3"><img src="<?php echo base_url('/common/images/whichone/2-3.png'); ?>" alt="icon" onload="this.width>>=1;this.onload=null;"></div>
+                            <div class="half"><img src="<?php echo base_url('/common/images/whichone/2-4.png'); ?>" alt="icon" onload="this.width>>=1;this.onload=null;"></div>
+                            <div class="col-3"><img src="<?php echo base_url('/common/images/whichone/2-5.png'); ?>" alt="icon" onload="this.width>>=1;this.onload=null;"></div>
+                        </div>
+                    </div>
+                    <div class="series-section blue-section cla-mediasec">
+                        <h3>美国《Consumer Reports》</h3>
+                        <p class="subp">《Consumer Reports》(中译：美国消费者报告)是由非盈利性消费者组织协会从1936年开始出版发行的杂志;针对汽车、电脑、生活用品和各种品牌产品做出无偏见的调查，所有排名数据均来自消费者的真实反馈。
+                            <br> Blueair Classic系列的503和650E长期位列该杂志空气净化器类目的前十名。</p>
+                        <div class="row">
+
+                            <div class="col-4 text-center"><img src="<?php echo base_url('/common/images/whichone/2-6.png'); ?>" alt="icon" onload="this.width>>=1;this.onload=null;"></div>
+                            <div class="col-4 text-center"><img src="<?php echo base_url('/common/images/whichone/2-7.png'); ?>" alt="icon" onload="this.width>>=1;this.onload=null;"></div>
+                            <div class="col-4 text-center"><img src="<?php echo base_url('/common/images/whichone/2-8.png'); ?>" alt="icon" onload="this.width>>=1;this.onload=null;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  end classic  -->
+
+            <!--  pro  -->
+            <div class="container" id="pro">
+                <div class="series-nav">
+                    <ul>
+                        <li>Pro M</li>
+                        <li>Pro L</li>
+                    </ul>
+                </div>
+
+                <div class="cps-container">
+                    <div class="series-section blue-section pro-first">
+                        <h1>Pro, 来自瑞典的专业之选</h1>
+                        <p class="subp">Blueair Pro是2014年瑞典总部研发团队多年倾听市场需求后悉心研发的专业空气净化器系列。革新性的V型滤网，高效利用进风空间，打造出卓越的CADR值。该系列面市以来即成为新的行业标杆。高效的性能与节省空间的机身相结合，成为全球诸多商业机构的办公场所净化首选。</p>
+                        <div class="tagwrap"><span class="sertag">36㎡-100㎡</span><span class="sertag">3款机型</span></div>
+                    </div>
+                    <div class="series-section">
+                        <div class="row midrow pro-panel-row">
+                            <div class="half">
+                                <h2>多功能，不多按钮</h2>
+                                <p class="subp">一款有空气监测功能的净化器可能功能多，仪表参数多，按钮也很多。但Pro的控制面板上只有加和减两个按钮，简单操作易上手。强大的自动检测室内污染源水平的智能监测模块，让您对室内空气状况一目了然，再加上节省空间的立塔式设计，让智能与简约浑然一体。</p>
+                            </div>
+                            <div class="half text-center">
+                                <img src="<?php echo base_url('/common/images/whichone/3-2.png'); ?>" alt="pro-panel">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="series-section gray-section">
+                        <div class="row pro-row">
+                            <div class="half text-left">
+                                <img src="<?php echo base_url('/common/images/whichone/3-3.png'); ?>" onload="this.width>>=1;this.onload=null;" alt="sense">
+                            </div>
+                            <div class="half">
+                                <h2>Blueair Pro与高端酒店</h2>
+                                <p class="subp">位于北京外交中心之地三里屯的瑜舍酒店是由日本著名建筑设计师隈研吾打造的一家高端都会风尚酒店。酒店配置了Blueair空气净化器来为客人创造洁净又安静的休憩空间。
+                                    <br> 酒店设在顶层的近200平米的复式客房Penthouse是外国明星和政商名人来华时喜欢下榻的房间，这里摆放着Pro XL净化器，这款净化器的CADR（洁净空气输出率）大于450CFM，非常适用Penthouse这样的超大空间。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row pro-row">
+                            <div class="half">
+                                <h2>Blueair Classic与大使馆</h2>
+                                <p class="subp">我们很了解客户，知道他们会有怎样的需求；同时我们只会选择如酒店其他设施设备一致的高端、美观的产品，当然还要足够安静，客人需要洁净空气和安静休息。</p>
+                                <br>
+                                <br>
+                                <small>——瑜舍酒店总经理Peter Wynne谈到<br>选择Blueair的原因</small>
+                            </div>
+                            <div class="half text-right">
+                                <img src="<?php echo base_url('/common/images/whichone/3-4.png'); ?>" onload="this.width>>=1;this.onload=null;" alt="sense">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="series-section pro-last">
+                        <h2>Pro与企事业机构</h2>
+                        <div class="row">
+                            <div class="half">
+                                <p class="subp">办公场所的空气中隐藏着看不见的危机，装修材料，二手烟，打印机等办公设备随时释放着有害气体和微粒，影响了员工的健康，降低了工作效率。
+                                    <br> 如今，越来越多得企事业机构认识到让员工呼吸到好空气的重要性，从而购买了Blueair空气净化器。其中Pro XL系列由于非常适用于大空间，受到了以下机构的青睐：</p>
+                                <div class="row">
+                                    <div class="col-4"><img class="pro-busicon" src="<?php echo base_url('/common/images/whichone/3-5.png'); ?>" alt="icon"></div>
+                                    <div class="col-4"><img class="pro-busicon" src="<?php echo base_url('/common/images/whichone/3-6.png'); ?>" alt="icon"></div>
+                                    <div class="col-4"><img class="pro-busicon" src="<?php echo base_url('/common/images/whichone/3-7.png'); ?>" alt="icon"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><img class="pro-busicon" src="<?php echo base_url('/common/images/whichone/3-8.png'); ?>" alt="icon"></div>
+                                    <div class="col-4"><img class="pro-busicon" src="<?php echo base_url('/common/images/whichone/3-9.png'); ?>" alt="icon"></div>
+                                    <div class="col-4"><img class="pro-busicon" src="<?php echo base_url('/common/images/whichone/3-10.png'); ?>" alt="icon"></div>
+                                </div>
+                            </div>
+                            <div class="half pro-last-right">
+                                <h3>改善办公环境空气可以……</h3>
+                                <p class="subp">让员工的工作绩效提升</p>
+                                <div class="row">
+                                    <div class="pro-smlleft">
+                                        <img src="<?php echo base_url('/common/images/whichone/3-icon1.png'); ?>" alt="icon">
+                                    </div>
+                                    <div class="pro-smlright">
+                                        <span class="bigtext">4</span>%<span class="bigtext"> - 16</span>%
+                                    </div>
+                                </div>
+                                <p class="subp">每年在每名员工身上挽回效益损失</p>
+                                <div class="row">
+                                    <div class="pro-smlleft">
+                                        <img src="<?php echo base_url('/common/images/whichone/3-icon2.png'); ?>" alt="icon">
+                                    </div>
+                                    <div class="pro-smlright">
+                                        <span class="bigtext">$480</span>
+                                    </div>
+                                </div>
+                                <small>——Lawrence Berkeley National Laboratory
+                            <br>调查显示</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  end pro  -->
+        </div>
+        <script src="<?php echo base_url('/common/js/jquery.min.js'); ?>"></script>
+        <script src="<?php echo base_url('/common/js/action.js'); ?>"></script>
+</body>
+
+</html>
