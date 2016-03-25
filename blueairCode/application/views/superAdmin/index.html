@@ -4,11 +4,18 @@
         <meta charset="UTF-8">
         <title>BlueAir</title>
         <link rel="stylesheet" href="<?php echo base_url('/common/css/admin-index.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('/common/css/bootstrap.min.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('/common/css/admin-product.css'); ?>">
     </head>
     <body>
+
         <div id="main-container">
             <div id="content-container">
                 <div id="list-container">
+                    <!-- 产品加载区 -->
+                    <div id='production'>
+                        
+                    </div>
                 </div>
                 <div class="right-menu">
                    <div class="right-top-menu">
@@ -16,15 +23,14 @@
                         <span id="welcome">你好，<?php echo $_SESSION['username']; ?> </span>
                    </div>
                    <div class="right-bottom-menu">
-                       <span class="series-tab active">classic</span>
-                       <span class="series-tab">pro</span>
-                       <span class="series-tab">sense</span>
-                       <button class="button1" id="add-product">添加产品</button>
+                       <span class="series-tab active" data-serieid="25">classic</span>
+                       <span class="series-tab" data-serieid="28">pro</span>
+                       <span class="series-tab" data-serieid="29">sense</span>
+                       <button class="button1" id="add-product" data-toggle="modal" data-target="#product-form" data-type="1">添加产品</button>
                    </div>
                 </div>
             </div>
         </div>
-
         <div class="blackBackground">
             <div class="logoLeft">
                 <img src="<?php echo base_url('/common/images/admin/logo.png'); ?>" alt="#" class="logoImg">
@@ -34,12 +40,243 @@
                     <li class="active">
                         <label for="" class="text icon1">产品库管理</label>
                     </li>
-                    <li onclick="window.location.href='/admin/users.html'">
+                    <li onclick="window.location.href='<?php echo base_url('/admin/users.html'); ?>'">
                         <label for="" class="text icon2">账号管理</label>
                     </li>
                 </ul>
             </div>	
             <input type="submit" value="返回销售工具" style="color:white " id="buttonProperty" class="button1" />	
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="product-form" tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="user-formLabel" style="left:200px">
+            <div class="modal-dialog" role="document" style="margin-top:100px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title text-center" id="user-formLabel">新建产品</h4>
+                    </div>
+                    <div class="modal-body">
+                       <form class="form" style="padding-bottom:18px;">
+                           <div class="form-group col-xs-6">
+                                <label for="productName" class="control-label">机型</label>
+                                <div>
+                                    <input type="text" class="form-control" id="productName" placeholder="机型">
+                                </div>
+                            </div>
+                           <div class="form-group col-xs-6">
+                                <label for="serieID" class="control-label">系列</label>
+                                <div>
+                                    <select id="serieID" class="form-control">
+                                        <option value="25">classic</option>
+                                        <option value="28">pro</option>
+                                        <option value="29">sense</option>
+                                    </select>
+                                </div>
+                            </div>
+                       </form>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist" style="margin:0 15px;">
+                            <li role="presentation" class="active"><a href="#parameter" aria-controls="parameter" role="tab" data-toggle="tab">参数</a></li>
+                            <li role="presentation"><a href="#images" aria-controls="images" role="tab" data-toggle="tab">图片</a></li>
+                            <li role="presentation"><a href="#feature" aria-controls="feature" role="tab" data-toggle="tab">特性</a></li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content" style="overflow:auto;position: absolute;left: 15px;right: 15px;bottom: 0;top: 130px;">
+                            <div role="tabpanel" class="tab-pane active" id="parameter">
+                                <form action="" class="form" style="margin-top:24px;">
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="producting_area" placeholder="产地:">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="warranty" placeholder="质保:">
+                                    </div>
+                                    <div class="form-group col-xs-12">
+                                        <input type="text" class="form-control" id="reg_warranty" placeholder="注册质保:">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="material" placeholder="材料:">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="height" placeholder="高(mm):">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="width" placeholder="宽(mm):">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="thickness" placeholder="厚(mm):">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="weight" placeholder="重(kg):">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="color" placeholder="颜色:">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="power_line_length" placeholder="电源线长度(m):">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="wheel" placeholder="滚轮:">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="filter_life" placeholder="滤网寿命(月):">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="CADR_PM" placeholder="CADR 颗粒物:">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="CADR_oxymethylene" placeholder="CADR 甲醛:">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="level_oxymethylene" placeholder="甲醛过滤等级:">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="CCM_oxymethylene" placeholder="CCM甲醛:">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="purification_level" placeholder="净化效率:">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="CCM_PM" placeholder="CCM颗粒物:">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="area" placeholder="适用面积(平方米):">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="level_PM" placeholder="颗粒物等级:">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="loadWind" placeholder="进风:">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="wind_gears" placeholder="风档:">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="wind_quantity" placeholder="风量:">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="gas_exchange" placeholder="换气次数(/小时):">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="power_consume" placeholder="功耗(W):">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="noise" placeholder="噪音dB(A):">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="inner_filter" placeholder="内置滤网:">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="append" placeholder="附赠:">
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="remark" placeholder="备注:">
+                                    </div>
+                                    <div class="form-group col-xs-12">
+                                        <input type="text" class="form-control" id="accessories" placeholder="可选配件:">
+                                    </div>
+                                    <div class="form-group col-xs-12">
+                                        <input type="text" class="form-control" id="jdURL" placeholder="京东链接:">
+                                    </div>
+                                    <div class="form-group col-xs-12">
+                                        <textarea type="text" class="form-control" rows="1" id="label" placeholder="一句话描述:"></textarea>
+                                    </div>
+                                    <div class="form-group col-xs-12">
+                                        <textarea type="text" class="form-control" rows="3" id="description" placeholder="详细描述:"></textarea>
+                                    </div>                                      
+                                    <div class="form-group col-xs-6">
+                                       <label for="remote_control">
+                                           <input type="checkbox" id="remote_control">
+                                           是否有遥控器
+                                       </label>
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                       <label for="particle_sensor">
+                                           <input type="checkbox" id="particle_sensor">
+                                           是否电子颗粒传感器
+                                       </label>
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                       <label for="gas_sensor">
+                                           <input type="checkbox" id="gas_sensor">
+                                           是否电子气体传感器
+                                       </label>
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                       <label for="fan_speed_control">
+                                           <input type="checkbox" id="fan_speed_control">
+                                           是否自动风扇速度控制器
+                                       </label>
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                       <label for="filter">
+                                           <input type="checkbox" id="filter">
+                                           是否滤网更换提示
+                                       </label>
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                       <label for="timer">
+                                           <input type="checkbox" id="timer">
+                                           是否有定时器
+                                       </label>
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                       <label for="motion_seneor">
+                                           <input type="checkbox" id="motion_seneor">
+                                           是否动作感应控制
+                                       </label>
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                       <label for="armorplate_glass_displayer">
+                                           <input type="checkbox" id="armorplate_glass_displayer">
+                                           是否有钢化玻璃显示板
+                                       </label>
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                       <label for="LCD">
+                                           <input type="checkbox" id="LCD">
+                                           是否有液晶显示器
+                                       </label>
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                       <label for="HEPASilentPlus">
+                                           <input type="checkbox" id="HEPASilentPlus">
+                                           是否HEPASilentPlus技术
+                                       </label>
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                       <label for="app_control">
+                                           <input type="checkbox" id="app_control">
+                                           是否APP控制
+                                       </label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="images">
+                              <div data-imgId="">
+                                <img width="100px" height="100px" src="../upload/9a0c73d527f41439957736003d182ba9.jpg">
+                              </div>
+                              <button id="pic_selector">ADD PIC</button>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="feature">
+                            特性
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center modal-footer">
+                        <button type="button" class="btn btn-primary" id="user-submit">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+        <script src="<?php echo base_url('/common/js/jquery.min.js'); ?>"></script>
+	      <script src="<?php echo base_url('/common/js/bootstrap.min.js'); ?>"></script>
+        <script src="<?php echo base_url('/common/js/admin-control.js'); ?>"></script>
+        <script src="<?php echo base_url('/common/js/ajaxupload.js'); ?>"></script>
+        <script src="<?php echo base_url('/common/js/superadmin-produts.js'); ?>"></script>
+
     </body>
 </html>

@@ -17,6 +17,7 @@ class Admin extends MY_Controller {
 		$this->load->model('Admin_model','admin');
 		$this->load->model('Scene_model','scene');
 		$this->load->model('Pic_model','pic');
+		$this->load->model('Feature_model','feature');
 		// error_reporting(0);
 	}
 
@@ -74,11 +75,11 @@ class Admin extends MY_Controller {
 	/*
 		添加的产品在写入DB前，用session记录，因此每次添加产品前，清除上次添加产品的session信息
 	*/
-	public function clearSeesion(){
+	public function clearSeesionData(){
 		foreach ($_SESSION['pic_path'] as $v) {
 			unlink('./upload/'.$v);
 		}
-		if($_POST['clear'])unset($_SESSION['pic_path']);
+		unset($_SESSION['pic_path']);
 	}
 
 
@@ -129,11 +130,6 @@ class Admin extends MY_Controller {
 	/*
 		删除产品
 	*/
-	public function productionDel(){
-		$f = $this->admin->delProduction($_POST['productionID']);
-		if($f == TRUE) echo 'success';
-	}
-
 	/*
 		添加系列
 	*/

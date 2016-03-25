@@ -52,24 +52,101 @@ $(function(){
         }
     });
 
+    var type,pId;//type,pId 声明为全局，方便'#user-submit'调用
+
     $('#product-form').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget);
-        var type = button.data("type");
+        type = button.data("type");
         var modal = $(this)
         modal.find(".modal-body").height(window.innerHeight - 300);
         if(type == 1){
+            pId = -1;//添加新产品，ID设为-1
             modal.find('.modal-title').text('新建产品');
             modal.data("productID", -1);
         }
         else{
-            var pId = button.data('productid');
+            pId = button.data('productid');//编辑旧产品，获取ID
             modal.find('.modal-title').text('编辑产品');
             modal.data("productID", pId);
+            //请求参数，图片，特性，label，tips
+            $.post(
+                'feature',
+                {
+                    pId:pId
+                },
+                function(data){
+                    var data=JSON.parse(data);
+                }
+            );
         }
+
+        // 创建一个上传参数
+        var uploadOption=
+        {
+            // 提交目标
+            action: 'upload',
+            // 服务端接收的名称
+            name: "file",
+            // 参数
+            data: {productID:pId},
+
+            dataType: 'JSON',
+            // 自动提交
+            autoSubmit: true,
+            // 选择文件之后…
+            onChange: function (file, extension) {
+                if (new RegExp(/(jpg)|(jpeg)|(bmp)|(gif)|(png)/i).test(extension)) {
+                    $("#filepath").val(file);
+                } else {
+                    alert("只限上传图片文件，请重新选择！");
+                }
+            },
+            // 开始上传文件
+            onSubmit: function (file, extension) {
+            },
+            // 上传完成之后
+            onComplete: function (file,response) {
+                var response=JSON.parse(response);
+                // var html='';
+                // $("#pic_selector").before(response);
+            }
+        }
+
+        // 初始化图片上传框
+        var oAjaxUpload = new AjaxUpload('#pic_selector', uploadOption);
+
     });
     
     window.onresize = function(){
         $('#product-form').find(".modal-body").height(window.innerHeight - 300);
     }
-    
+
+    // 添加，编辑(参数)
+    $('#user-submit').click(function(){
+        $.post(
+            'productionEdit',
+            {
+                type:type
+                /*
+                    参数list
+                */
+            },
+            function(data){
+                console.log(data);
+                //成功则清空上一次未保存的session信息
+                $.post('clearSeesionData',{clear:true},function(data){
+                });
+
+            }
+        );
+    });
+
+
+
+
+
+
+
+
+
 });

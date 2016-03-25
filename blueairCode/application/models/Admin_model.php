@@ -30,18 +30,24 @@ class Admin_model extends MY_Model{
         $products = [];
         $pic = new Pic_model();
         if($_SESSION['userType'] == 2){
-            $query = "select product.productID as productID, productName, isnull(privilege.productID) as online from product left join privilege on product.productID = privilege.productID where product.serieID = ? and privilege.userID = ?";
-            $products = $this->db->query($query, array($serieId, $_SESSION["userID"]))->result_array();
+            $query = "select product.productID as productID, productName, not isnull(privilege.productID) as isOnline from product left join privilege on product.productID = privilege.productID and privilege.userID = ? where product.serieID = ?";
+            $products = $this->db->query($query, array($_SESSION["userID"], $serieId))->result_array();
         }
         else if($_SESSION['userType'] == 1){
             $query = "select productID, productName from product where serieID = ?";
-            $products = $this->db->query($query, array($serieId)->result_array();
+            $products = $this->db->query($query, $serieId)->result_array();
         }
         else{
             return FALSE;
         }
         foreach ($products as &$production) {
-            $production['pic'] = $pic->getProductionPic($production['productID']);
+            $pics = $pic->getProductionPic($production['productID']);
+            if($_SESSION['userType'] == 2){
+                $production['isOnline'] = $production['isOnline'] == '1' ? TRUE : FALSE;
+            }
+            if(count($pics) > 0){
+                $production['picture_path'] = base_url("/upload/" . $pics[0]["pic_path"]);
+            }
         }
         return $products;
     }
@@ -61,34 +67,7 @@ class Admin_model extends MY_Model{
 		}
 		return $data;
 	}
-
-	public function getStoreProductionList($userID){
-		$pic = new Pic_model();
-
-		$serie_query = $this->db->get('series')->result_array();
-		foreach ($serie_query as $v) {
-			$not_exist='SELECT productName,productID FROM product WHERE serieID = '.$v['serieID'].' AND productID NOT IN (SELECT productID FROM privilege WHERE userID = '.$userID.')';
-			$v['production_not_exist'] = $this->db->query($not_exist)->result_array();
-
-			foreach ($v['production_not_exist'] as &$production) {
-				$production['pic'] = $pic->getProductionPic($production['productID']);
-			}
-			unset($production);
-
-			$exist='SELECT productName,productID FROM product WHERE serieID = '.$v['serieID'].' AND productID IN (SELECT productID FROM privilege WHERE userID = '.$userID.')';
-			$v['production_exist'] = $this->db->query($exist)->result_array();
-			
-			foreach ($v['production_exist'] as &$production) {
-				$production['pic'] = $pic->getProductionPic($production['productID']);
-			}
-			unset($production);
-
-			$data[] = $v;
-		}
-		return $data;
-	}
-    
-    
+	
 	public function getProductionList($serieID){
 		switch ($_SESSION['userType']) {
 			case '1':
@@ -98,8 +77,8 @@ class Admin_model extends MY_Model{
 				break;
 
 			case '2':
-				$production_sql = 'SELECT productName,productID FROM product WHERE serieID = ?'.' AND productID IN (SELECT productID FROM privilege WHERE userID = '.$_SESSION['userID'].')';
-				$data = $this->db->query($production_sql,$serieID)->result_array();
+				$production_sql = 'SELECT productName,productID FROM product WHERE serieID = ? AND productID IN (SELECT productID FROM privilege WHERE userID = )';
+				$data = $this->db->query($production_sql,array($serieID, $_SESSION['userID']))->result_array();
 				return $data;
 
 			default:
@@ -121,12 +100,6 @@ class Admin_model extends MY_Model{
 	public function addProduction($data){
 		$this->db->insert('product', $data);
 		$productID = $this->db->insert_id();
-		//添加产品的同时 在表格中创建 description 和 label
-		$des_data  = array('productID' => $productID,'description'=>'');
-		$this->db->insert('description',$des_data);
-		$label_data  = array('productID' => $productID,'label'=>'');
-		$this->db->insert('label',$label_data);
-
 		return  $productID;
 	}
 
@@ -137,7 +110,7 @@ class Admin_model extends MY_Model{
         	$this->pic->delProductionPic($pic['pictureID']);
 		}
 
-		//删除 参数 特性 label des tips
+		//删除 参数 特性 tips
 		$this->db->where('productID', $id);
 		$this->db->delete('privilege');
 
@@ -146,12 +119,6 @@ class Admin_model extends MY_Model{
 
 		$this->db->where('productID', $id);
 		$this->db->delete('feature');
-
-		$this->db->where('productID', $id);
-		$this->db->delete('description');
-
-		$this->db->where('productID', $id);
-		$this->db->delete('label');
 
 		$this->db->where('productID', $id);
 		$this->db->delete('tips');

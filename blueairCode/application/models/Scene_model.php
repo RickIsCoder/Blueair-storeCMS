@@ -9,15 +9,15 @@ class Scene_model extends MY_Model{
 	}
 
 	public function getScale($sceneID){
-		$query_sql = 'SELECT scaleID,scaleName FROM scale WHERE sceneID =' . $sceneID;
-		$scaleList = $this->db->query($query_sql)->result_array();
+		$query_sql = 'SELECT scaleID,scaleName FROM scale WHERE sceneID = ?';
+		$scaleList = $this->db->query($query_sql,$sceneID)->result_array();
 		return $scaleList;
 		
 	}
 
 	public function getSceneProduct($scaleID){
-		$query_sql = 'SELECT sceneProductID,productID FROM sceneProduct WHERE scaleID =' . $scaleID;
-		$sceneProduct = $this->db->query($query_sql)->result_array();
+		$query_sql = 'SELECT sceneProductID,productID FROM sceneProduct WHERE scaleID = ?';
+		$sceneProduct = $this->db->query($query_sql, $scaleID)->result_array();
 		return $sceneProduct;
 		
 	}
@@ -65,8 +65,8 @@ class Scene_model extends MY_Model{
 	}
 
 	public function checkSceneProduction($scaleID){
-		$production_sql = 'SELECT productName,productID FROM product WHERE productID NOT IN (SELECT productID FROM sceneProduct WHERE scaleID = '.$scaleID.')';
-		$noExistProdution = $this->db->query($production_sql)->result_array();	
+		$production_sql = 'SELECT productName,productID FROM product WHERE productID NOT IN (SELECT productID FROM sceneProduct WHERE scaleID = ?)';
+		$noExistProdution = $this->db->query($production_sql, $scaleID)->result_array();	
 		return 	$noExistProdution;
 	}
 

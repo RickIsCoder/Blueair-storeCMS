@@ -21,11 +21,11 @@ class User_model extends MY_Model{
 	}
 
     public function addUser($data){
-        // should check if realy added.
+        // should check if realy added
         // if add a user with an exist username?
-		$f = $this->db->insert('user',$data);
+        $f = $this->db->insert('user',$data);
         if($f){
-            return $this->db->insert_id();
+            return TRUE;
         }
         else{
             return FALSE;

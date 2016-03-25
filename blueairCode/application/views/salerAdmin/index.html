@@ -3,12 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <title>BlueAir</title>
+        <link rel="stylesheet" href="<?php echo base_url('/common/css/bootstrap.min.css'); ?>">
         <link rel="stylesheet" href="<?php echo base_url('/common/css/admin-index.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('/common/css/admin-product.css'); ?>">
     </head>
     <body>
         <div id="main-container">
             <div id="content-container">
                 <div id="list-container">
+                    <!-- 产品加载区 -->
+                    <div id='production'>
+                        
+                    </div>
                 </div>
                 <div class="right-menu">
                    <div class="right-top-menu">
@@ -16,15 +22,15 @@
                         <span id="welcome">你好，<?php echo $_SESSION['username']; ?> </span>
                    </div>
                    <div class="right-bottom-menu">
-                       <span class="series-tab active">classic</span>
-                       <span class="series-tab">pro</span>
-                       <span class="series-tab">sense</span>
+                       <span class="series-tab active" data-serieid="25">classic</span>
+                       <span class="series-tab" data-serieid="28">pro</span>
+                       <span class="series-tab" data-serieid="29">sense</span>
                        <button class="button1" id="add-product">添加产品</button>
                    </div>
                 </div>
             </div>
         </div>
-
+        
         <div class="blackBackground">
             <div class="logoLeft">
                 <img src="<?php echo base_url('/common/images/admin/logo.png'); ?>" alt="#" class="logoImg">
@@ -38,5 +44,11 @@
             </div>	
             <input type="submit" value="返回销售工具" style="color:white " id="buttonProperty" class="button1" />	
         </div>
+
+        <script src="<?php echo base_url('/common/js/jquery.min.js'); ?>"></script>
+	    <script src="<?php echo base_url('/common/js/bootstrap.min.js'); ?>"></script>
+        <script src="<?php echo base_url('/common/js/admin-control.js'); ?>"></script>
+        <script src="<?php echo base_url('/common/js/storeadmin-produts.js'); ?>"></script>
+
     </body>
 </html>

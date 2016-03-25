@@ -1,17 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Feature_model extends MY_Model{
-	public function getFeatureDes($productionID){
-		$des_sql = 'SELECT description FROM description WHERE productID=?';
-		$data = $this->db->query($des_sql,$productionID)->result_array();
-		return $data;
-	}
-	
-	public function getFeatureLabel($productionID){
-		$des_sql = 'SELECT label FROM label WHERE productID=?';
-		$data = $this->db->query($des_sql,$productionID)->result_array();
-		return $data;
-	}
 
 	public function getFeatureItems($productionID){
 		$feature_sql = 'SELECT featureID,featureTitle,featureContent FROM feature WHERE productID=?';
@@ -42,17 +31,6 @@ class Feature_model extends MY_Model{
 		return TRUE;
 	}
 
-	public function editDescription($productID,$data){
-		$this->db->where('productID',$productID);
-		$this->db->update('description',$data);
-		return TRUE;	
-	}
-
-	public function editLabel($productID,$data){
-		$this->db->where('productID',$productID);
-		$this->db->update('label',$data);
-		return TRUE;	
-	}
 
 	public  function addTips($data){
 		$this->db->insert('tips', $data);
