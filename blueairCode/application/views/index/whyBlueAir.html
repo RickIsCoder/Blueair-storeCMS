@@ -16,63 +16,75 @@
 </head>
 
 <body data-pagename="whyBlueAir">
-    <div class="main-container">
-        <div class="wba" id="whyBlueAirContainer">
 
-            <?php include "nav.html"; ?>
+    <?php include "nav.html"; ?>
+        <div class="container navtype-vertical inshow" id="whyBlueAirContainer">
 
             <div id="whyBlueAirSlide">
-                <div class="slick-container ourbrand">
+                <div class="container ourbrand">
                     <img src="<?php echo base_url('/common/images/logo.png'); ?>" alt="logo" class="ob-logo">
                     <div class="ob-text">
                         <h2>我们的品牌</h2>
                         <p class="subp">Blueair品牌1996年创立于瑞典首都斯德哥尔摩，HEPASilent® 高效静音专利技术使之成为全球最强劲的空气净化系统，并在技术创新、高品质、高效能等方面迅速赢得业内认可，确立了在国际市场上高端品牌的形象及地位。</p>
                     </div>
-                    <div class="ob-digital row">
-                        <div class="col-4">
-                            <p class="ob-title"><span class="en">20</span>年</p>
-                            <p>空气净化系统生产、研发历史。</p>
-                        </div>
-                        <div class="col-4">
-                            <p class="ob-title"><span class="en">63</span>个
-                                <p>
-                                    <p>国家热销，深受欧美、日韩顾客喜爱。</p>
-                        </div>
-                        <div class="col-4">
-                            <p class="ob-title"><span class="en">84</span>%
-                                <p>
-                                    <p>顾客表示Blueair比之前用的其他品牌净化器性能更优。</p>
+                    <div class="ob-digital">
+                        <div class="ob-digital-wrap">
+                            <div class="ob-digital-item">
+                                <p class="ob-title-wrap"><span class="ob-title">20</span> 年</p>
+                                <p class="subp">空气净化系统生产、研发历史。</p>
+                            </div>
+                            <div class="ob-digital-item mid">
+                                <p class="ob-title-wrap"><span class="ob-title">63</span> 个</p>
+                                <p class="subp">国家热销，深受欧美、日韩顾客喜爱。</p>
+                            </div>
+                            <div class="ob-digital-item">
+                                <p class="ob-title-wrap"><span class="ob-title">84</span> %</p>
+                                <p class="subp">顾客表示Blueair比之前用的其他品牌净化器性能更优。</p>
+                            </div>
                         </div>
                     </div>
                     <small>注：数据来自权威机构对美国791名用户的调查访问</small>
                 </div>
-                <div class="slick-container">
-                    <img src="<?php echo base_url('/common/images/logo.png'); ?>" alt="logo" class="hs-logo">
-                    <div class="hs-text">
-                        <h2>专利技术 <span class="en">HEPASilent</span></h2>
-                        <p class="subp">结合电子吸附和滤网过滤的多层渐进式过滤技术，可清除0.1微米级对肺脏有害的可吸入颗粒物，及过敏原、香烟烟雾、细菌及激光打印机、传真机所释放的微粒等空气中99.7%的污染源。</p>
+                <div class="container">
+                    <div class="hs-title">
+                        <div class="hs-title-wrap">
+                            <div class="hs-title-left">
+                                <img src="<?php echo base_url('/common/images/logo.png'); ?>" alt="logo" class="hs-logo">
+                                <div class="hs-text">
+                                    <h2>专利技术 HEPASilent</h2>
+                                    <p class="subp">结合电子吸附和滤网过滤的多层渐进式过滤技术，可清除0.1微米级对肺脏有害的可吸入颗粒物，及过敏原、香烟烟雾、细菌及激光打印机、传真机所释放的微粒等空气中99.7%的污染源。</p>
+                                </div>
+                            </div>
+                            <img src="<?php echo base_url('/common/images/whyBlueAir/hepaimg.png'); ?>" alt="HEPASilent" class="hs-img">
+                        </div>
                     </div>
-                    <img src="<?php echo base_url('/common/images/whyBlueAir/hepaimg.png'); ?>" alt="HEPASilent" class="hs-img">
+
                     <div class="hs-nav">
-                        <div class="hs-item">
-                            <img role="button" id="jumpEfficient" src="<?php echo base_url('/common/images/whyBlueAir/hepaNav1.png'); ?>" alt="icon">
-                            <p class="subp">有效清除包括PM2.5在内的大部分微尘颗粒和细菌，一小时内室内5次循环换气。</p>
-                        </div>
-                        <div class="hs-item">
-                            <img role="button" id="jumpMute" src="<?php echo base_url('/common/images/whyBlueAir/hepaNav2.png'); ?>" alt="icon">
-                            <p class="subp">低速运转时静过轻声絮语，绝不干扰您的睡眠。</p>
-                        </div>
-                        <div class="hs-item">
-                            <img role="button" id="jumpEnergy" src="<?php echo base_url('/common/images/whyBlueAir/hepaNav3.png'); ?>" alt="icon">
-                            <p class="subp">猜猜Blueair的能耗和哪种设备相当？</p>
-                        </div>
-                        <div class="hs-item">
-                            <img role="button" id="jumpByproduct" src="<?php echo base_url('/common/images/whyBlueAir/hepaNav4.png'); ?>" alt="icon">
-                            <p class="subp">绝对不会释放任何臭氧，妈妈再也不用担心家中臭氧超标。</p>
+                        <div class="hs-nav-wrap">
+                            <div class="hs-item">
+                                <img role="button" id="jumpEfficient" src="<?php echo base_url('/common/images/whyBlueAir/hepaNav1.png'); ?>" alt="icon">
+                                <p class="text-center">高效 <img src="<?php echo base_url('/common/images/arrow.png'); ?>" class="arrow-img" alt="arrow"></p>
+                                <p class="subp">有效清除包括PM2.5在内的大部分微尘颗粒和细菌，一小时内室内5次循环换气。</p>
+                            </div>
+                            <div class="hs-item">
+                                <img role="button" id="jumpMute" src="<?php echo base_url('/common/images/whyBlueAir/hepaNav2.png'); ?>" alt="icon">
+                                <p class="text-center">静音 <img src="<?php echo base_url('/common/images/arrow.png'); ?>" class="arrow-img" alt="arrow"></p>
+                                <p class="subp">低速运转时静过轻声絮语，绝不干扰您的睡眠。</p>
+                            </div>
+                            <div class="hs-item">
+                                <img role="button" id="jumpEnergy" src="<?php echo base_url('/common/images/whyBlueAir/hepaNav3.png'); ?>" alt="icon">
+                                <p class="text-center">节能 <img src="<?php echo base_url('/common/images/arrow.png'); ?>" class="arrow-img" alt="arrow"></p>
+                                <p class="subp">猜猜Blueair的能耗和哪种设备相当？</p>
+                            </div>
+                            <div class="hs-item">
+                                <img role="button" id="jumpByproduct" src="<?php echo base_url('/common/images/whyBlueAir/hepaNav4.png'); ?>" alt="icon">
+                                <p class="text-center">零副产物 <img src="<?php echo base_url('/common/images/arrow.png'); ?>" class="arrow-img" alt="arrow"></p>
+                                <p class="subp">绝对不会释放任何臭氧，妈妈再也不用担心家中臭氧超标。</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="slick-container">
+                <div class="container">
                     <div class="serve-banner">
                         <img src="<?php echo base_url('/common/images/logo.png'); ?>" alt="logo" class="serve-logo">
                         <div class="serve-title">
@@ -82,61 +94,66 @@
                         <img src="<?php echo base_url('/common/images/whyBlueAir/serverMan.png'); ?>" alt="img" class="serve-man">
                     </div>
                     <div class="serve">
-                        <div class="item">
-                            <div class="imgwrap"><img src="<?php echo base_url('/common/images/whyBlueAir/serveIcon1.png'); ?>" alt="Icon"></div>
-                            <h3>入户测试 上门服务</h3>
-                            <p class="explain">专业团队到您家，为您提供空气检测服务。</p>
-                        </div>
-                        <div class="item">
-                            <div class="imgwrap"><img src="<?php echo base_url('/common/images/whyBlueAir/serveIcon2.png'); ?>" alt="Icon"></div>
-                            <h3>注册会员 实惠更多</h3>
-                            <p class="explain">到blueair.cn注册后您可以享受更快捷高效的售后服务支持。</p>
-                        </div>
-                        <div class="item">
-                            <div class="imgwrap"><img src="<?php echo base_url('/common/images/whyBlueAir/serveIcon3.png'); ?>" alt="Icon"></div>
-                            <h3>全型滤网 长期供应</h3>
-                            <p class="explain">Blueair本着对客户负责的态度，为客户的后续使用提供不间断的保障。</p>
-                        </div>
-                        <div class="item">
-                            <div class="imgwrap"><img src="<?php echo base_url('/common/images/whyBlueAir/serveIcon4.png'); ?>" alt="Icon"></div>
-                            <h3>服务网点 遍布全国</h3>
-                            <p class="explain">售后服务网络 覆盖全中国95个城市32个省及直辖市。</p>
-                        </div>
-                        <div class="item">
-                            <div class="imgwrap"><img src="<?php echo base_url('/common/images/whyBlueAir/serveIcon5.png'); ?>" alt="Icon"></div>
-                            <h3>企业客户 全程服务</h3>
-                            <p class="explain">对集团采购的客户提供前期方案咨询、上门送货、售后的全程服务。</p>
+                        <div class="serve-item-wrap">
+                            <div class="item">
+                                <div class="imgwrap"><img src="<?php echo base_url('/common/images/whyBlueAir/serveIcon1.png'); ?>" alt="Icon"></div>
+                                <h3>入户测试 上门服务</h3>
+                                <p class="subp">专业团队到您家，为您提供空气检测服务。</p>
+                            </div>
+                            <div class="item">
+                                <div class="imgwrap"><img src="<?php echo base_url('/common/images/whyBlueAir/serveIcon2.png'); ?>" alt="Icon"></div>
+                                <h3>注册会员 实惠更多</h3>
+                                <p class="subp">到blueair.cn注册后您可以享受更快捷高效的售后服务支持。</p>
+                            </div>
+                            <div class="item">
+                                <div class="imgwrap"><img src="<?php echo base_url('/common/images/whyBlueAir/serveIcon3.png'); ?>" alt="Icon"></div>
+                                <h3>全型滤网 长期供应</h3>
+                                <p class="subp">Blueair本着对客户负责的态度，为客户的后续使用提供不间断的保障。</p>
+                            </div>
+                            <div class="item">
+                                <div class="imgwrap"><img src="<?php echo base_url('/common/images/whyBlueAir/serveIcon4.png'); ?>" alt="Icon"></div>
+                                <h3>服务网点 遍布全国</h3>
+                                <p class="subp">售后服务网络 覆盖全中国95个城市32个省及直辖市。</p>
+                            </div>
+                            <div class="item">
+                                <div class="imgwrap"><img src="<?php echo base_url('/common/images/whyBlueAir/serveIcon5.png'); ?>" alt="Icon"></div>
+                                <h3>企业客户 全程服务</h3>
+                                <p class="subp">对集团采购的客户提供前期方案咨询、上门送货、售后的全程服务。</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="slick-container">
-                    <img src="<?php echo base_url('/common/images/logo.png'); ?>" alt="logo" class="honor-logo">
-                    <h1 class="honor-title">荣誉和故事</h1>
-                    <div class="honor-nav">
-                        <span class="honor-navitem actived" id="honorIdenty">奖项和认证</span>
-                        <span class="honor-navitem" id="honorReport">荣誉和报道</span>
+                <div class="container">
+                    <div class="honor-wrap">
+                        <img src="<?php echo base_url('/common/images/logo.png'); ?>" alt="logo" class="honor-logo">
+                        <h1 class="honor-title">荣誉和故事</h1>
+                        <div class="honor-nav">
+                            <span class="honor-navitem actived" id="honorIdenty">奖项和认证</span>
+                            <span class="honor-navitem" id="honorReport">荣誉和报道</span>
+                        </div>
+                        <div class="honor-content actived" id="honorIdentyContent">
+                            <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg1.png'); ?>" alt="img">
+                            <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg2.png'); ?>" alt="img">
+                            <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg3.png'); ?>" alt="img">
+                            <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg4.png'); ?>" alt="img">
+                            <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg5.png'); ?>" alt="img">
+                            <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg6.png'); ?>" alt="img">
+                            <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg7.png'); ?>" alt="img">
+                            <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg8.png'); ?>" alt="img">
+                            <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg9.png'); ?>" alt="img">
+                            <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg10.png'); ?>" alt="img">
+                            <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg11.png'); ?>" alt="img">
+                            <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg12.png'); ?>" alt="img">
+                        </div>
+                        <div class="honor-content" id="honorReportContent">
+                            <img src="<?php echo base_url('/common/images/whyBlueAir/honorRightImgBig.png'); ?>" alt="img">
+                            <img src="<?php echo base_url('/common/images/whyBlueAir/honorRightImg1.png'); ?>" alt="img">
+                            <img src="<?php echo base_url('/common/images/whyBlueAir/honorRightImg2.png'); ?>" alt="img">
+                            <img src="<?php echo base_url('/common/images/whyBlueAir/honorRightImg3.png'); ?>" alt="img">
+                            <img src="<?php echo base_url('/common/images/whyBlueAir/honorRightImg4.png'); ?>" alt="img">
+                        </div>
                     </div>
-                    <div class="honor-content actived" id="honorIdentyContent">
-                        <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg1.png'); ?>" alt="img">
-                        <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg2.png'); ?>" alt="img">
-                        <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg3.png'); ?>" alt="img">
-                        <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg4.png'); ?>" alt="img">
-                        <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg5.png'); ?>" alt="img">
-                        <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg6.png'); ?>" alt="img">
-                        <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg7.png'); ?>" alt="img">
-                        <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg8.png'); ?>" alt="img">
-                        <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg9.png'); ?>" alt="img">
-                        <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg10.png'); ?>" alt="img">
-                        <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg11.png'); ?>" alt="img">
-                        <img src="<?php echo base_url('/common/images/whyBlueAir/honorImg12.png'); ?>" alt="img">
-                    </div>
-                    <div class="honor-content" id="honorReportContent">
-                        <img src="<?php echo base_url('/common/images/whyBlueAir/honorRightImgBig.png'); ?>" alt="img">
-                        <img src="<?php echo base_url('/common/images/whyBlueAir/honorRightImg1.png'); ?>" alt="img">
-                        <img src="<?php echo base_url('/common/images/whyBlueAir/honorRightImg2.png'); ?>" alt="img">
-                        <img src="<?php echo base_url('/common/images/whyBlueAir/honorRightImg3.png'); ?>" alt="img">
-                        <img src="<?php echo base_url('/common/images/whyBlueAir/honorRightImg4.png'); ?>" alt="img">
-                    </div>
+
                 </div>
             </div>
 
@@ -144,26 +161,33 @@
         <!--  end WhyBlueAir  -->
 
         <!--  Efficient  -->
-        <div class="efficient" id="efficient">
-            <div class="item efficient-light" id="efficientLight">
+        <div class="container navtype-vertical" id="efficient">
+            <div class="container navtype-horizontal inshow efficient-light" id="efficientLight">
                 <h2>打开Blueair净化器仅一小时
                     <br> PM2.5和细菌浓度下降了99%</h2>
                 <img src="<?php echo base_url('/common/images/whyBlueAir/efiicientLightImg.png'); ?>" alt="img" class="el-img">
-                <p class="explain">用一个人往返北欧的机票钱，购入一台Blueair，您就可以吧北欧的空气
+                <p class="subp">用一个人往返北欧的机票钱，购入一台Blueair，您就可以吧北欧的空气
                     <br>永久地带回家中，让您和家人一起呼吸到全球最好的空气。</p>
-                <div role="button" id="btnWhyEfficient">为什么这么高效?</div>
+                <div class="why-efficient-btn">
+                    <div role="button" class="btn-why-efficient" id="btnWhyEfficient">了解HEPASlient奇妙的过滤能力 <img src="<?php echo base_url('/common/images/whyBlueAir/play.png'); ?>" alt="img"></div>
+                </div>
                 <img src="<?php echo base_url('/common/images/whyBlueAir/machine.png'); ?>" alt="machine" class="el-machineimg">
             </div>
-            <div class="item efficient-dark" id="efficientDark">
+            <div class="container efficient-dark" id="efficientDark">
                 <div class="darkair"></div>
-                <div class="bacterialwrap"></div>
+                <div class="bacterialwrap" id="bacterials-wrap">
+                    <img class="bacterials layer" data-depth="-0.40" src="<?php echo base_url('/common/images/whyBlueAir/bacterial1.png'); ?>" alt="bacterials">
+                    <img class="bacterials layer" data-depth="0.20" src="<?php echo base_url('/common/images/whyBlueAir/bacterial2.png'); ?>" alt="bacterials">
+                    <img class="bacterials layer" data-depth="-0.20" src="<?php echo base_url('/common/images/whyBlueAir/bacterial3.png'); ?>" alt="bacterials">
+                    <img class="bacterials layer" data-depth="0.40" src="<?php echo base_url('/common/images/whyBlueAir/bacterial4.png'); ?>" alt="bacterials">
+                </div>
                 <p class="bacterial-text">重度污染的室内，
                     <br> PM2.5浓度和细菌浓度分别为400µg/m3和20000cfu/m3。</p>
                 <div role="button" class="openbabtn" id="openBlueAir"></div>
-                <p class="explain">点击开启Blueair净化器
+                <p class="subp">点击开启Blueair净化器
                     <br>让Blueair带给您耳目一新的改变</p>
             </div>
-            <div class="whyefficient" id="whyEfficient">
+            <div class="container navtype-horizontal whyefficient" id="whyEfficient">
                 <h2>Blueair何以达到如此高的净化效率
                     <br>——归功于<span class="emspan">HEPASilent</span>的创新性净化技术</h2>
                 <div class="row">
@@ -181,7 +205,7 @@
         <!--  end Efficient  -->
 
         <!--  Mute  -->
-        <div class="mute" id="mute">
+        <div class="mute container navtype-vertical" id="mute">
             <div class="row">
                 <div class="col-3 mute-item1">
                     <img src="<?php echo base_url('/common/images/whyBlueAir/53db.png'); ?>" alt="play">
@@ -198,64 +222,69 @@
                 <div class="col-3 mute-item4">
                     <img src="<?php echo base_url('/common/images/whyBlueAir/23db.png'); ?>" alt="play">
                     <p>开着Blueair的夜晚</p>
+                    <div class="mute-efficient-btn">
+                        <div role="button" class="btn-why-efficient" id="">了解空气净化器噪音的小秘密 <img src="<?php echo base_url('/common/images/whyBlueAir/play.png'); ?>" alt="img"></div>
+                    </div>
                 </div>
             </div>
         </div>
         <!--  end Mute  -->
 
         <!--  Energy Saving  -->
-        <div class="energy" id="energy">
-            <h1>猜猜Blueair的最低功率和以下那种设备相当？</h1>
-            <div class="energy-item">
-                <p class="energy-qustitle en">1</p>
-                <div class="energy-cicle" id="energyBtn1">
-                    <img src="<?php echo base_url('/common/images/whyBlueAir/energy1.png'); ?>" alt="img">
+        <div class="energy container navtype-vertical" id="energy">
+            <h2 class="energy-title">猜猜Blueair的最低功率和以下那种设备相当？</h2>
+            <div class="energy-item-wrap">
+                <div class="energy-item">
+                    <p class="energy-qustitle">1</p>
+                    <div class="energy-cicle" id="energyBtn1">
+                        <img src="<?php echo base_url('/common/images/whyBlueAir/energy1.png'); ?>" alt="img">
+                    </div>
+                    <h2>发光水母</h2>
+                    <img src="<?php echo base_url('/common/images/whyBlueAir/wrong.png'); ?>" alt="wrong" class="energy-ans" id="energy1Img">
+                    <p class="energy-content" id="energy1Content">水母是靠荧光蛋白来发光，Blueair目前没有引入这样的技术喔。不过为了降低耗，我们一直再努力！</p>
                 </div>
-                <h2>发光水母</h2>
-                <img src="<?php echo base_url('/common/images/whyBlueAir/wrong.png'); ?>" alt="wrong" class="energy-ans" id="energy1Img">
-                <p class="energy-content" id="energy1Content">水母是靠荧光蛋白来发光，Blueair目前没有引入这样的技术喔。不过为了降低耗，我们一直再努力！</p>
-            </div>
-            <div class="energy-item">
-                <p class="energy-qustitle en">2</p>
-                <div class="energy-cicle" id="energyBtn2">
-                    <img src="<?php echo base_url('/common/images/whyBlueAir/energy2.png'); ?>" alt="img">
+                <div class="energy-item">
+                    <p class="energy-qustitle">2</p>
+                    <div class="energy-cicle" id="energyBtn2">
+                        <img src="<?php echo base_url('/common/images/whyBlueAir/energy2.png'); ?>" alt="img">
+                    </div>
+                    <h2>液晶电视</h2>
+                    <img src="<?php echo base_url('/common/images/whyBlueAir/wrong.png'); ?>" alt="wrong" class="energy-ans" id="energy2Img">
+                    <p class="energy-content" id="energy2Content">家用的50英寸平板电视，电源功率大致在100W左右，甚至更多，Blueair不需要这么高的耗电量喔。</p>
                 </div>
-                <h2>液晶电视</h2>
-                <img src="<?php echo base_url('/common/images/whyBlueAir/wrong.png'); ?>" alt="wrong" class="energy-ans" id="energy2Img">
-                <p class="energy-content" id="energy2Content">家用的50英寸平板电视，电源功率大致在100W左右，甚至更多，Blueair不需要这么高的耗电量喔。</p>
-            </div>
-            <div class="energy-item">
-                <p class="energy-qustitle en">3</p>
-                <div class="energy-cicle" id="energyBtn3">
-                    <img src="<?php echo base_url('/common/images/whyBlueAir/energy3.png'); ?>" alt="img">
+                <div class="energy-item">
+                    <p class="energy-qustitle">3</p>
+                    <div class="energy-cicle" id="energyBtn3">
+                        <img src="<?php echo base_url('/common/images/whyBlueAir/energy3.png'); ?>" alt="img">
+                    </div>
+                    <h2>节能空调</h2>
+                    <img src="<?php echo base_url('/common/images/whyBlueAir/wrong.png'); ?>" alt="wrong" class="energy-ans" id="energy3Img">
+                    <p class="energy-content" id="energy3Content">达到二级能效等级的1.5匹节能空调，制冷功率大致为1500W-1800W，Blueair不需要这么高的耗电量喔。</p>
                 </div>
-                <h2>节能空调</h2>
-                <img src="<?php echo base_url('/common/images/whyBlueAir/wrong.png'); ?>" alt="wrong" class="energy-ans" id="energy3Img">
-                <p class="energy-content" id="energy3Content">达到二级能效等级的1.5匹节能空调，制冷功率大致为1500W-1800W，Blueair不需要这么高的耗电量喔。</p>
-            </div>
-            <div class="energy-item">
-                <p class="energy-qustitle en">4</p>
-                <div class="energy-cicle" id="energyBtn4">
-                    <img src="<?php echo base_url('/common/images/whyBlueAir/energy4.png'); ?>" alt="img">
+                <div class="energy-item">
+                    <p class="energy-qustitle">4</p>
+                    <div class="energy-cicle" id="energyBtn4">
+                        <img src="<?php echo base_url('/common/images/whyBlueAir/energy4.png'); ?>" alt="img">
+                    </div>
+                    <h2>节能灯泡</h2>
+                    <img src="<?php echo base_url('/common/images/whyBlueAir/right.png'); ?>" alt="right" class="energy-ans" id="energy4Img">
+                    <p class="energy-content" id="energy4Content">Blueair的HEPASilent过滤技术可有效降低风压，最低功率仅10W，24小时开机能耗低于一个节能灯泡。</p>
+                    <div class="energy-honor" id="energyHonor"><img src="<?php echo base_url('/common/images/whyBlueAir/honorImg2.png'); ?>" alt="Honor">荣获美国能源之星认证</div>
                 </div>
-                <h2>节能灯泡</h2>
-                <img src="<?php echo base_url('/common/images/whyBlueAir/right.png'); ?>" alt="right" class="energy-ans" id="energy4Img">
-                <p class="energy-content" id="energy4Content">Blueair的HEPASilent过滤技术可有效降低风压，最低功率仅10W，24小时开机能耗低于一个节能灯泡。</p>
-                <div class="energy-honor" id="energyHonor"><img src="<?php echo base_url('/common/images/whyBlueAir/honorImg2.png'); ?>" alt="Honor">荣获美国能源之星认证</div>
             </div>
         </div>
         <!--  end Energy Saving -->
 
         <!--  By-product  -->
-        <div class="byproduct" id="byproduct">
+        <div class="byproduct container navtype-vertical" id="byproduct">
             <div class="row">
                 <div class="half lefthalf">
-                    <p>市面上许多净化器虽然功能丰富，却很容易产生超标的臭氧，本应担当健康卫士却成为了健康杀手。连同其他家用电器和释放的臭氧和室外超标的近地面臭氧，一起对人体造成危害。</p>
+                    <p class="subp">市面上许多净化器虽然功能丰富，却很容易产生超标的臭氧，本应担当健康卫士却成为了健康杀手。连同其他家用电器和释放的臭氧和室外超标的近地面臭氧，一起对人体造成危害。</p>
                     <img src="<?php echo base_url('/common/images/whyBlueAir/byproductLeftImg.png'); ?>" alt="Img">
-                    <div role="button" id="byproductLearnMore">了解更多臭氧知识</div>
+                    <div role="button" id="byproductLearnMore">了解室内臭氧和大气臭氧的知识<img src="<?php echo base_url('/common/images/whyBlueAir/play.png'); ?>" alt="img"></div>
                 </div>
                 <div class="half righthalf">
-                    <p class="right-con1">Blueair专利的HEPASilent®过滤技术不但做到“零臭氧排放”，还可以在密封的房间里有效减少臭氧水平。无论是来自室外的近地面臭氧，还是家居生活中产生的臭氧，您都无需再担心。</p>
+                    <p class="right-con1 subp">Blueair专利的HEPASilent®过滤技术不但做到“零臭氧排放”，还可以在密封的房间里有效减少臭氧水平。无论是来自室外的近地面臭氧，还是家居生活中产生的臭氧，您都无需再担心。</p>
                     <img src="<?php echo base_url('/common/images/whyBlueAir/byproductRightImg.png'); ?>" alt="img" class="rightimg1">
                     <img src="<?php echo base_url('/common/images/whyBlueAir/homeauth.png'); ?>" alt="img" class="rightimg2">
                     <p class="right-text1">美国加州空气资源委员会(ARB)授予Blueair“零臭氧排放”认证。</p>
@@ -266,12 +295,12 @@
             </div>
         </div>
         <!--  end By-product  -->
-    </div>
 
 
-    <script src="<?php echo base_url('/common/js/jquery.min.js'); ?>"></script>
-    <script src="<?php echo base_url('/common/js/slick.min.js'); ?>"></script>
-    <script src="<?php echo base_url('/common/js/action.js'); ?>"></script>
+        <script src="<?php echo base_url('/common/js/jquery.min.js'); ?>"></script>
+        <script src="<?php echo base_url('/common/js/slick.min.js'); ?>"></script>
+        <script src="<?php echo base_url('/common/js/jquery.parallax.min.js'); ?>"></script>
+        <script src="<?php echo base_url('/common/js/action.js'); ?>"></script>
 </body>
 
 </html>

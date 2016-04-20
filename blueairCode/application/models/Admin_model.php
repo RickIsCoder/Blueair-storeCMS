@@ -1,11 +1,8 @@
 <?php 
-
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 require_once "Pic_model.php";
 
 class Admin_model extends MY_Model{
-
-
 
 	public function getSeriesList(){
 		$data = $this->db->get('series')->result_array();
@@ -26,27 +23,25 @@ class Admin_model extends MY_Model{
 		return $name;
 	}
     
-    public function getAdminProductsBySerieIs($serieId){
+    public function getAdminProductsBySerieId($serieId){
         $products = [];
         $pic = new Pic_model();
+        $baseUrl = base_url("/upload/");
         if($_SESSION['userType'] == 2){
-            $query = "select product.productID as productID, productName, not isnull(privilege.productID) as isOnline from product left join privilege on product.productID = privilege.productID and privilege.userID = ? where product.serieID = ?";
+            $query = "select product.productID as productID, productName, not isnull(privilege.productID) as isOnline, CONCAT('$baseUrl/', pic_path) as pic_path from product left join picture on product.productID = picture.productID left join privilege on product.productID = privilege.productID and privilege.userID = ? where product.serieID = ?  GROUP BY productID";
             $products = $this->db->query($query, array($_SESSION["userID"], $serieId))->result_array();
         }
         else if($_SESSION['userType'] == 1){
-            $query = "select productID, productName from product where serieID = ?";
+            $query = "select product.productID, productName, CONCAT('$baseUrl/', pic_path) as pic_path from product left join picture on product.productID = picture.productID where serieID = ? group by product.productID";
             $products = $this->db->query($query, $serieId)->result_array();
         }
         else{
             return FALSE;
         }
+
         foreach ($products as &$production) {
-            $pics = $pic->getProductionPic($production['productID']);
             if($_SESSION['userType'] == 2){
                 $production['isOnline'] = $production['isOnline'] == '1' ? TRUE : FALSE;
-            }
-            if(count($pics) > 0){
-                $production['picture_path'] = base_url("/upload/" . $pics[0]["pic_path"]);
             }
         }
         return $products;
@@ -77,7 +72,7 @@ class Admin_model extends MY_Model{
 				break;
 
 			case '2':
-				$production_sql = 'SELECT productName,productID FROM product WHERE serieID = ? AND productID IN (SELECT productID FROM privilege WHERE userID = )';
+				$production_sql = 'SELECT productName,productID FROM product WHERE serieID = ? AND productID IN (SELECT productID FROM privilege WHERE userID = ?)';
 				$data = $this->db->query($production_sql,array($serieID, $_SESSION['userID']))->result_array();
 				return $data;
 
@@ -93,8 +88,21 @@ class Admin_model extends MY_Model{
 
 	public function getProductionDetail($productID){
 		$productDetail_sql = 'SELECT * FROM product WHERE productID = ?';
+        $baseUrl = base_url("/upload/");
+		$sql_pic = "SELECT CONCAT('$baseUrl/', pic_path) as pic_path FROM picture WHERE productID = ?";
+		$sql_tips  = 'SELECT tipsID, tips FROM tips WHERE productID = ?';
+		$sql_feature  = 'SELECT featureID, featureTitle, featureContent FROM feature WHERE productID = ?';
 		$data = $this->db->query($productDetail_sql,$productID)->result_array();
-		return $data;
+        if(count(data) > 0){
+            $product = $data[0];
+            $product['pic'] = $this->db->query($sql_pic,$productID)->result_array();
+            $product['tips'] = $this->db->query($sql_tips,$productID)->result_array();
+            $product['feature'] = $this->db->query($sql_feature,$productID)->result_array();
+            return $product;
+        }
+        else{
+		  return NULL;
+        }
 	}
 
 	public function addProduction($data){
@@ -131,21 +139,52 @@ class Admin_model extends MY_Model{
 		$this->db->update('product', $data);
 	}
 
-	public function addSerie($data){
-		$this->db->insert('series',$data);
-		return $this->db->insert_id();
-	}
+	public function getProductionForExhibition(){
 
-	public function delSerie($serieID){
-		$relativeProduction_sql = 'SELECT productID FROM product WHERE serieID = ?';
-		$data = $this->db->query($relativeProduction_sql,$serieID)->result_array();
-		foreach ($data as $relativeProduction) {
-			$this->delProduction($relativeProduction['productID']);
+		$sql_series = 'SELECT serieID,serieName FROM series ';
+		$series = $this->db->query($sql_series)->result_array();
+
+        $baseUrl = base_url("/upload/");
+		$sql_pic = "SELECT CONCAT('$baseUrl/', pic_path) as pic_path FROM picture WHERE productID = ?";
+		$sql_tips  = 'SELECT tipsID, tips FROM tips WHERE productID = ?';
+		$sql_feature  = 'SELECT featureID, featureTitle, featureContent FROM feature WHERE productID = ?';
+
+		switch ($_SESSION['userType']) {
+			case 2:
+				$sql_produtions ='SELECT * FROM product  WHERE productID IN (SELECT productID FROM privilege WHERE userID = ?) AND serieID = ?';
+				foreach ($series as &$seriesItem) {
+					$seriesItem['production'] = $this->db->query($sql_produtions,array($_SESSION['userID'],$seriesItem['serieID']))->result_array();
+					foreach ($seriesItem['production'] as &$productionItem) {
+						$productionItem['pic'] = $this->db->query($sql_pic,$productionItem['productID'])->result_array();
+						$productionItem['tips'] = $this->db->query($sql_tips,$productionItem['productID'])->result_array();
+						$productionItem['feature'] = $this->db->query($sql_feature,$productionItem['productID'])->result_array();
+					}
+					unset($productionItem);
+				}
+
+				break;
+			case 1:
+				$sql_produtions ='SELECT * FROM product  WHERE serieID = ?';
+
+				foreach ($series as &$seriesItem) {
+					$seriesItem['production'] = $this->db->query($sql_produtions,$seriesItem['serieID'])->result_array();
+					foreach ($seriesItem['production'] as &$productionItem) {
+						$productionItem['pic'] = $this->db->query($sql_pic,$productionItem['productID'])->result_array();
+						$productionItem['tips'] = $this->db->query($sql_tips,$productionItem['productID'])->result_array();
+						$productionItem['feature'] = $this->db->query($sql_feature,$productionItem['productID'])->result_array();
+					}
+					unset($productionItem);
+				}
+
+				break;
+			default:
+				return FALSE;
+				break;
 		}
 
-		$this->db->where('serieID', $serieID);
-		$f = $this->db->delete('series');
-		return $f;
+		unset($seriesItem);
+		return $series;
+		
 	}
 
 	public function delStoreProduction($data){

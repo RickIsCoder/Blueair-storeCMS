@@ -45,6 +45,7 @@ $(function(){
         }
     });
     
+    /*按确定的时候*/
     $("#user-submit").click(function(){
         var username = $("#username").val();
         var password = $("#password").val();

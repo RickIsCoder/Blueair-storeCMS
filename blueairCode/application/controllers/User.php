@@ -31,7 +31,7 @@ class User extends MY_Controller {
     
     /*
 		退出按钮
-		点击清session，并跳转至login页面
+		点击清session，并跳转至login页面p
 	*/
 	public function logout(){
 		if(session_destroy()){

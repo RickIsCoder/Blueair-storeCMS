@@ -14,26 +14,26 @@
 </head>
 
 <body>
-    <div class="main-container">
-        <?php include "nav.html"; ?>
+    <?php include "nav.html"; ?>
         <!--  homePage  -->
         <div class="container">
-            <div class="hp-header">
-                <img src="<?php echo base_url('/common/images/logo.png'); ?>" alt="logo" class="hp-logo">
+            <img src="<?php echo base_url('/common/images/logo.png'); ?>" alt="logo" class="hp-logo">
+            <div class="hp-banner">
+                <img src="<?php echo base_url('/common/images/homePageBanner.png'); ?>" alt="homepageBanner">
             </div>
-            <div class="hp-banner"></div>
             <div class="hp-footer">
-                <a role="button" class="icon-wnc" href="<?php echo base_url('/whyCleaner.html'); ?>"></a>
-                <a role="button" class="icon-wba" href="<?php echo base_url('/whyBlueAir.html'); ?>"></a>
-                <a role="button" class="icon-which" href="<?php echo base_url('/whichOne.html'); ?>"></a>
+                <div class="hp-footer-awrap">
+                    <a role="button" class="icon-wnc" href="<?php echo base_url('/whyCleaner.html'); ?>"></a>
+                    <a role="button" class="icon-wba" href="<?php echo base_url('/whyBlueAir.html'); ?>"></a>
+                    <a role="button" class="icon-which" href="<?php echo base_url('/whichOne.html'); ?>"></a>
+                </div>
             </div>
         </div>
         <!--  end homePage  -->
-    </div>
 
-    <script src="<?php echo base_url('/common/js/jquery.min.js'); ?>"></script>
-    <script src="<?php echo base_url('/common/js/slick.min.js'); ?>"></script>
-    <script src="<?php echo base_url('/common/js/action.js'); ?>"></script>
+        <script src="<?php echo base_url('/common/js/jquery.min.js'); ?>"></script>
+        <script src="<?php echo base_url('/common/js/slick.min.js'); ?>"></script>
+        <script src="<?php echo base_url('/common/js/action.js'); ?>"></script>
 </body>
 
 </html>

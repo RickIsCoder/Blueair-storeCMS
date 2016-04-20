@@ -15,7 +15,7 @@ $(function(){
                 product.isOnline = Boolean(product.isOnline);
                 pHtml += "<div class='product "+(product.isOnline ? "online" : "offline")+"' data-productid='"+product.productID+"'>";
                 pHtml += "<div class='status'>"+(product.isOnline ? "上架中" : "已下架")+"</div>";
-                pHtml += "<div class='product-image-container' style='background-image:url("+product.picture_path+")'></div>"
+                pHtml += "<div class='product-image-container' style='background-image:url("+product.pic_path+")'></div>"
                 pHtml += "<div class='product-name'>"+product.productName+"</div>"
                 pHtml += "<div class='button-container'><button class='product-btn btn btn-default ' data-productid='"+product.productID+"' data-online='"+product.isOnline+"'>"+(product.isOnline ? "下 架" : "上 架")+"</button></div>"
                 pHtml += "</div>";

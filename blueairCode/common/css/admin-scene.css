@@ -1,0 +1,70 @@
+
+/* admin-sense.css*/
+
+#buttonSave{
+	width: 60px;
+	height: 30px;
+	left: 50%;
+	position: relative;
+	margin-left: -100px;
+    border: none;
+
+}
+
+#buttonCancle{
+	width: 60px;
+	height: 30px;
+	position: relative;
+	left: 50%;
+	margin-left: 50px;
+    border: none;	
+	
+}
+
+.spanColor{
+    color: #939598;
+}
+
+.editIcon{
+    position: relative;
+    margin-left: -6px;
+}
+
+.dropIcon{
+    position: relative;
+    margin-left: 18px;
+}
+
+.addScene{
+    padding-left: 32px;
+    border: none;
+    background-image: url(../images/admin/add-product.png);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 8px center;
+}
+
+.formCenter{
+    text-align: center;
+}
+
+.icon-con{
+    vertical-align: middle;
+}
+
+.scene-product, .scale-con{
+    line-height: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 18px;
+}
+
+.scene-product .delete, .scale-con .delete{
+    margin-left: 0;
+    background-size: 50%;
+}
+
+#list-container {
+    padding: 140px 40px 50px 40px;
+    overflow: auto;
+}

@@ -43,8 +43,8 @@
         'append' => '附赠',
         'remark' => '备注',
         'accessories' => '可选配件',
-        //'jdURL' => '京东链接',
-        //'description' => '描述',
+        'jdURL' => '京东链接',
+        'description' => '描述',
         'app_control' => '是否APP控制'
     );
  ?>

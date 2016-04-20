@@ -43,6 +43,9 @@
                     <li onclick="window.location.href='<?php echo base_url('/admin/users.html'); ?>'">
                         <label for="" class="text icon2">账号管理</label>
                     </li>
+                    <li onclick="window.location.href='<?php echo base_url('/admin/scene.html'); ?>'">
+                        <label for="" class="text icon3">应用场景管理</label>
+                    </li>
                 </ul>
             </div>	
             <input type="submit" value="返回销售工具" style="color:white " id="buttonProperty" class="button1" />	
@@ -59,14 +62,14 @@
                     <div class="modal-body">
                        <form class="form" style="padding-bottom:18px;">
                            <div class="form-group col-xs-6">
-                                <label for="productName" class="control-label">机型</label>
-                                <div>
-                                    <input type="text" class="form-control" id="productName" placeholder="机型">
+                               <div class="input-group">
+                                  <div class="input-group-addon">机型:</div>
+                                    <input type="text" class="form-control" id="productName">
                                 </div>
                             </div>
                            <div class="form-group col-xs-6">
-                                <label for="serieID" class="control-label">系列</label>
-                                <div>
+                               <div class="input-group">
+                                  <div class="input-group-addon">系列:</div>
                                     <select id="serieID" class="form-control">
                                         <option value="25">classic</option>
                                         <option value="28">pro</option>
@@ -87,103 +90,245 @@
                             <div role="tabpanel" class="tab-pane active" id="parameter">
                                 <form action="" class="form" style="margin-top:24px;">
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="producting_area" placeholder="产地:">
+                                       <div class="input-group">
+                                          <div class="input-group-addon">产地:</div>
+                                          <input type="text" class="form-control" id="producting_area" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="warranty" placeholder="质保:">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">质保:</div>
+                                          <input type="text" class="form-control" id="warranty" >
+                                        </div>
                                     </div>
                                     <div class="form-group col-xs-12">
-                                        <input type="text" class="form-control" id="reg_warranty" placeholder="注册质保:">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">注册质保:</div>
+                                        <input type="text" class="form-control" id="reg_warranty" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="material" placeholder="材料:">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">材料:</div>
+                                        <input type="text" class="form-control" id="material" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="height" placeholder="高(mm):">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">高(mm):</div>
+                                        <input type="text" class="form-control" id="height" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="width" placeholder="宽(mm):">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">宽(mm):</div>
+                                        <input type="text" class="form-control" id="width" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="thickness" placeholder="厚(mm):">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">厚(mm):</div>
+                                        <input type="text" class="form-control" id="thickness" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="weight" placeholder="重(kg):">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">重(kg):</div>
+                                        <input type="text" class="form-control" id="weight" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="color" placeholder="颜色:">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">颜色:</div>
+                                        <input type="text" class="form-control" id="color" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="power_line_length" placeholder="电源线长度(m):">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">电源线长度(m):</div>
+                                        <input type="text" class="form-control" id="power_line_length" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="wheel" placeholder="滚轮:">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">滚轮:</div>
+                                        <input type="text" class="form-control" id="wheel" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="filter_life" placeholder="滤网寿命(月):">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">滤网寿命(月):</div>
+                                        <input type="text" class="form-control" id="filter_life" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="CADR_PM" placeholder="CADR 颗粒物:">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">CADR 颗粒物:</div>
+                                        <input type="text" class="form-control" id="CADR_PM" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="CADR_oxymethylene" placeholder="CADR 甲醛:">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">CADR 甲醛:</div>
+                                        <input type="text" class="form-control" id="CADR_oxymethylene" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="level_oxymethylene" placeholder="甲醛过滤等级:">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">甲醛过滤等级:</div>
+                                        <input type="text" class="form-control" id="level_oxymethylene" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="CCM_oxymethylene" placeholder="CCM甲醛:">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">CCM甲醛:</div>
+                                        <input type="text" class="form-control" id="CCM_oxymethylene" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="purification_level" placeholder="净化效率:">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">净化效率:</div>
+                                        <input type="text" class="form-control" id="purification_level" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="CCM_PM" placeholder="CCM颗粒物:">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">CCM颗粒物:</div>
+                                        <input type="text" class="form-control" id="CCM_PM" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="area" placeholder="适用面积(平方米):">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">适用面积(平方米):</div>
+                                        <input type="text" class="form-control" id="area" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="level_PM" placeholder="颗粒物等级:">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">颗粒物等级:</div>
+                                        <input type="text" class="form-control" id="level_PM" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="loadWind" placeholder="进风:">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">进风:</div>
+                                        <input type="text" class="form-control" id="loadWind" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="wind_gears" placeholder="风档:">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">风档:</div>
+                                        <input type="text" class="form-control" id="wind_gears" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="wind_quantity" placeholder="风量:">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">风量:</div>
+                                        <input type="text" class="form-control" id="wind_quantity" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="gas_exchange" placeholder="换气次数(/小时):">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">换气次数(/小时):</div>
+                                        <input type="text" class="form-control" id="gas_exchange" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="power_consume" placeholder="功耗(W):">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">功耗(W):</div>
+                                        <input type="text" class="form-control" id="power_consume" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="noise" placeholder="噪音dB(A):">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">噪音声压级dB(A):</div>
+                                        <input type="text" class="form-control" id="noiseSoundPressure" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="inner_filter" placeholder="内置滤网:">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">噪音声功级dB(A):</div>
+                                        <input type="text" class="form-control" id="noiseAcousticalPower" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="append" placeholder="附赠:">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">内置滤网:</div>
+                                        <input type="text" class="form-control" id="inner_filter" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-6">
-                                        <input type="text" class="form-control" id="remark" placeholder="备注:">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">粒子滤网:</div>
+                                        <input type="text" class="form-control" id="particleFilter" >
+                                       </div>
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">复合型滤网:</div>
+                                        <input type="text" class="form-control" id="combineFilter" >
+                                       </div>
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">活性炭滤网:</div>
+                                        <input type="text" class="form-control" id="charcoalFilter" >
+                                       </div>
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">滤网更换提示:</div>
+                                        <input type="text" class="form-control" id="filter" >
+                                       </div>
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">空气智能模块:</div>
+                                        <input type="text" class="form-control" id="airIntelligent" >
+                                       </div>
+                                    </div>
+
+                                    <div class="form-group col-xs-6">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">滤网数量:</div>
+                                        <input type="text" class="form-control" id="filter_num" >
+                                       </div>
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">附赠:</div>
+                                        <input type="text" class="form-control" id="append" >
+                                       </div>
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">可选配件:</div>
+                                        <input type="text" class="form-control" id="accessories" >
+                                       </div>
+                                    </div>
+                                    <div class="form-group col-xs-6">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">备注:</div>
+                                        <input type="text" class="form-control" id="remark" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-12">
-                                        <input type="text" class="form-control" id="accessories" placeholder="可选配件:">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">京东链接:</div>
+                                        <input type="text" class="form-control" id="jdURL" >
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-12">
-                                        <input type="text" class="form-control" id="jdURL" placeholder="京东链接:">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">一句话描述:</div>
+                                        <textarea type="text" class="form-control" rows="1" id="label" ></textarea>
+                                       </div>
                                     </div>
                                     <div class="form-group col-xs-12">
-                                        <textarea type="text" class="form-control" rows="1" id="label" placeholder="一句话描述:"></textarea>
-                                    </div>
-                                    <div class="form-group col-xs-12">
-                                        <textarea type="text" class="form-control" rows="3" id="description" placeholder="详细描述:"></textarea>
+                                        <div class="input-group">
+                                          <div class="input-group-addon">详细描述:</div>
+                                        <textarea type="text" class="form-control" rows="3" id="description" ></textarea>
+                                       </div>
                                     </div>                                      
                                     <div class="form-group col-xs-6">
                                        <label for="remote_control">
@@ -207,12 +352,6 @@
                                        <label for="fan_speed_control">
                                            <input type="checkbox" id="fan_speed_control">
                                            是否自动风扇速度控制器
-                                       </label>
-                                    </div>
-                                    <div class="form-group col-xs-6">
-                                       <label for="filter">
-                                           <input type="checkbox" id="filter">
-                                           是否滤网更换提示
                                        </label>
                                     </div>
                                     <div class="form-group col-xs-6">
@@ -254,13 +393,52 @@
                                 </form>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="images">
-                              <div data-imgId="">
-                                <img width="100px" height="100px" src="../upload/9a0c73d527f41439957736003d182ba9.jpg">
-                              </div>
-                              <button id="pic_selector">ADD PIC</button>
+                                <div id="images-container"></div>
+                                <div class="clearfix"></div>
+                                <div id="pic_selector-con"><button id="pic_selector" class="btn btn-default">添加图片</button></div>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="feature">
-                            特性
+                                <div class="container-fluid" style="margin: 16px auto">
+                                    <div class="row">
+                                        <div class="col-xs-12">标签：</div>
+                                    </div>
+                                    <div class="row">
+                                        <div id="tag-container">
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="form">
+                                    <div class="form-group col-xs-9">
+                                        <input type="text" class="form-control" id="add-tag-text" placeholder="标签:">
+                                    </div>
+                                    <div class="form-group col-xs-3 text-right">
+                                        <button class="btn btn-primary" id="add-tag-bt">添加标签</button>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                
+                                <div class="container-fluid" style="margin: 16px auto;border-top: 1px solid #ccc; padding-top:16px;">
+                                    <div class="row">
+                                        <div class="col-xs-12">特性：</div>
+                                    </div>
+                                    <div class="row">
+                                        <div id="feature-container">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form" action="">
+                                    <div class="form-group col-xs-6">
+                                        <input type="text" class="form-control" id="add-feature-title" placeholder="特性标题:">
+                                    </div>
+                                    <div class="form-group col-xs-12">
+                                        <textarea type="text" class="form-control" id="add-feature-descr" placeholder="特性描述:" rows="3"></textarea>
+                                    </div>
+                                    <div class="form-group col-xs-12 text-right">
+                                        <button class="btn btn-primary" id="add-feature-bt">添加特性</button>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
                             </div>
                         </div>
                     </div>

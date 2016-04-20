@@ -4,10 +4,11 @@ html,
 body {
     width: 100%;
     height: 100%;
-    font-family: 'Hiragino Sans GB';
+    font-family: 'Helvetica Neue', 'Hiragino Sans GB';
     font-size: 18px;
-    color: #353535;
+    color: #007dc5;
     line-height: 1.556;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 * {
@@ -74,6 +75,7 @@ small {
     top: 0;
     left: 0;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .emspan {
@@ -132,32 +134,8 @@ small {
     text-align: left;
 }
 
-.en {
-    font-family: 'Helvetica Neue';
-}
-
-.explain {
-    font-size: 14px;
-    color: #909090;
-}
-
 .smlnote {
     font-size: 14px;
-}
-
-.main-container {
-    width: 100%;
-    height: 100%;
-    max-width: 1024px;
-    max-height: 768px;
-    position: relative;
-    background-color: white;
-    margin: 0 auto;
-    overflow: hidden;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
 }
 
 .imgwrap > img {
@@ -166,6 +144,7 @@ small {
 
 
 /* slickJs button css */
+
 .slick-dots {
     bottom: 6%;
 }
@@ -195,7 +174,9 @@ small {
     color: transparent;
 }
 
+
 /* nav */
+
 nav {
     position: fixed;
     top: 0;
@@ -284,8 +265,9 @@ nav .close.actived {
 
 .navimg {
     vertical-align: middle;
-    width: 35px;
+    width: 40px;
     margin-right: 20px;
+    vertical-align: middle;
     margin-top: -5px;
 }
 
@@ -301,6 +283,37 @@ nav .close.actived {
     left: 50px;
     font-size: 14px;
     color: #007dc5;
+}
+
+
+/* nav type */
+
+.navtype-vertical {
+    top: 100%;
+    -webkit-transition: top ease-in 0.5s;
+    transition: top ease-in 0.5s;
+}
+
+.navtype-vertical.inshow {
+    top: 0;
+}
+
+.navtype-vertical.dismiss {
+    top: -100%;
+}
+
+.navtype-horizontal {
+    left: 100%;
+    -webkit-transition: left ease-in 0.5s;
+    transition: left ease-in 0.5s;
+}
+
+.navtype-horizontal.inshow {
+    left: 0;
+}
+
+.navtype-horizontal.dismiss {
+    left: -100%;
 }
 
 

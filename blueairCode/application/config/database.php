@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'logicdesign.mysqldb.chinacloudapi.cn',
+	'hostname' => 'rds75g2c403chw727313.mysql.rds.aliyuncs.com',
 
-	'username' => 'logicdesign%logicdesign',
+	'username' => 'logicdesign_db',
 	'password' => '1234abcD',
 	'database' => 'blueair',
 	'dbdriver' => 'mysqli',

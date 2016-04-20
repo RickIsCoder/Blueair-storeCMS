@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0" />
+
+    <title>Choose For YOU</title>
+    <link rel="stylesheet" href="<?php echo base_url('/common/css/bootstrap.min.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/common/css/resetStyle.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/common/css/common.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/common/css/chooseforyou.css'); ?>">
+
+
+</head>
+
+<body data-pagename="chooseForYou">
+    <div id="main-container">
+        <div id="nav-container">
+            <a id="back-btn" href="<?php echo base_url('/whichOne.html'); ?>"></a>
+            <div id="menu-container">
+                <div data-panel="#choose-panel" class="menu-item active">为您甄选</div>
+                <div data-panel="#refrence-plan" class="menu-item">参考方案</div>
+                <div data-panel="#enterprise-buy" class="menu-item">企业客户采购</div>
+            </div>
+        </div>
+        <div id="choose-panel" class="content-container active">
+            <div id="choose-form">
+                <div>请根据下方提示，列举出您家庭的房间情况，让Blueair为您的家庭量身规划净化方案。</div>
+                <div id="scene-list">
+                    <div>请逐个添加您房间的类别和大小。</div>
+                    <div id="scene-container-ourter">
+                        <div id="scene-container"></div>
+                    </div>
+                </div>
+                <div id="scale-list">
+                    <div>选择房间面积</div>
+                    <div id="scale-container"></div>
+                    <div id="scale-control-panel">
+                        <button id="add-scale-btn" class="btn">添加</button>
+                    </div>
+                </div>
+                <div id="myrooms">
+                    <div>您添加的房间</div>
+                    <div id="myrooms-container"></div>
+                    <div class="myrooms-contol-panel">
+                        <button id="view-plan-btn" class="btn">查看方案</button>
+                    </div>
+                </div>
+            </div>
+            <div id="choose-result">
+                <div>推荐给您的净化方案：</div>
+                <table id="result-table" style="margin-top:24px; width:100%;">
+                    <thead>
+                        <tr>
+                            <td style="text-align:center; width:100px;">房间</td>
+                            <td style="text-align:center">可选机型</td>
+                        </tr>
+                    </thead>
+                    <tbody id="result-table-body"></tbody>
+                </table>
+                <div class="myrooms-contol-panel">
+                    <button id="replan-btn" class="btn">重新选择</button>
+                </div>
+            </div>
+        </div>
+        <div id="refrence-plan" class="content-container">
+            <div class="container">
+                <div class="row" style="margin-top:40px;">
+                    <!--
+                    <div class="btn-group btn-group-xs navbar-button">
+                        <button type="button" class="btn btn-default" id="room-one">大开间</button>
+                        <button type="button" class="btn btn-default" id="room-two">一室一厅</button>
+                        <button type="button" class="btn btn-default" id="room-three">二室一厅</button>
+                        <button type="button" class="btn btn-default" id="room-four"></button>
+                        <button type="button" class="btn btn-default" id="room-five"></button>
+                    </div>
+                    -->
+                    <div class="col-sm-12">
+                        <div class="col-sm-2 col-sm-offset-1 nav-style click-nav" id="room-one">大开间</div>
+                        <div class="col-sm-2 nav-style" id="room-two">一室一厅</div>
+                        <div class="col-sm-2 nav-style" id="room-three">二室一厅</div>
+                        <div class="col-sm-2 nav-style" id="room-four">三室一厅</div>
+                        <div class="col-sm-2 nav-style" id="room-five">四室两厅+厨房</div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div id="nav-one" class="table-content" style="padding:0 50px;">
+                            <div class="nav-title">
+                                大开间净化方案：
+                            </div>
+                            <table class="table table-condensed" style="margin-top:20px;">
+                                <thead>
+                                    <tr>
+                                        <th class="table-location">房间</th>
+                                        <th class="table-location-two">可选机型</th>
+                                        <th class="center table-location-three">优点</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="center">
+                                        <td style="width:200px;" class="cell-img">
+                                            <div>
+                                                <img src="common/images/chooseForYou/bigkaijian.png" alt="" class="img-size">
+                                                <!--                                            <img src="common/images/chooseForYou/sofa.png" class="cell-img-one" alt="">-->
+                                            </div>
+                                            <div class="cell-bottom">客厅</div>
+                                        </td>
+                                        <td style="width:200px;" class="cell-img product-image" data-productid="38">
+                                            <div>
+                                                <img src="common/images/chooseForYou/550E.png" alt="" class="img-size">
+                                            </div>
+                                            <div class="cell-bottom">550E</div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-text">
+                                    这款机型胜任于大空间，在别墅、大平层净化效果特别出众，还配有轮脚，便于在大空间中随意移动。
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="nav-two" class="table-content" style="padding:0 50px;">
+                            <div class="nav-title">
+                                一室一厅净化方案：
+                            </div>
+                            <table class="table table-condensed" style="margin-top:20px;">
+                                <thead>
+                                    <tr>
+                                        <th class="table-location">房间</th>
+                                        <th class="table-location-two">可选机型</th>
+                                        <th class="center table-location-three">优点</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="center">
+                                        <td style="width:200px;" class="cell-img">
+                                            <div>
+                                                <img src="common/images/chooseForYou/livingroom.png" alt="" class="img-size">
+                                                <!--                                            <img src="common/images/chooseForYou/sofa.png" class="cell-img-one" alt="">-->
+                                            </div>
+                                            <div class="cell-bottom">客厅</div>
+                                        </td>
+                                        <td style="width:200px;" class="cell-img product-image" data-productid="36">
+                                            <div>
+                                                <img src="common/images/chooseForYou/403.png" alt="" class="img-size">
+                                            </div>
+                                            <div class="cell-bottom">403</div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-text">
+                                                可以去除来自室外大气中的可吸入颗粒物，以及室内装修材料和家具产生的有害气体、沙发上的细菌、植物产生的霉菌和花粉，主人和客人吸烟后产生的烟雾等。给您一个干净清爽的起居空间。
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="center">
+                                        <td style="width:200px;" class="cell-img">
+                                            <div>
+                                                <img src="common/images/chooseForYou/bedroom.png" alt="" class="img-size">
+                                                <!--                                            <img src="common/images/chooseForYou/sofa.png" class="cell-img-one" alt="">-->
+                                            </div>
+                                            <div class="cell-bottom">主卧</div>
+                                        </td>
+                                        <td style="width:200px;" class="cell-img product-image" data-productid="12">
+                                            <div>
+                                                <img src="common/images/chooseForYou/203.png" alt="" class="img-size">
+                                            </div>
+                                            <div class="cell-bottom">203</div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-text">
+                                                可以去除来自室外大气中的可吸入颗粒物，以及室内装修材料和家具产生的有害气体、来自床品的各种细菌等。且夜间低速运转时十分安静，您和家人在睡眠时呼吸洁净空气的同时，不会受到噪音的干扰。
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="nav-three" class="table-content" style="padding:0 50px;">
+                            <div class="nav-title">
+                                二室一厅净化方案：
+                            </div>
+                            <table class="table table-condensed" style="margin-top:20px;">
+                                <thead>
+                                    <tr>
+                                        <th class="table-location">房间</th>
+                                        <th class="table-location-two">可选机型</th>
+                                        <th class="center table-location-three">优点</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="center">
+                                        <td style="width:200px;" class="cell-img">
+                                            <div>
+                                                <img src="common/images/chooseForYou/livingroom.png" alt="" class="img-size">
+                                                <!--                                            <img src="common/images/chooseForYou/sofa.png" class="cell-img-one" alt="">-->
+                                            </div>
+                                            <div class="cell-bottom">客厅</div>
+                                        </td>
+                                        <td style="width:200px;" class="cell-img product-image" data-productid="37">
+                                            <div>
+                                                <img src="common/images/chooseForYou/503.png" alt="" class="img-size">
+                                            </div>
+                                            <div class="cell-bottom">503</div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-text">
+                                                可以去除来自室外大气中的可吸入颗粒物，以及室内装修材料和家具产生的有害气体、沙发上的细菌、植物产生的霉菌和花粉，主人和客人吸烟后产生的烟雾等。给您一个干净清爽的起居空间。
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="center">
+                                        <td style="width:200px;" class="cell-img">
+                                            <div>
+                                                <img src="common/images/chooseForYou/bedroom.png" alt="" class="img-size">
+                                                <!--                                            <img src="common/images/chooseForYou/sofa.png" class="cell-img-one" alt="">-->
+                                            </div>
+                                            <div class="cell-bottom">主卧</div>
+                                        </td>
+                                        <td style="width:200px;" class="cell-img product-image" data-productid="36">
+                                            <div>
+                                                <img src="common/images/chooseForYou/403.png" alt="" class="img-size">
+                                            </div>
+                                            <div class="cell-bottom">403</div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-text">
+                                                可以去除来自室外大气中的可吸入颗粒物，以及室内装修材料和家具产生的有害气体、来自床品的各种细菌等。且夜间低速运转时十分安静，您和家人在睡眠时呼吸洁净空气的同时，不会受到噪音的干扰。
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="center">
+                                        <td style="width:200px;" class="cell-img">
+                                            <div>
+                                                <img src="common/images/chooseForYou/childroom.png" alt="" class="img-size">
+                                                <!--                                            <img src="common/images/chooseForYou/sofa.png" class="cell-img-one" alt="">-->
+                                            </div>
+                                            <div class="cell-bottom">次卧</div>
+                                        </td>
+                                        <td style="width:200px;" class="cell-img product-image" data-productid="12">
+                                            <div>
+                                                <img src="common/images/chooseForYou/203.png" alt="" class="img-size">
+                                            </div>
+                                            <div class="cell-bottom">203</div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-text">
+                                                可以去除来自室外大气中的可吸入颗粒物，以及室内装修材料和家具产生的有害气体、来自床品的各种细菌等。且夜间低速运转时十分安静，您和家人在睡眠时呼吸洁净空气的同时，不会受到噪音的干扰。
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="nav-four" class="table-content" style="padding:0 50px;">
+                            <div class="nav-title">
+                                三室一厅净化方案：
+                            </div>
+                            <table class="table table-condensed" style="margin-top:20px;">
+                                <thead>
+                                    <tr>
+                                        <th class="table-location">房间</th>
+                                        <th class="table-location-two">可选机型</th>
+                                        <th class="center table-location-three">优点</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="center">
+                                        <td style="width:200px;" class="cell-img">
+                                            <div>
+                                                <img src="common/images/chooseForYou/livingroom.png" alt="" class="img-size">
+                                                <!--                                            <img src="common/images/chooseForYou/sofa.png" class="cell-img-one" alt="">-->
+                                            </div>
+                                            <div class="cell-bottom">客厅</div>
+                                        </td>
+                                        <td style="width:200px;" class="cell-img product-image" data-productid="37">
+                                            <div>
+                                                <img src="common/images/chooseForYou/503.png" alt="" class="img-size">
+                                            </div>
+                                            <div class="cell-bottom">503</div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-text">
+                                                可以去除来自室外大气中的可吸入颗粒物，以及室内装修材料和家具产生的有害气体、沙发上的细菌、植物产生的霉菌和花粉，主人和客人吸烟后产生的烟雾等。给您一个干净清爽的起居空间。
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="center">
+                                        <td style="width:200px;" class="cell-img">
+                                            <div>
+                                                <img src="common/images/chooseForYou/bedroom.png" alt="" class="img-size">
+                                                <!--                                            <img src="common/images/chooseForYou/sofa.png" class="cell-img-one" alt="">-->
+                                            </div>
+                                            <div class="cell-bottom">主卧</div>
+                                        </td>
+                                        <td style="width:200px;" class="cell-img product-image" data-productid="35">
+                                            <div>
+                                                <img src="common/images/chooseForYou/270E.png" alt="" class="img-size">
+                                            </div>
+                                            <div class="cell-bottom">270E Slim</div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-text">
+                                                可以去除来自室外大气中的可吸入颗粒物，以及室内装修材料和家具产生的有害气体、来自床品的各种细菌等。且夜间低速运转时十分安静，您和家人在睡眠时呼吸洁净空气的同时，不会受到噪音的干扰。
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="center">
+                                        <td style="width:200px;" class="cell-img">
+                                            <div>
+                                                <img src="common/images/chooseForYou/childroom.png" alt="" class="img-size">
+                                                <!--                                            <img src="common/images/chooseForYou/sofa.png" class="cell-img-one" alt="">-->
+                                            </div>
+                                            <div class="cell-bottom">次卧</div>
+                                        </td>
+                                        <td style="width:200px;" class="cell-img product-image" data-productid="35">
+                                            <div>
+                                                <img src="common/images/chooseForYou/270E.png" alt="" class="img-size">
+                                            </div>
+                                            <div class="cell-bottom">270E Slim</div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-text">
+                                                可以去除来自室外大气中的可吸入颗粒物，以及室内装修材料和家具产生的有害气体、来自床品的各种细菌等。且夜间低速运转时十分安静，您和家人在睡眠时呼吸洁净空气的同时，不会受到噪音的干扰。
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="center">
+                                        <td style="width:200px;" class="cell-img">
+                                            <div>
+                                                <img src="common/images/chooseForYou/childroom.png" alt="" class="img-size">
+                                                <!--                                            <img src="common/images/chooseForYou/sofa.png" class="cell-img-one" alt="">-->
+                                            </div>
+                                            <div class="cell-bottom">次卧</div>
+                                        </td>
+                                        <td style="width:200px;" class="cell-img product-image" data-productid="35">
+                                            <div>
+                                                <img src="common/images/chooseForYou/270E.png" alt="" class="img-size">
+                                            </div>
+                                            <div class="cell-bottom">270E Slim</div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-text">
+                                                可以去除来自室外大气中的可吸入颗粒物，以及室内装修材料和家具产生的有害气体、来自床品的各种细菌等。且夜间低速运转时十分安静，您和家人在睡眠时呼吸洁净空气的同时，不会受到噪音的干扰。
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="nav-five" class="table-content" style="padding:0 50px;">
+                            <div class="nav-title">
+                                四室两厅+厨房净化方案：
+                            </div>
+                            <table class="table table-condensed" style="margin-top:20px;">
+                                <thead>
+                                    <tr>
+                                        <th class="table-location">房间</th>
+                                        <th class="table-location-two">可选机型</th>
+                                        <th class="center table-location-three">优点</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="center">
+                                        <td style="width:200px;" class="cell-img">
+                                            <div>
+                                                <img src="common/images/chooseForYou/livingroom.png" alt="" class="img-size">
+                                                <!--                                            <img src="common/images/chooseForYou/sofa.png" class="cell-img-one" alt="">-->
+                                            </div>
+                                            <div class="cell-bottom">客厅</div>
+                                        </td>
+                                        <td style="width:200px;" class="cell-img product-image" data-productid="40">
+                                            <div>
+                                                <img src="common/images/chooseForYou/ProL.png" alt="" class="img-size">
+                                            </div>
+                                            <div class="cell-bottom">Pro L</div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-text">
+                                                可以去除来自室外大气中的可吸入颗粒物，以及室内装修材料和家具产生的有害气体、沙发上的细菌、植物产生的霉菌和花粉，主人和客人吸烟后产生的烟雾等。给您一个干净清爽的起居空间。
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="center">
+                                        <td style="width:200px;" class="cell-img">
+                                            <div>
+                                                <img src="common/images/chooseForYou/livingroom.png" alt="" class="img-size">
+                                                <!--                                            <img src="common/images/chooseForYou/sofa.png" class="cell-img-one" alt="">-->
+                                            </div>
+                                            <div class="cell-bottom">客厅</div>
+                                        </td>
+                                        <td style="width:200px;" class="cell-img product-image" data-productid="38">
+                                            <div>
+                                                <img src="common/images/chooseForYou/550E.png" alt="" class="img-size">
+                                            </div>
+                                            <div class="cell-bottom">550E</div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-text">
+                                                可以去除来自室外大气中的可吸入颗粒物，以及室内装修材料和家具产生的有害气体、沙发上的细菌、植物产生的霉菌和花粉，主人和客人吸烟后产生的烟雾等。给您一个干净清爽的起居空间。
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="center">
+                                        <td style="width:200px;" class="cell-img">
+                                            <div>
+                                                <img src="common/images/chooseForYou/bedroom.png" alt="" class="img-size">
+                                                <!--                                            <img src="common/images/chooseForYou/sofa.png" class="cell-img-one" alt="">-->
+                                            </div>
+                                            <div class="cell-bottom">主卧</div>
+                                        </td>
+                                        <td style="width:200px;" class="cell-img product-image" data-productid="36">
+                                            <div>
+                                                <img src="common/images/chooseForYou/403.png" alt="" class="img-size">
+                                            </div>
+                                            <div class="cell-bottom">403</div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-text">
+                                                可以去除来自室外大气中的可吸入颗粒物，以及室内装修材料和家具产生的有害气体、来自床品的各种细菌等。且夜间低速运转时十分安静，您和家人在睡眠时呼吸洁净空气的同时，不会受到噪音的干扰。
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="center">
+                                        <td style="width:200px;" class="cell-img">
+                                            <div>
+                                                <img src="common/images/chooseForYou/childroom.png" alt="" class="img-size">
+                                                <!--                                            <img src="common/images/chooseForYou/sofa.png" class="cell-img-one" alt="">-->
+                                            </div>
+                                            <div class="cell-bottom">次卧</div>
+                                        </td>
+                                        <td style="width:200px;" class="cell-img product-image" data-productid="12">
+                                            <div>
+                                                <img src="common/images/chooseForYou/203.png" alt="" class="img-size">
+                                            </div>
+                                            <div class="cell-bottom">203</div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-text">
+                                                可以去除来自室外大气中的可吸入颗粒物，以及室内装修材料和家具产生的有害气体、来自床品的各种细菌等。且夜间低速运转时十分安静，您和家人在睡眠时呼吸洁净空气的同时，不会受到噪音的干扰。
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="center">
+                                        <td style="width:200px;" class="cell-img">
+                                            <div>
+                                                <img src="common/images/chooseForYou/kitchen.png" alt="" class="img-size">
+                                                <!--                                            <img src="common/images/chooseForYou/sofa.png" class="cell-img-one" alt="">-->
+                                            </div>
+                                            <div class="cell-bottom">厨房</div>
+                                        </td>
+                                        <td style="width:200px;" class="cell-img product-image" data-productid="12">
+                                            <div>
+                                                <img src="common/images/chooseForYou/203.png" alt="" class="img-size">
+                                            </div>
+                                            <div class="cell-bottom">203</div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-text">
+                                                高温煎炒会产生大量的有害油烟。这款机器可以去除烹饪产生的可吸入颗粒物和气态污染物，防止这些污染物向室内扩散，造成室内污染。
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+        <div id="enterprise-buy" class="content-container">
+            <div class="line-one">
+                <div style="text-align:center;">请完善下面的联系方式，以便我们的工作人员和您取得联系，为您提供更专业的服务。</div>
+
+                <form id="customer-procurement" class="form-horizontal">
+                    <div class="form-group">
+                        <label for="companyName" class="col-sm-3 control-label labelText">公司名称</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="companyName" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Email" class="col-sm-3 control-label labelText">Email</label>
+                        <div class="col-sm-9">
+                            <input type="test" class="form-control" id="Email" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel" class="col-sm-3 control-label labelText">联系电话</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="tel" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contacts" class="col-sm-3 control-label labelText">联系人</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="contacts" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address" class="col-sm-3 control-label labelText">联系地址</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="address" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="describe" class="col-sm-3 labelText control-label">简单描述</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" rows="3" id="describe"></textarea>
+                        </div>
+                    </div>
+                    <div class=" button-right">
+                        <button id="customer-submit" class="btn">提交</button>
+                        <button id="customer-cancle" class="btn">取消</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="<?php echo base_url('/common/js/jquery.min.js'); ?>"></script>
+    <script src="<?php echo base_url('/common/js/chooseforyou.js'); ?>"></script>
+</body>
+
+</html>

@@ -8,9 +8,9 @@ class Pic_model extends MY_Model{
 	}
 
 	public function getProductionPic($productID){
-		$relativeID = 'product_'.$productID;
-		$productPic_sql = 'SELECT pictureID,pic_path FROM picture WHERE relativeID = ?';
-		$data = $this->db->query($productPic_sql,$relativeID)->result_array();
+        $baseUrl = base_url("/upload/");
+		$productPic_sql = "SELECT pictureID,CONCAT('$baseUrl/', pic_path) as pic_path FROM picture WHERE productID = ?";
+		$data = $this->db->query($productPic_sql, $productID)->result_array();
 		return $data;
 	}
 
@@ -23,14 +23,14 @@ class Pic_model extends MY_Model{
 	}
 
 	public function getPicturePath($id){
-		$path_sql = 'SELECT pic_path FROM picture WHERE pictureID = ?';
+		$path_sql = "SELECT pic_path FROM picture WHERE pictureID = ?";
 		$pic_path = $this->db->query($path_sql,$id)->result_array();
 		return $pic_path;
 	}
 
 	public  function relativePicID($productID){
-		$relativeID_sql = 'SELECT pictureID FROM picture WHERE relativeID = ?';
-		$relativeID = $this->db->query($relativeID_sql,'product_'.$productID)->result_array();
+		$relativeID_sql = 'SELECT pictureID FROM picture WHERE productID = ?';
+		$relativeID = $this->db->query($relativeID_sql,$productID)->result_array();
 		return $relativeID;
 	}
 }

@@ -1,0 +1,341 @@
+#main-container {
+    width: 100%;
+    height: 100%;
+    background: white;
+    overflow: hidden;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#nav-container {
+    background: #007dc5;
+    position: absolute;
+    width: 150px;
+    height: 100%;
+}
+
+#back-btn {
+    cursor: pointer;
+    position: fixed;
+    width: 52px;
+    height: 52px;
+    z-index: 999;
+    background: url(../images/backIcon.png) no-repeat center center #007dc5;
+    background-size: contain;
+    top: 0;
+    left: 0;
+}
+
+#menu-container {
+    position: relative;
+    margin-top: 80px;
+}
+
+.menu-item {
+    line-height: 50px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu-item.active {
+    background-color: white;
+    color: #007dc5;
+}
+
+.content-container {
+    position: absolute;
+    left: 150px;
+    right: 0px;
+    top: 0;
+    bottom: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+}
+
+#scene-list {
+    margin: 36px 0;
+}
+
+#scene-container-ourter {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+}
+
+#scene-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    white-space: nowrap;
+}
+
+.btn {
+    width: 120px;
+    height: 36px;
+    font-size: 14px;
+    border: 1px solid #007dc5;
+    color: #007dc5;
+    border-radius: 18px;
+    outline: none;
+}
+
+#scale-control-panel,
+.myrooms-contol-panel {
+    text-align: right;
+    margin-top: 24px;
+}
+
+#myrooms {
+    padding: 30px 0;
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+}
+
+.scene-item {
+    display: inline-block;
+    margin: 15px;
+    width: 100px;
+    cursor: pointer;
+    position: relative;
+}
+
+.scene-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.scene-name {
+    text-align: center;
+}
+
+.scene-item.active:after {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    right: 0px;
+    top: 70px;
+    background-image: url(/common/images/sceneChecked.png);
+    background-size: contain;
+}
+
+.scale-item {
+    display: inline-block;
+    padding-left: 26px;
+    background-image: url(/common/images/sceneUnChecked.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: left center;
+    margin: 15px;
+}
+
+.scale-item.active {
+    background-image: url(/common/images/sceneChecked.png);
+}
+
+#result-table-body tr {
+    border-top: 1px solid #D8D8D8;
+}
+
+#result-table-body td {
+    vertical-align: top;
+    text-align: center;
+}
+
+.myroom-item {
+    display: inline-block;
+    padding: 6px 40px 6px 20px;
+    margin: 12px 15px 0 15px;
+    background-color: #D8D8D8;
+    border-radius: 30px;
+    position: relative;
+}
+
+.delete {
+    display: inline-block;
+    background-image: url(/common/images/navCloseBtn.png);
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.form-control {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -webkit-transition: none;
+    transition: none;
+}
+
+#choose-form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 80px 30px 30px 30px;
+}
+
+#choose-result {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    left: 0;
+    background-color: white;
+    overflow: hidden;
+}
+
+#choose-result.active {
+    padding: 80px 30px 30px 30px;
+    overflow: auto;
+}
+
+#refrence-plan,
+#enterprise-buy {
+    display: none;
+}
+
+#customer-procurement {
+    margin-top: 100px;
+    padding-right: 100px;
+}
+
+.button-right {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.labelText {
+    color: #0080E1;
+    font-weight: lighter;
+}
+
+.line-one {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 80px 30px 30px 30px;
+}
+
+.plan-title {
+    margin-top: 40px;
+    padding-left:
+}
+
+.nav-style {
+    border: 1px solid #4A4A4A;
+    color: #4A4A4A;
+    outline: none;
+    text-align: center;
+    font-size: 13px;
+    font-weight: lighter;
+    background-color: white;
+    border-right-width: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-style:first-child {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    margin-left: 50px;
+}
+
+.nav-style:last-child {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-right-width: 1px;
+}
+
+.click-nav {
+    color: white;
+    background-color: #4A4A4A;
+    border: 1px solid #4A4A4A;
+    outline: none;
+    text-align: center;
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+
+/*
+#nav-one{
+    display:block;
+}
+
+#nav-two{
+    display: none;
+}
+
+#nav-three{
+    display: none;
+}
+*/
+
+.center {
+    text-align: center;
+}
+
+.cell-text {
+    padding-top: 10px;
+    text-align: left;
+    padding-right: 15px;
+    font-size: 14px;
+}
+
+.nav-title {
+    margin-top: 75px;
+    font-size: 18px;
+}
+
+.table-location {
+    padding-left: 35px!important;
+    font-size: 16px;
+    padding-bottom: 10px!important;
+}
+
+.table-location-two {
+    padding-left: 24px!important;
+    font-size: 16px;
+    padding-bottom: 10px!important;
+}
+
+.table-location-three {
+    padding-left: 24px!important;
+    font-size: 16px;
+    padding-bottom: 10px!important;
+}
+
+.cell-img {
+    text-align: left!important;
+    padding-top: 10px!important;
+}
+
+.img-size {
+    width: 50%;
+    height: 50%;
+}
+
+.cell-bottom {
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 35px!important;
+}
+
+.product-image{
+    cursor: pointer;
+}

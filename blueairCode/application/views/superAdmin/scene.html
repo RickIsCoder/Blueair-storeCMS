@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BlueAir</title>
+    <link rel="stylesheet" href="<?php echo base_url('/common/css/bootstrap.min.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/common/css/admin-index.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/common/css/admin-scene.css'); ?>">
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="content-container">
+            <div id="list-container" style="padding-top:100px;">
+                <div class="table-responsive">
+                    <table class="table table-hover user-table">
+                        <thead>
+                            <tr>
+                                <th class="formCenter" colspan="2">场景</th>
+                                <th class="formCenter">规模</th>
+                                <th>适用产品</th>
+                                <th style="width:120px;">
+                                    <button class="button1 addScene" id="" data-toggle="modal" data-target="#scene-form" data-type="1">添加场景</button>
+                                </th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody id="sense-table-body">
+                           
+                            
+                        </tbody>
+                          
+                    </table>
+                </div>
+            </div>
+            <div class="right-menu">
+                <div class="right-top-menu">
+                    <button class="button1" id="logout">登出</button>
+                    <span id="welcome">你好，<?php echo $_SESSION['username']; ?> </span>
+                </div>
+                <!-- 所有用户信息加载区 -->
+                <div class='users'>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="blackBackground">
+        <div class="logoLeft">
+            <img src="<?php echo base_url('/common/images/admin/logo.png'); ?>" alt="#" class="logoImg">
+        </div>
+        <div class="formTop">
+            <ul>
+                <li onclick="window.location.href='<?php echo base_url('/admin/index.html'); ?>'">
+                    <label for="" class="text icon1">产品库管理</label>
+                </li>
+                <li onclick="window.location.href='<?php echo base_url('/admin/users.html'); ?>'">
+                    <label for="" class="text icon2">账号管理</label>
+                </li>
+                <li class="active">
+                    <label for="" class="text icon3">应用场景管理</label>
+                </li>
+            </ul>
+        </div>
+        <input type="submit" value="返回销售工具" style="color:white " id="buttonProperty" class="button1" />
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="scene-form" tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="scene-formLabel" style="left:200px">
+        <div class="modal-dialog" role="document" style="margin-top:100px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-body">
+                        <div class="form">
+                            <div class="form-group col-xs-12">
+                               <div class="input-group">
+                                  <div class="input-group-addon">场景名称:</div>
+                                  <input type="text" class="form-control" id="scene-name" >
+                               </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form" style="margin-bottom:24px;">
+                            <div class="col-xs-6">
+                                <button id="add-scene-icon">添加图标</button>
+                            </div>
+                            <div class="col-xs-3">
+                                <div id="images-container"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div id="scale-container" style="padding:15px">
+                            
+                        </div>
+                       <div class="form">
+                            <div class="form-group col-xs-9">
+                                <input type="text" class="form-control" id="new-scale-name" >
+                            </div>
+                            <div class="form-group col-xs-3">
+                                <button class="btn btn-primary" id="add-new-scale">保存</button>
+                            </div>
+                            <div class="clearfix"></div>
+                       </div>
+                        <div style="margin-top:40px;">
+                            <button id="buttonSave" class="button1">保存</button>
+                            <button id="buttonCancle" class="button1" data-dismiss="modal">取消</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="<?php echo base_url('/common/js/jquery.min.js'); ?>"></script>
+    <script src="<?php echo base_url('/common/js/bootstrap.min.js'); ?>"></script>
+    <script src="<?php echo base_url('/common/js/admin-control.js'); ?>"></script>
+    <script src="<?php echo base_url('/common/js/ajaxupload.js'); ?>" ></script>
+    <script src="<?php echo base_url('/common/js/admin-scene.js'); ?>" ></script>
+</body>
+
+</html>

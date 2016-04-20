@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+        <title></title>
+
+        <link rel="stylesheet" href="<?php echo base_url('/common/css/resetStyle.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('/common/css/common.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('/common/css/whichone.css'); ?>">
+        <style type="text/css">
+            #product-container {
+                width: 100%;
+                height: 100%;
+                left: 0;
+            }
+            .pd-nav{
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body data-pagename="whichone">
+        <!--  product detail -->
+        <div id="product-container">
+            <div>
+                <div>
+                    <span id="pd-nav-ft" class="pd-nav active" role="button">产品特性</span>
+                    <span id="pd-nav-para" class="pd-nav" role="button">详细参数</span>
+                </div>
+                <div class="pd-header">
+                    <div class="pd-title-wrap">
+                        <h1 id="pd-title" class="en"></h1>
+                        <p id="pd-label" class="subp"></p>
+                    </div>
+                    <div id="pd-tips"></div>
+                    <div class="clearBoth"></div>
+                </div>
+                <div id="pd-ft-container" class="product-content inshow"></div>
+                <div id="pd-para-container" class="product-content">
+                    <div class="pd-para-section">
+                        <h2>净化效果</h2>
+                        <table class="pd-para-contwrap">
+                            <tr>
+                                <td>适用面积</td>
+                                <td>颗粒物 (CADR)</td>
+                                <td>甲醛 (CADR)</td>
+                            </tr>
+                            <tr>
+                                <td id="para-area" class="en"></td>
+                                <td id="para-CADR_PM" class="en"></td>
+                                <td id="para-CADR_oxymethylene" class="en"></td>
+                            </tr>
+                            <tr>
+                                <td>颗粒物（CCM）</td>
+                                <td>颗粒物净化能效等级</td>
+                                <td>甲醛净化能效等级</td>
+                            </tr>
+                            <tr>
+                                <td id="para-CCM_PM" class="en"></td>
+                                <td id="para-level_PM"></td>
+                                <td id="para-level_oxymethylene"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="pd-para-section">
+                        <h2>产品</h2>
+                        <table class="pd-para-contwrap">
+                            <tr>
+                                <td>尺寸</td>
+                                <td>噪音 声功率级</td>
+                                <td>噪音 声压级</td>
+                            </tr>
+                            <tr>
+                                <td id="para-size" class="en"></td>
+                                <td id="para-noiseAcousticalPower" class="en"></td>
+                                <td id="para-noiseSoundPressure" class="en"></td>
+                            </tr>
+                            <tr>
+                                <td>功率</td>
+                                <td>滚轮</td>
+                            </tr>
+                            <tr>
+                                <td id="para-power_consume" class="en"></td>
+                                <td id="para-wheel"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="pd-para-section">
+                        <h2>维护售后</h2>
+                        <table class="pd-para-contwrap">
+                            <tr>
+                                <td>产地</td>
+                                <td>质量保证</td>
+                            </tr>
+                            <tr>
+                                <td id="para-producting_area"></td>
+                                <td id="para-warranty"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="pd-para-section">
+                        <h2>HEPASlient多层渐进式过滤网</h2>
+                        <table class="pd-para-contwrap">
+                            <tr>
+                                <td>粒子型滤网</td>
+                                <td>复合型滤网</td>
+                                <td>活性炭滤网</td>
+                            </tr>
+                            <tr>
+                                <td id="para-particleFilter"></td>
+                                <td id="para-combineFilter"></td>
+                                <td id="para-charcoalFilter"></td>
+                            </tr>
+                            <tr>
+                                <td>滤网数量</td>
+                                <td>滤网更换提示</td>
+                            </tr>
+                            <tr>
+                                <td id="para-filter_num" class="en"></td>
+                                <td id="para-filter"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="pd-para-section" id="pd-para-sensor">
+                        <h2>传感器</h2>
+                        <table class="pd-para-contwrap">
+                            <tr>
+                                <td>空气智能模块</td>
+                            </tr>
+                            <tr>
+                                <td id="para-airIntelligent"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  end product detail  -->
+
+        <script src="<?php echo base_url('/common/js/jquery.min.js'); ?>"></script>
+        <script src="<?php echo base_url('/common/js/action.js'); ?>"></script>
+        <script src="<?php echo base_url('/common/js/products.js'); ?>"></script>
+        <script type="text/javascript">
+            var query = location.search.substr(1);
+            var param = {};
+            query.split("&").forEach(function(part) {
+                var item = part.split("=");
+                param[item[0]] = decodeURIComponent(item[1]);
+            });
+            $.post("getProductDetail", {productID: param.productID}, function(data){
+                Products.setProductInfo(data)
+            }, "JSON");
+        </script>
+    </body>
+
+</html>

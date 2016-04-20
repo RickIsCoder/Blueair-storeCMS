@@ -1,26 +1,15 @@
-.wba {
-    width: 100%;
-    height: 100%;
+html,body{
+    overflow: hidden;
     position: relative;
-    top: 0;
-    left: 0;
-    -webkit-transition: top 0.5s ease;
-    transition: top 0.5s ease;
 }
 
-.wba.dismiss {
-    top: -100%;
+#whyBlueAirContainer {
+    overflow: hidden;
 }
 
-.slick-container {
-    width: 1024px;
-    height: 768px;
-    max-width: 1024px;
-    max-height: 768px;
+#whyBlueAirSlide .container {
     position: relative;
-    background-color: white;
-    top: 0;
-    left: 0;
+    color: #007dc5;
 }
 
 .ourbrand {
@@ -32,7 +21,7 @@
     width: 223px;
     height: 42px;
     position: absolute;
-    top: 70px;
+    top: 51px;
     right: 63px;
 }
 
@@ -40,41 +29,56 @@
     width: 400px;
     height: 300px;
     position: absolute;
-    top: 91px;
-    left: 153px;
+    top: 51px;
+    left: 10%;
+    color: #394a58;
 }
 
-.wba h2 {
-    color: #007dc5;
-}
-
-.wba .subp {
-    margin-top: 12px;
+#whyBlueAirContainer .subp {
+    margin-top: 6px;
     line-height: 22px;
 }
 
 .ob-digital {
     width: 100%;
-    height: 190px;
+    height: 235px;
     color: white;
     position: absolute;
     text-align: center;
-    padding-top: 40px;
-    top: 60%;
+    bottom: 12%;
     left: 0;
-    background-color: rgba(0, 125, 165, 0.8);
 }
 
-.ob-digital .col-4 {
-    padding-left: 15px;
-    padding-right: 15px;
+.ob-digital-wrap {
+    display: inline-block;
+}
+
+.ob-digital-item {
+    width: 235px;
+    height: 235px;
+    padding-left: 35px;
+    padding-right: 35px;
+    background-color: white;
+    color: #007dc5;
+    display: inline-block;
+    border-radius: 100%;
+    vertical-align: middle;
+}
+
+.ob-digital-item.mid {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.ob-title-wrap {
+    margin-top: 50px;
 }
 
 .ob-title {
     font-weight: 100;
+    line-height: 1;
     font-size: 60px;
-    line-height: 60px;
-    margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 .ourbrand small {
@@ -84,28 +88,41 @@
     position: absolute;
 }
 
+
+
 .hs-logo {
     width: 223px;
     height: 42px;
-    position: absolute;
-    top: 10%;
-    left: 71px;
+}
+
+.hs-title {
+    width: 100%;
+    text-align: center;
+}
+
+.hs-title-wrap {
+    display: inline-block;
+    margin-top: 80px;
+    margin-left: 40px;
+}
+
+.hs-title-left{
+    display: inline-block;
+    vertical-align: top;
 }
 
 .hs-text {
     width: 357px;
-    height: 300px;
-    position: absolute;
-    top: 20%;
-    left: 77px;
+    text-align: left;
+    margin-top: 40px;
 }
 
-.hs-img {
+img.hs-img {
     width: 506px;
     height: 214px;
-    position: absolute;
-    top: 14%;
-    right: 35px;
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: 40px;
 }
 
 .hs-nav {
@@ -114,36 +131,44 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    background: url(../images/whyBlueAir/hepaBottomBg.png) no-repeat top center;
-    background-size: 100% 100%;
+    text-align: center;
+}
+
+.hs-nav-wrap {
+    display: inline-block;
 }
 
 .hs-item > img {
-    width: 160px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
     display: block;
     margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.slick-slide .arrow-img {
+    width: 8px;
+    display: inline;
+    vertical-align: baseline;
+    margin-left: 3px;
 }
 
 .hs-item {
     width: 183px;
     height: 240px;
     float: left;
-    margin-top: 50px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .hs-item .subp {
     width: 183px;
     height: 70px;
-    color: white;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
-.hs-item:first-child {
-    margin-left: 111px;
-}
+
 
 .serve-banner {
     width: 100%;
@@ -164,8 +189,8 @@
 }
 
 .serve-title {
-    width: 35.9vh;
-    height: 35.9vh;
+    width: 37vh;
+    height: 37vh;
     border-radius: 100%;
     color: white;
     text-align: center;
@@ -189,32 +214,33 @@
 }
 
 .serve-man {
-    height: 80%;
+    height: 90%;
     position: absolute;
     bottom: 0;
-    right: 166px;
+    right: 200px;
 }
 
 .serve {
     width: 100%;
     height: 38.67%;
     position: absolute;
-    bottom: 0;
+    bottom: 25px;
     left: 0;
+    text-align: center;
 }
 
-.serve .imgwrap {
-    height: 80px;
+.serve-item-wrap {
+    display: inline-block;
+}
+
+.serve .imgwrap > img {
+    height: 87px;
+    width: 87px;
 }
 
 .serve .imgwrap > img {
     margin: 0 auto;
-}
-
-.serve .item:first-child .imgwrap > img {
-    -webkit-transform: translateY(-10px);
-    -ms-transform: translateY(-10px);
-    transform: translateY(-10px);
+    margin-bottom: 10px;
 }
 
 .serve .item {
@@ -223,21 +249,25 @@
     float: left;
 }
 
-.serve .item:first-child {
-    margin-left: 44px;
+
+
+.honor-wrap {
+    position: relative;
+    width: 900px;
+    margin: 0 auto;
 }
 
 .honor-logo {
     width: 223px;
     height: 42px;
     position: absolute;
-    top: 70px;
+    top: 40px;
     left: 59px;
 }
 
 .honor-title {
     position: absolute;
-    top: 147px;
+    top: 100px;
     left: 64px;
     color: #007dc5;
 }
@@ -245,7 +275,7 @@
 .honor-nav {
     position: absolute;
     left: 64px;
-    top: 221px;
+    top: 160px;
 }
 
 .honor-navitem {
@@ -263,7 +293,7 @@
     height: 377px;
     position: absolute;
     left: 64px;
-    bottom: 55px;
+    top: 200px;
     display: none;
 }
 
@@ -299,21 +329,9 @@
 
 /* efficient */
 
-.efficient {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
+#efficient {
     background: url(../images/whyBlueAir/efficientBg.jpg) no-repeat center center;
     background-size: 100% 100%;
-    -webkit-transition: top 0.5s ease;
-    transition: top 0.5s ease;
-}
-
-.efficient.inshow {
-    top: 0;
 }
 
 .bacterialwrap {
@@ -322,9 +340,14 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: url(../images/whyBlueAir/bacterials.png) no-repeat center center;
+    background: url(../images/whyBlueAir/bacterialbg.png) no-repeat center center;
     background-size: 100%;
 }
+
+.bacterialwrap .bacterials {
+    width: 100%;
+}
+
 
 .bacterial-text {
     color: white;
@@ -332,7 +355,7 @@
     line-height: 43px;
     text-align: center;
     position: absolute;
-    top: 21%;
+    top: 15%;
     left: 0;
     width: 100%;
 }
@@ -348,37 +371,20 @@
 .openbabtn {
     width: 99px;
     height: 99px;
-    position: absolute;
-    top: 65%;
-    left: 463px;
+    position: relative;
+    top: 60%;
+    margin: 0 auto;
     background: url(../images/whyBlueAir/openBlueair.png) no-repeat center center;
     background-size: contain;
 }
 
-.efficient-dark .explain {
+.efficient-dark .subp {
     position: absolute;
     top: 80%;
     left: 0;
     width: 100%;
     text-align: center;
     color: white;
-}
-
-.efficient .item {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.efficient-light {
-    -webkit-transition: left 0.5s ease;
-    transition: left 0.5s ease;
-}
-
-.efficient-light.dismiss {
-    left: -100%;
 }
 
 .efficient-dark {
@@ -389,6 +395,10 @@
 
 .efficient-dark.dismiss {
     opacity: 0;
+}
+
+#efficientLight {
+    background-color: transparent;
 }
 
 .efficient-light h2 {
@@ -403,12 +413,13 @@
 .el-img {
     width: 482px;
     height: 164px;
-    position: absolute;
+    position: relative;
     top: 30%;
-    left: 271px;
+    display: block;
+    margin: 0 auto;
 }
 
-.efficient-light .explain {
+.efficient-light .subp {
     width: 100%;
     height: 50px;
     position: absolute;
@@ -417,18 +428,20 @@
     text-align: center;
 }
 
-#btnWhyEfficient {
-    width: 142px;
-    height: 36px;
-    position: absolute;
-    top: 65%;
-    left: 441px;
-    border-radius: 40px;
-    background-color: #A1D792;
+.why-efficient-btn {
+    position: relative;
+    height: 37px;
+    width: 100%;
+    left: 0;
+    top: 44%;
     text-align: center;
-    font-size: 14px;
-    line-height: 36px;
-    color: white;
+}
+
+.btn-why-efficient img {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    margin-top: -5px;
 }
 
 .el-machineimg {
@@ -437,16 +450,6 @@
     position: absolute;
     bottom: 0;
     left: 212px;
-}
-
-.whyefficient {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 100%;
-    top: 0;
-    -webkit-transition: left 0.5s ease;
-    transition: left 0.5s ease;
 }
 
 .whyefficient .row {
@@ -465,10 +468,6 @@
     width: 90%;
 }
 
-.whyefficient.inshow {
-    left: 0;
-}
-
 .whyefficient h2 {
     position: absolute;
     width: 100%;
@@ -477,15 +476,6 @@
     top: 15%;
 }
 
-.mute {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-transition: top 0.5s ease;
-    transition: top 0.5s ease;
-}
 
 .mute .row {
     height: 100%;
@@ -494,10 +484,6 @@
 .mute .row .col-3 {
     height: 100%;
     text-align: center;
-}
-
-.mute.inshow {
-    top: 0;
 }
 
 .mute-item1 {
@@ -520,8 +506,25 @@
     background-size: cover;
 }
 
-.mute img {
+.mute-efficient-btn {
+    position: relative;
+    text-align: center;
+}
+.btn-why-efficient {
+    display: inline-block;
+    border-radius: 40px;
+    background-color: #007dc5;
+    text-align: center;
+    font-size: 14px;
+    line-height: 37px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.mute .col-3 > img {
     margin-top: 90%;
+    width: 44%;
 }
 
 .mute p {
@@ -530,56 +533,44 @@
     line-height: 42px;
 }
 
-.energy {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 100%;
-    background-color: white;
-    -webkit-transition: top 0.5s ease;
-    transition: top 0.5s ease;
-}
-
-.energy.inshow {
-    top: 0;
-}
-
-.energy h1 {
-    position: absolute;
-    top: 15px;
+.energy-title {
+    position: relative;
+    top: 30px;
     left: 0;
     width: 100%;
-    text-align: center;
 }
 
 .energy-cicle {
-    width: 280px;
-    height: 280px;
+    width: 180px;
+    height: 180px;
     margin-bottom: 30px;
     border-radius: 100%;
     line-height: 280px;
     text-align: center;
-    opacity: 0.8;
-    z-index: -1;
-    background-color: #007dc5;
     cursor: pointer;
 }
 
 .energy-cicle img {
-    vertical-align: middle;
+    width: 180px;
+    height: 180px;
+}
+
+.energy-item-wrap {
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
 }
 
 .energy-item {
-    width: 280px;
+    width: 180px;
     height: 600px;
-    float: left;
-    margin-left: -61px;
-    margin-top: 8%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 50px;
 }
 
-.energy-item:first-of-type {
-    margin-left: 40px;
+.energy-item:last-of-type {
+    margin-right: 0;
 }
 
 .energy-qustitle {
@@ -613,7 +604,7 @@
     margin: 0 auto;
     font-size: 12px;
     line-height: 18px;
-    color: #909090;
+    text-align: left;
     opacity: 0;
     -webkit-transition: opacity 0.5s ease 0.5s;
     transition: opacity 0.5s ease 0.5s;
@@ -636,7 +627,6 @@
     margin-top: 10px;
     font-size: 12px;
     opacity: 0;
-    color: #909090;
     -webkit-transition: opacity 0.5s ease 0.8s;
     transition: opacity 0.5s ease 0.8s;
 }
@@ -645,15 +635,7 @@
     opacity: 1;
 }
 
-.byproduct {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 100%;
-    -webkit-transition: top 0.5s ease;
-    transition: top 0.5s ease;
-}
+
 
 .byproduct .row {
     height: 100%;
@@ -665,15 +647,11 @@
 }
 
 .byproduct .lefthalf {
-    background-color: #353535;
+    background-color: #394a58;
 }
 
 .byproduct .righthalf {
-    background-color: #80bfe3;
-}
-
-.byproduct.inshow {
-    top: 0;
+    background-color: white;
 }
 
 .lefthalf p {
@@ -685,10 +663,17 @@
     color: white;
 }
 
-.lefthalf img {
+.lefthalf > img {
     position: absolute;
     right: 0;
-    bottom: 15%;
+    bottom: 19%;
+    width: 426px;
+    height: 342px;
+}
+
+.righthalf > img {
+    width: 123px;
+    height: 386px;
 }
 
 .byproduct div[role="button"] {
@@ -704,8 +689,17 @@
 }
 
 #byproductLearnMore {
-    top: 86%;
+    top: 82%;
     left: 75px;
+    color: white;
+    background-color: #007dc5;
+}
+#byproductLearnMore img {
+    width: 14px;
+    vertical-align: middle;
+    position: static;
+    margin-left: 5px;
+    margin-top: -5px;
 }
 
 .byproduct .right-con1 {
@@ -720,7 +714,7 @@
 .byproduct .rightimg1 {
     position: absolute;
     left: 0;
-    bottom: 15%;
+    bottom: 19%;
 }
 
 .byproduct .rightimg2 {
